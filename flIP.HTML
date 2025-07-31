@@ -106,9 +106,23 @@
                 </div>
             </div>
             <!-- BRAND -->
-            <div class="brand">BRAND
+             <div class="brand-main">
+            <div class="brand" onclick="brandclick()">BRAND
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
             </div>
+            <div class="brand-filters" id="brand-id">
+                <div class="Search-sign">
+                    <div class="searching-box">
+                    <svg width="12" height="20" viewBox="0 0 17 18" xmlns="http://www.w3.org/2000/svg"><g fill="grey" fill-rule="evenodd"><path class="JVQyl9" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="JVQyl9" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
+                    <input class="searching" type="text" placeholder="Search Brand"><br>
+                    </div>
+                    <div><label class="brand-label"><input type="checkbox">Apple</label></div></BR>
+                    <div><label class="brand-label"><input type="checkbox">Google</label></div><br>
+                    <div><label class="brand-label"><input type="checkbox">MOTOROLA</label></div>
+                </div>
+            </div>
+            </div>     
+            <!-- F-ASSURED -->
             <div class="f-assured">
                 <div class="check">
                 <input type="checkbox" >
@@ -117,111 +131,355 @@
                 <div class="questionmark"><span>?</span></div>
             </div>
             <!-- CUSTOMER-RATINGS -->
-              <div class="customer-rating">CUSTOMER RATINGS
+             <div class="main-customer">
+              <div class="customer-rating" onclick="togglefilter()">CUSTOMER RATINGS
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+                 </div>
+                 <div class="customer-filter" id="customer-id">
+                    <div class="pink"><label class="customer-label"> <input type="checkbox"> 4★ & above </style></label></div><br>
+                    <div><label class="customer-label"> <input type="checkbox"> 3★ & above</label></div>
+                </div>
             </div>
             <!-- GST-INVOICE AVAILABLE -->
-              <div class="gst-invoice">GSTINVOICE AVAILABLE
+             <div class="main-gst">
+              <div class="gst-invoice" onclick="gstclick()">GSTINVOICE AVAILABLE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="gst-filter" id="gst-id">
+                <div><label class="gst-label"> <input type="checkbox">GST invoice available</label></div>
+            </div>
             </div>
             <!-- RAM -->
-             <div class="ram">RAM
+             <div class="main-ram">
+             <div class="ram" onclick="ramclick()">RAM
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="ram-filter" id="ram-id">
+                <div><label class="ram-label"><input type="checkbox">4 GB</label></div><br>
+                <div><label class="ram-label"><input type="checkbox">3 GB</label></div><br>
+                <div><label class="ram-label"><input type="checkbox">2 GB</label></div><br>
+                <div><label class="ram-label"><input type="checkbox">10GB and Below</label></div><br>
+                <div><label class="ram-label"><input type="checkbox">8GB and Above</label></div><br>
+                <div><label class="ram-label"><input type="checkbox">6 GB</label></div><br>
+                <div><label class="ram-label"><input type="checkbox">6 GB Above</label></div>
+            </div>
             </div>
              <!-- INTERNAL STORAGE -->
-            <div class="internal-storage">INTERNAL STORAGE
+              <div class="internal-main">
+            <div class="internal-storage" onclick="internalclick()">INTERNAL STORAGE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="internal-filter" id="internal-id">
+                <div><label class="internal-label"> <input type="checkbox"> 256 GB & Above</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">128-255.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">64 - 127.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">32-63.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">16-31.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">8 - 15.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">4-7.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">2GB-3.9 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">1GB-1.9GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">Less than 1 GB</label></div><br>
+                <div><label class="internal-label"><input type="checkbox">256 GB Above</label></div>
+            </div>
             </div>
               <!-- BATTERY CAPACITY -->
-               <div class="battery-capacity">BATTERY CAPACITY
+               <div class="main-battery">
+               <div class="battery-capacity" onclick="batteryclick()">BATTERY CAPACITY
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="battery-filter" id="battery-id">
+                <div><label class="battery-label"> <input type="checkbox">1000 - 1999 mAh</label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">2000 - 2999 mAh</label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">3000 - 3999 mAh</label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">4000 - 4999 mAh</label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">5000 - 5999 mAh</label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">5000 mAh Above></label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">6000 mAh & Above></label></div><br>
+                <div><label class="battery-label"> <input type="checkbox">Less than 1000 mAh</label></div>
+
+            </div>
             </div>
                <!-- SCREEN SIZE -->
-                <div class="screen-size">SCREEN SIZE
+                <div class="main-screen">
+                <div class="screen-size" onclick="screenclick()">SCREEN SIZE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="screen-filter" id="screen-id">
+                <div><label class="screen-label"><input type="checkbox">5.7 - 5.9 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">5.5 - 5.6 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">5.2 - 5.4 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">5 - 5.1 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">4.5 - 4.9 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">4 - 4.4 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">3.5 - 3.9 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">3 - 3.4 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">Less than 3 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">6.4 inch & above</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">6 - 6.3 inch</label></div><br>
+                <div><label class="screen-label"><input type="checkbox">6 inch above</label></div><br>
+            </div>
             </div>
                 <!-- PRIMARY -->
-                 <div class="primary">PRIMARY CAMERA
+                 <div class="main-primary">
+                 <div class="primary" onclick="primaryclick()">PRIMARY CAMERA
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="primary-filter" id="primary-id">
+                <div><label class="primary-label"> <input type="checkbox">5 - 7.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">Below 5 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">8 - 11.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">12 - 12.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">12 - 15.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">13 - 15.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">16 - 20.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">21 - 31.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">21 MP Above</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">32 - 47.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">48 - 63.9 MP</label></div><br>
+                <div><label class="primary-label"> <input type="checkbox">64 MP & Above</label></div>
+            </div>
             </div>
             <!-- SECONDARY CAMERA -->
-              <div class="secondary-camera">SECONDARY CAMERA
+             <div class="main-secondary">
+              <div class="secondary-camera" onclick="secondaryclick()">SECONDARY CAMERA
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="secondary-filter" id="secondary-id">
+                <div><label class="secondary-label"><input type="checkbox"> 12 - 12.9 MP</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 12 - 15.9 MP</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 13 - 15.9 MP</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 16 - 20.9 MP</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 21 MP Above</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 21 MP & Above</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 5 - 7.9 MP</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> 8 - 11.9 MP</label></div><br>
+                <div><label class="secondary-label"><input type="checkbox"> Below 5 MP</label></div><br>
+            </div>
             </div>
                  <!-- PROCESSOR BRAND -->
-                   <div class="processor-brand">PROCESSOR BRAND
+                  <div class="main-processor">
+                   <div class="processor-brand" onclick="processorclick()">PROCESSOR BRAND
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="processor-filter" id="processor-id">
+                <div><label class="processor-label"><input type="checkbox">AMD</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Apple</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">ARM</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">exynos</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Google</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">HiSilicon</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Huawei</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">intel</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Mediatek</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Qualcomm</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">RDA</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Snapdragon</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">Spreadtrum</label></div><br>
+                <div><label class="processor-label"><input type="checkbox">unisoc</label></div><br>
+            </div>
             </div>
                   <!-- SPECIALITY -->
-                    <div class="speciality">SPECIALITY
+                   <div class="speciality-main">
+                    <div class="speciality" onclick="specialityclick()">SPECIALITY
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="speciality-filter" id="speciality-id">
+                <div><label class="speciality-label"> <input type="checkbox">Big Storage</label></div><br>
+                <div><label class="speciality-label"> <input type="checkbox">Higher Performance</label></div><br>
+                <div><label class="speciality-label"> <input type="checkbox">Long-Lasting Battery</label></div><br>
+                <div><label class="speciality-label"> <input type="checkbox">Selfie Camera</label></div><br>
+            </div>
             </div>
                    <!-- RESOLUTION TYPE -->
-                     <div class="resolution">RESOLUTION TYPE
+                    <div class="resolution-main">
+                     <div class="resolution" onclick="resolutionclick()">RESOLUTION TYPE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
             </div>
+            <div class="resolution-filter" id="resolution-id">
+                <div><label class="resolution-label"> <input type="checkbox">Full HD</label></div><br>
+                <div><label class="resolution-label"><input type="checkbox">Full HD+ </label></div><br>
+                <div><label class="resolution-label"> <input type="checkbox">Full HD+ AMOLED Display</label></div><br>
+                <div><label class="resolution-label"><input type="checkbox">Full HD+ E3 Super AMOLED Display</label></div><br>
+                <div><label class="resolution-label"> <input type="checkbox">Full HD+ Super AMOLED Display</label></div><br>
+                <div><label class="resolution-label"><input type="checkbox">FWVGA</label></div>
+            </div>
+           </div>
                     <!-- OPERATING SYSTEM -->
-                      <div class="operating-system">OPERATING SYSTEM
+                     <div class="operating-main">
+                      <div class="operating-system" onclick="operatingclick()">OPERATING SYSTEM
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="operating-filter" id="operating-id">
+                <div><label class="operating-label"><input type="checkbox">Android</label></div><br>
+                 <div><label class="operating-label"><input type="checkbox">Blackberry</label></div><br>
+                  <div><label class="operating-label"><input type="checkbox">Firefox</label></div><br>
+                   <div><label class="operating-label"><input type="checkbox">ioS</label></div><br>
+                    <div><label class="operating-label"><input type="checkbox">kaiOS</label></div><br>
+                     <div><label class="operating-label"><input type="checkbox">symbian</label></div><br>
+                      <div><label class="operating-label"><input type="checkbox">Tizan</label></div><br>
+                       <div><label class="operating-label"><input type="checkbox">Window</label></div><br>
+            </div>
             </div>
                      <!-- NETWORK TYPE -->
-                       <div class="network-type">NETWORK TYPE
+                      <div class="network-main">
+                       <div class="network-type" onclick="networkclick()">NETWORK TYPE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="network-filter" id="network-id">
+                <div><label class="network-label"><input type="checkbox">2G</label></div><br>
+                <div><label class="network-label"><input type="checkbox">3G</label></div><br>
+                <div><label class="network-label"><input type="checkbox">4G</label></div><br>
+                <div><label class="network-label"><input type="checkbox">4G VOLTE</label></div><br>
+                <div><label class="network-label"><input type="checkbox">5.5G</label></div><br>
+                <div><label class="network-label"><input type="checkbox">5G</label></div><br>
+            </div>
             </div>
                       <!-- SIM TYPE -->
-                        <div class="sim-type">SIM TYPE
+                       <div class="sim-main">
+                        <div class="sim-type" onclick="simclick()">SIM TYPE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="sim-filter" id="sim-id">
+                <div><label class="sim-label"><input type="checkbox">Dual sim</label></div><br>
+                <div><label class="sim-label"><input type="checkbox">Dual sim(Nano + eSIM)</label></div><br>
+                <div><label class="sim-label"><input type="checkbox">Dual sim(Physiscal+eSIM)</label></div><br>
+            </div>
             </div>
                        <!-- OFFERS -->
-                         <div class="offers">OFFERS
+                        <div class="offers-main">
+                         <div class="offers" onclick="offersclick()">OFFERS
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="offers-filter" id="offers-id">
+                <div><label class="offers-label"><input type="checkbox">Buy More, Save More</label></div><br>
+                <div><label class="offers-label"><input type="checkbox">Special Price</label></div>
+        
+            </div>
             </div>
                         <!-- FEATURES -->
-                          <div class="features">FEATURES
+                         <div class="features-main">
+                          <div class="features" onclick="featuresclick()">FEATURES
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="features-filter" id="features-id">
+                <div><label class="features-label"><input type="checkbox">WiFi</label></div><br>
+                <div><label class="features-label"><input type="checkbox">HD recording</label></div><br>
+                <div><label class="features-label"><input type="checkbox">FM Player</label></div>
+            </div>
             </div>
                          <!-- TYPE -->
-                           <div class="type">TYPE
+                          <div class="type-main">
+                           <div class="type" onclick="typeclick()">TYPE
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+            <div class="type-filter" id="type-id">
+                <div><label class="type-label"><input type="checkbox">SmartPhones</label></div><br>
+                <div><label class="type-label"><input type="checkbox">FeaturePhones</label></div>
+
+            </div>
             </div>
                           <!-- NUMBER OF CORES -->
-                            <div class="no-of-cores">NUMBER OF CORES
+                            <div class="no-of-cores-main">
+                            <div class="no-of-cores" onclick="cores()">NUMBER OF CORES
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+                        <div class="no-of-cores-filter" id="no-of-cores-id">
+                <div><label class="no-of-cores-label"><input type="checkbox">Dual Core</label></div><br>
+                <div><label class="no.of-cores-label"><input type="checkbox">Hexa Core</label></div>
+            </div>
             </div>
                            <!-- AVAILABILITY -->
-                             <div class="availability">AVAILABILITY
+                            
+                            <div class="availability-main">
+                             <div class="availability" onclick="availabilityclick()">AVAILABILITY
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
+            </div>
+             <div class="availability-filter" id="availability-id">
+               <div> <label class="availability-label"><input type="checkbox">SmartPhones</label></div><br>
+               <div> <label class="availability-label"><input type="checkbox">FeaturePhones</label></div>
+                </div>
             </div>
                             <!-- DISCOUNT-->
-                              <div class="discout">DISCOUNT
+                             <div class="discount-main">
+                              <div class="discout" onclick="discountclick()">DISCOUNT
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
             </div>
+            <div class="discount-filter" id="discount-id">
+                <div><label class="discount-label"><input type="checkbox">50% or more</label></div><br>
+                <div><label class="discount-label"><input type="checkbox">40% or more</label></div><br>
+                <div><label class="discount-label"><input type="checkbox">30% or more</label></div><br>
+                </div>
+                </div>
                              <!-- OPERATING SYSTEM VERSION NAME -->
-                               <div class="os-version-name">OPERATING SYSTEM VERSION NAME
+                              <div class="os-version-main">
+                               <div class="os-version-name" onclick="osversionclick()">OPERATING SYSTEM VERSION NAME
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
             </div>
+             <div class="os-version-filter" id="os-version-id">
+                <div><label class="os-version-label"><input type="checkbox">50% or more</label></div><br>
+                <div><label class="os-version-label"><input type="checkbox">40% or more</label></div><br>
+                <div><label class="os-version-label"><input type="checkbox">30% or more</label></div><br>
+                </div>
+                </div>
                               <!-- CLOCK SPEED-->
-                                <div class="clock-speed">CLOCK SPEED
+                               <div class="clock-main">
+                                <div class="clock-speed" onclick="clockclick()">CLOCK SPEED
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
             </div>
+             <div class="clock-filter" id="clock-id">
+                <div><label class="clock-label"><input type="checkbox">1.5-1.9 GHz</label></div><br>
+                <div><label class="clock-label"><input type="checkbox">2-2.1 GHz</label></div><br>
+                <div><label class="clock-label"><input type="checkbox">2-2.5 GHz</label></div><br>
+                </div>
+                </div>
+
+
+            <!-- HELP -->
            <div class="help">
                 <span>Need help?</span>
                 <div class="help-2">
-                <a href="#">Help me Decide</a>
+                <a href="#">Help me decide</a>
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="VQiHOk"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#2874f0" class="jVpjWi"></path></svg>
             </div>
             <div class="book-img">
                 <img src="img/image.png" alt="#">
             </div>
             </div>
-
         </section>
-         
-        <section class="main-body"></section>
-    </section>
+        <section class="main-body">
+            <div class="body-head">
+                <div class="home-one">
+                    <a class="home-svg" id="homehover1" href="#">Home </a>
+                    <svg  width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="home-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="wMLTcO"></path></svg>
+                    
+                    
+                    <a class="mobile-svg" id="homehover2" href="#">Mobile &  A... </a>
+                    <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="mobile-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="wMLTcO"></path></svg>
+                        
+                        
+                    <a class="mob-svg" id="homehover3" href="#">Mobiles</a>
+                    <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="mob-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="wMLTcO"></path></svg>
+                    
+                    </div>
+                    <div class="next">
+                     <h1 class="mobile-heading">Mobiles</h1>
+                        <span class="bracket">(Showing 1-24 products of 11,618 products)</span>
+                        </div>
+                        <div class="sort">
+                            <span class="sort-by">Sort By</span>
+                            <span class="popularity">Popularity</span>
+                            <span class="low-high">Price--Low to high</span>
+                            <span class="hgih-low">price--High to low</span>
+                            <span class="newest">Newest First</span>
+                        </div>
+                        </div>       
+        </section>
+    </section>                          
     <script src="flip.js"></script>
 </body>
 </html>
+
 
 
 
