@@ -34,24 +34,125 @@
                 </div>
             <div class="second"></div>
     </header>
-
+                  
     <!-- 2ND HEADER -->
-    <section class="sub-head-containter">
-        <div class="sub-main">
+    <div class="sub-head-containter">
             <div class="mini">
-                <span id="sub" class="electronics">Electronics   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg>
- </span>
-                <span id="sub" class="tv">TVs & Appliances    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub" class="men">Man   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub" class="women">Women    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub" class="Baby&kids">Baby & Kids    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub" class="Home & Furnitre">Home & Furnitre    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub" class="Sports,Books&More">Sports, Books & More    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub" class="Flights">Flights    </span>
-                <span id="sub" class="Offer Zone">Offer Zone    </span>
+                <span id="sub" class="electronics" onmouseenter="electromouse()"  onmouseleave="electroout()">Electronics   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub1" class="tv" onmouseover="electromouse1()"  onmouseout="electroout1()">TVs & Appliances    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub2" class="men" onmouseover="electromouse2()"  onmouseout="electroout2()">Man   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub3" class="women" onmouseover="electromouse3()"  onmouseout="electroout3()">Women    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub4" class="Baby&kids" onmouseover="electromouse4()"  onmouseout="electroout4()">Baby & Kids    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub5" class="Home & Furnitre" onmouseover="electromouse5()"  onmouseout="electroout5()">Home & Furnitre    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub6" class="Sports,Books&More" onmouseover="electromouse6()"  onmouseout="electroout6()">Sports, Books & More    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub7" class="Flights" onmouseover="electromouse7()"  onmouseout="electroout7()">Flights    </span>
+                <span id="sub8" class="Offer Zone" onmouseover="electromouse8()"  onmouseout="electroout8()" >Offer Zone    </span>
            </div>
+           </div>
+
+    <!-- ELECTRONICS-BOX -->
+     <div  class="main-cont" id="eachid" onmouseenter="boxmouse()">
+     <div class="inside-container" id="some" >
+        <div class="inside" >
+            <h1 ><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#">Mobiles</a></h1>
+           <a href="#" class="mob-1">Samsung</a>
+           <a href="#" class="mob-1">Infinix</a>
+           <a href="#" class="mob-1">OPPO</a>
+           <a href="#" class="mob-1">Apple</a>
+           <a href="#" class="mob-1">Vivo</a>
+           <a href="#" class="mob-1">Honor</a>
+           <a href="#" class="mob-1">Asus</a>
+           <a href="#" class="mob-1">Poco X2</a>
+           <a href="#" class="mob-1">realme Narzo 10</a>
+           <a href="#" class="mob-1">Infinix Hot 9</a>
+           <a href="#" class="mob-1">IQOO 3</a>
+           <a href="#" class="mob-1">iPhone SE</a>
+           <a href="#" class="mob-1">Motorola razr</a>
+           <a href="#" class="mob-1">realme Narzo 10A</a>
+           <a href="#" class="mob-1">Motorola g8 power lite</a>
+
         </div>
-    </section>
+        <div class="inside-2">
+           <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="accessory">Mobile Accessories</a></h1> 
+            <a href="#" class="accessory">Mobile Cases</a>
+            <a href="#" class="accessory">Headphones &amp; Headsets</a>
+            <a href="#" class="accessory">Power Banks</a>
+            <a href="#" class="accessory">Screenguards</a>
+            <a href="#" class="accessory">Memory Cards</a>
+            <a href="#" class="accessory">Smart Headphones</a>
+            <a href="#" class="accessory">Mobile Cables</a>
+            <a href="#" class="accessory">Mobile Chargers</a>
+            <a href="#" class="accessory">Mobile Holders</a>
+            <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="accessory">Smart Wearable Tech</a></h1>
+            <a href="#" class="accessory">Smart Watches</a>
+            <a href="#" class="accessory">Smart Glasses (VR)</a>
+            <a href="#" class="accessory">Smart Bands</a>
+          <h1> <a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="accessory">Health Care Appliances</a></h1> 
+            <a href="#" class="accessory">Bp Monitors</a>
+            <a href="#" class="accessory">Weighing Scale</a>
+
+        </div>
+        <div class="inside-3">
+            <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="computer-item">Laptops</a></h1>
+            <a href="#" class="computer-item">Gaming Laptops</a>
+           <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="computer-item">Desktop PCs</a></h1> 
+            <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="computer-item">Gaming &amp; Accessories</a></h1>
+            <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="computer-item">Computer Accessories</a></h1>
+            <a href="#" class="computer-item">External Hard Disks</a>
+            <a href="#" class="computer-item">Pendrives</a>
+            <a href="#" class="computer-item">Laptop Skins &amp; Decals</a>
+            <a href="#" class="computer-item">Laptop Bags</a>
+            <a href="#" class="computer-item">Mouse</a>
+            <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="computer-item">Computer Peripherals</a></h1>
+            <a href="#" class="computer-item">Printers &amp; Ink Cartridges</a>
+            <a href="#" class="computer-item">Monitors</a>
+           <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="computer-item">Tablets</a></h1> 
+            <a href="#" class="computer-item">Apple iPads</a>
+
+        </div>
+        <div class="inside-4">
+            <a href="#" class="electronics-item">Televisions</a>
+            <h1><a style="color: black; text-decoration: none; padding: 7px; padding-left: 0px;" href="#" class="electronics-item">Speakers</a></h1>
+            <a href="#" class="electronics-item">Home Audio Speakers</a>
+            <a href="#" class="electronics-item">Home Theatres</a>
+            <a href="#" class="electronics-item">Soundbars</a>
+            <a href="#" class="electronics-item">Bluetooth Speakers</a>
+            <a href="#" class="electronics-item">DTH Set Top Box</a>
+           <h1><a style="color: black; text-decoration: none; padding: 7px; padding-left: 0px;" href="#" class="electronics-item">Smart Home Automation</a></h1> 
+            <a href="#" class="electronics-item">Google Nest</a>
+            <h1><a style="color: black; text-decoration: none; padding: 7px; padding-left: 0px;" href="#" class="electronics-item">Camera</a></h1>
+            <a href="#" class="electronics-item">DSLR &amp; Mirrorless</a>
+            <a href="#" class="electronics-item">Compact &amp; Bridge Cameras</a>
+            <a href="#" class="electronics-item">Sports &amp; Action</a>
+            <h1><a style="color: black; text-decoration: none; padding: 7px; padding-left: 0px;" href="#" class="electronics-item">Camera Accessories</a></h1>
+            <a href="#" class="electronics-item">Lens</a>
+            <a href="#" class="electronics-item">Tripods</a>
+           <h1><a style="color: black; text-decoration: none; padding: 7px; padding-left: 0px;" href="#" class="electronics-item">Network Components</a></h1> 
+            <a href="#" class="electronics-item">Routers</a>
+
+        </div>
+        <div class="inside-5">
+           <h1><a style="color: black; text-decoration: none; padding: 7px; padding-left: 0px;" href="#" class="featured-item">Featured</a></h1> 
+            <a href="#" class="featured-item">Google Assistant Store</a>
+            <a href="#" class="featured-item">Laptops on Buyback Guarantee</a>
+            <a href="#" class="featured-item">Flipkart SmartBuy</a>
+            <a href="#" class="featured-item">Li-Polymer Power Banks</a>
+            <a href="#" class="featured-item">Sony PS4 Pro &amp; Slim</a>
+            <a href="#" class="featured-item">Apple Products</a>
+            <a href="#" class="featured-item">Microsoft Store</a>
+            <a href="#" class="featured-item">Lenovo Phab Series</a>
+            <a href="#" class="featured-item">JBL Speakers</a>
+            <a href="#" class="featured-item">Smartphones On Buyback Guarantee</a>
+            <a href="#" class="featured-item">Philips</a>
+            <a href="#" class="featured-item">Dr. Morepen</a>
+            <a href="#" class="featured-item">Complete Mobile Protection</a>
+            <a href="#" class="featured-item">Mobiles No Cost EMI</a>
+            <a href="#" class="featured-item">Huawei Watch Gt 2e Smart Watch</a>
+
+        </div>
+     </div>
+     </div>
+    
     <section class="body">
         <section class="side-bar">
             
@@ -148,7 +249,7 @@
             <div class="gst-filter" id="gst-id">
                 <div><label class="gst-label"> <input type="checkbox">GST invoice available</label></div>
             </div>
-            </div>
+            </div>       
             <!-- RAM -->
              <div class="main-ram">
              <div class="ram" onclick="ramclick()">RAM

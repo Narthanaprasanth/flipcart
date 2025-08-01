@@ -219,4 +219,206 @@ boxout3.addEventListener("mouseout",function(){
 })
 
 
+//BOX---------
+function boxmouse(){
+    const boxin=document.getElementById("some")
+    if(boxin.style.display==="block"||boxin.style.display===""){
+        boxin.style.display="block"
+    }
+}
 
+
+
+
+//ELECTRONICS---------
+
+function electromouse(){
+    const font=document.getElementById("sub")
+    if(font.style.color===""){
+        font.style.color="blue"
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+   
+}
+function electroout(){
+    const font=document.getElementById("sub")
+    if(font.style.color==="blue"){
+        font.style.color=""
+    }
+    
+     const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    } 
+}
+
+
+//TV AND AAPLIANCES---------
+
+function electromouse1(){
+    const font1=document.getElementById("sub1")
+    if(font1.style.color===""){
+        font1.style.color="blue"
+    }
+     const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+}
+function electroout1(){
+    const font1=document.getElementById("sub1")
+    if(font1.style.color==="blue"){
+        font1.style.color=""
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    }
+}
+
+
+//MEN---------
+
+function electromouse2(){
+    const font2=document.getElementById("sub2")
+    if(font2.style.color===""){
+        font2.style.color="blue"
+    }
+     const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+}
+function electroout2(){
+    const font2=document.getElementById("sub2")
+    if(font2.style.color==="blue"){
+        font2.style.color=""
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    }
+}
+
+
+//WOMEN---
+function electromouse3(){
+    const font3=document.getElementById("sub3")
+    if(font3.style.color===""){
+        font3.style.color="blue"
+    }
+     const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+}
+function electroout3(){
+    const font3=document.getElementById("sub3")
+    if(font3.style.color==="blue"){
+        font3.style.color=""
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    }
+}
+
+
+//BABY & KIDS---------
+function electromouse4(){
+    const font4=document.getElementById("sub4")
+    if(font4.style.color===""){
+        font4.style.color="blue"
+    }
+     const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+}
+function electroout4(){
+    const font4=document.getElementById("sub4")
+    if(font4.style.color==="blue"){
+        font4.style.color=""
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    }
+}
+//HOME & FURNITURE---------
+function electromouse5(){
+    const font5=document.getElementById("sub5")
+    if(font5.style.color===""){
+        font5.style.color="blue"
+    }
+     const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+}
+function electroout5(){
+    const font5=document.getElementById("sub5")
+    if(font5.style.color==="blue"){
+        font5.style.color=""
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    }
+}
+//SPORTS BOOKS & MORE----------
+function electromouse6(){
+    const font6=document.getElementById("sub6")
+    if(font6.style.color===""){
+        font6.style.color="blue"
+    }
+     const over=document.getElementById("eachid")
+    if(over.style.display==="none"||over.style.display===""){
+        over.style.display="block"
+    }
+}
+function electroout6(){
+    const font6=document.getElementById("sub6")
+    if(font6.style.color==="blue"){
+        font6.style.color=""
+    }
+    const over=document.getElementById("eachid")
+    if(over.style.display==="block"||over.style.display===""){
+        over.style.display="none"
+    }
+}
+//FLIGHT----
+function electromouse7(){
+    const font7=document.getElementById("sub7")
+    if(font7.style.color===""){
+        font7.style.color="blue"
+    }
+   
+}
+function electroout7(){
+    const font7=document.getElementById("sub7")
+    if(font7.style.color==="blue"){
+        font7.style.color=""
+    }
+   
+}
+
+
+//OFFER ZONE
+function electromouse8(){
+    const font8=document.getElementById("sub8")
+    if(font8.style.color===""){
+        font8.style.color="blue"
+    }
+   
+}
+function electroout8(){
+    const font8=document.getElementById("sub8")
+    if(font8.style.color==="blue"){
+        font8.style.color=""
+    }
+   
+}
