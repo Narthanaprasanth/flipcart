@@ -40,7 +40,7 @@
             <div class="mini">
                 <span id="sub" class="electronics" onmouseenter="electromouse()"  onmouseleave="electroout()">Electronics   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
                 <span id="sub1" class="tv" onmouseover="electromouse1()"  onmouseout="electroout1()">TVs & Appliances    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
-                <span id="sub2" class="men" onmouseover="electromouse2()"  onmouseout="electroout2()">Man   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
+                <span id="sub2" class="men" onmouseover="electromouse2()"  onmouseout="electroout2()">Men   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
                 <span id="sub3" class="women" onmouseover="electromouse3()"  onmouseout="electroout3()">Women    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
                 <span id="sub4" class="Baby&kids" onmouseover="electromouse4()"  onmouseout="electroout4()">Baby & Kids    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
                 <span id="sub5" class="Home & Furnitre" onmouseover="electromouse5()"  onmouseout="electroout5()">Home & Furnitre    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#b8bbbf" class="CPYntE"></path></svg></span>
@@ -574,28 +574,100 @@
                             <span class="hgih-low">price--High to low</span>
                             <span class="newest">Newest First</span>
                         </div>
-                        </div>       
+                        </div> 
+                       <!-- Container where cards will be added -->
+<!-- Main container for cards -->
+<div id="container"></div>
+
+<!-- Hidden template -->
+<div id="templates" style="display: none;">
+  <div class="card" style="display: flex; flex-direction: row;  border-bottom: 1px solid rgb(231, 228, 228); padding: 24px 0px 30px 24px;  width: 100%;">
+    <div class="pic-phone">     
+      <img class="product-img" width="150px" alt="" style="margin-left: 25px;">
+      <div style="margin-top: 16px;"><label  style="font-size: 14px; color: #212121;"> <input type="checkbox" style="margin-right: 8px;">Add to Compare</label></div>
+    </div>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="N1bADF" width="16" height="16" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="grey" class="x1UMqG" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg> -->
+
+  <div class="details" style="display: flex; flex-direction: row;">
+    <div class="ul-class" style="width: 741px;">
+    <ul style=" font-size: 14px; letter-spacing: .3; font-family:Inter,-apple-system,Helvetica,Arial,sans-serif; color: #212121;
+  line-height: 22px;">
+   <!-- <div class="sponsered" style="display: flex;"> -->
+        <!-- <span style="font-size: 12px; font-weight: 400; line-height: 14px; color: #bdbdbd; width: auto; display: block; ">sponsered</span> -->
+    <!-- </div> -->
+      <h1 id="title" onmouseover="titleover()"  style="font-size: 17px; margin-bottom: 6px;"></h1>
+
+      <div class="mainratting" style="display: flex; flex-direction: row; height: 19px; align-items: center; margin-bottom: 13px;"> 
+     <div class="rating" style="color: white; padding: 2px 4px 2px 6px; border-radius: 3px; font-size: 12px; align-items: center; display: flex; background-color:  #388e3c; width: max-content; height: 15px;"> <div class="num"></div> <div class="starss">
+<svg width="10" height="10" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L14.945 8.757L22.25 9.63L17 14.57L18.39 21.84L12 18L5.61 21.84L7 14.57L1.75 9.63L9.055 8.757L12 2Z"/>
+</svg>
+</div></div> 
+        <div class="reviews&rating" style="color: #878787; display: flex; flex-direction: row; padding-left: 8px; font-size: 14px; font-weight: 800;" > 
+        <div class="stars" style="color: #878787;" ></div>
+         Ratings  & &nbsp; 
+        <div class="review" style="color: #878787;">1,171</div>   
+        Reviews</div>
+         </div>                 
+      <li class="memory"  style="display: table-row;"></li>
+      <li class="display" style="display: table-row;"></li>
+      <li class="frontcamera" style="display: table-row;"></li>
+      <li class="battery" style="display: table-row;"></li>
+      <li class="processor" style="display: table-row;"></li>
+      <li class="charger" style="display: table-row;"></li>
+      <li class="warrenty" style="display: table-row;"></li>
+    </ul>
+    </div>
+    <div class="phone-price" style="padding-left: 25px;"> 
+        <div class="mix" style="display: flex; flex-direction: row;">
+     <div class="price" style="font-weight: 700; font-size: 25px; padding-right: 20px;"><p > </p></div> 
+     <div class="flip-cart-img"><img src="img/f-assurerd.png" alt="" width="71px" height="20px" style="display: inline-block; vertical-align: top; padding-top: 6px;"></div>
+      </div>
+      <div class="discount-mix" style="display: flex; flex-direction: row;">
+        <div class="strike" style="text-decoration: line-through; font-size: 14px; color: #878787;"> <p></p></div>
+        <div class="discount" style="margin-left: 8px; color:  #388e3c; font-size: 13px; letter-spacing: -.2px; font-weight: 800;"><p></p></div>
+      </div>
+
+     <div class="present"> <p class="tagline" style="margin-top: 5px; height: fit-content; width: fit-content; padding: 4px; border-radius: 2px; background-color: rgb(233, 222, 255); color: rgb(112, 72, 198); font-size: 12px; font-style: normal;"></p></div>
+      <div class="exchange-mix" style="display: flex; flex-direction: row;">
+     <div style="color: black; font-size: 14px;">Upto &nbsp;</div>  <div class="exchange" style="color: black; font-size: 14px; font-weight: 800;"> </div> <div style="color: black; font-size: 14px;">&nbsp; off on exchange</div> 
+     </div>
+          <div class="bankoffer" style="color: rgb(38, 165, 65); font-weight: 800; font-size: 14px; margin-top: 5px;">Bank Offer</div>
+
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+                              
+                            
         </section>
-    </section>                          
+    </section>  
+    
+    <!-- MODEL -->
+<!-- <div id="container"> -->
+
+<!-- Template to clone -->
+<!-- <div id="template">
+  <div class="card" style="border:1px solid #ccc; padding:10px; margin:auto; width: 50%;">
+    <h3 class="title">nothing phone (3a)(black,128gb)</h3>
+    <p class="memory">8gb ram|128gb rom</p>
+    <p class="display">43.66 cm (17.19 cm) Full HD+ Display</p>
+    <p class="camera">50mh main</p>
+    <p class="battery">5000 mah battery</p>
+    <p class="processor">7s gen3 processor</p>
+    <p class="warrenty">1 year manufacturing warrenty</p>
+  </div>
+</div>
+
+</div> -->
     <script src="flip.js"></script>
+
+
+    
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
