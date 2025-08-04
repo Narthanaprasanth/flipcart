@@ -1,190 +1,262 @@
 function brandclick(){
+    const svg=document.getElementById("brandid")
+    
+
     const brandbox=document.getElementById("brand-id")
     if(brandbox.style.display==="none"||brandbox.style.display===""){
         brandbox.style.display="block"
+        svg.style.transform="rotate(90deg)"
     }else{
         brandbox.style.display="none"
+         svg.style.transform="rotate(-90deg)"
+
     }
 }
 
 function togglefilter(){
+     const svg=document.getElementById("brandid1")
     const filterbox=document.getElementById("customer-id")
     if(filterbox.style.display==='none' || filterbox.style.display===""){
         filterbox.style.display="block";
+        svg.style.transform="rotate(90deg)"
     }else{
         filterbox.style.display="none"
+         svg.style.transform="rotate(-90deg)"
     }
 }
 function gstclick(){
+     const svg=document.getElementById("brandid2")
     const gstbox=document.getElementById("gst-id")
     if(gstbox.style.display==='none' || gstbox.style.display===""){
         gstbox.style.display="block"
+        svg.style.transform="rotate(90deg)"
     }else{
         gstbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 
 }
 function ramclick(){
+       const svg=document.getElementById("brandid3")
     const rambox=document.getElementById("ram-id")
     if(rambox.style.display==='none' || rambox.style.display===""){
         rambox.style.display="block"
+        svg.style.transform="rotate(90deg)"
     }else{
         rambox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 
 }
 function internalclick(){
+    const svg=document.getElementById("brandid4")
     const internalbox=document.getElementById("internal-id")
     if(internalbox.style.display==="none"|| internalbox.style.display===""){
         internalbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         internalbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function batteryclick(){
+    const svg=document.getElementById("brandid5")
     const batterybox=document.getElementById("battery-id")
         if(batterybox.style.display==="none"|| batterybox.style.display===""){
              batterybox.style.display="block"
+              svg.style.transform="rotate(90deg)"
         }else{
             batterybox.style.display="none"
+            svg.style.transform="rotate(-90deg)"
         }
            
     }
 function screenclick(){
+    const svg=document.getElementById("brandid6")
     const screenbox=document.getElementById("screen-id")
     if(screenbox.style.box==="none"||screenbox.style.display===""){
         screenbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         screenbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function primaryclick(){
+    const svg=document.getElementById("brandid7")
     const primarybox=document.getElementById("primary-id")
     if(primarybox.style.display==="none"||primarybox.style.display===""){
         primarybox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         primarybox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function secondaryclick(){
+    const svg=document.getElementById("brandid8")
     const secondarybox=document.getElementById("secondary-id")
     if(secondarybox.style.display==="none"||secondarybox.style.display===""){
         secondarybox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         secondarybox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function processorclick(){
+    const svg=document.getElementById("brandid9")
     const processorbox=document.getElementById("processor-id")
     if(processorbox.style.display==="none"||processorbox.style.display===""){
         processorbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         processorbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function specialityclick(){
+    const svg=document.getElementById("brandid10")
     const specialitybox=document.getElementById("speciality-id")
     if(specialitybox.style.display==="none"||specialitybox.style.display===""){
         specialitybox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         specialitybox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function resolutionclick(){
+    const svg=document.getElementById("brandid11")
     const resolutionbox=document.getElementById("resolution-id")
     if(resolutionbox.style.display==="none"||resolutionbox.style.display===""){
         resolutionbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         resolutionbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function operatingclick(){
+    const svg=document.getElementById("brandid12")
     const operatingbox=document.getElementById("operating-id")
         if(operatingbox.style.display==="none"||operatingbox.style.display===""){
             operatingbox.style.display="block"
+             svg.style.transform="rotate(90deg)"
         }else{
             operatingbox.style.display="none"
+            svg.style.transform="rotate(-90deg)"
         }
     }
 
 function networkclick(){
+    const svg=document.getElementById("brandid13")
     const networkbox=document.getElementById("network-id")
     if(networkbox.style.display==="none"||networkbox.style.display===""){
         networkbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         networkbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function simclick(){
+    const svg=document.getElementById("brandid14")
     const simbox=document.getElementById("sim-id")
     if(simbox.style.display==="none"||simbox.style.display===""){
         simbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         simbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function offersclick(){
+    const svg=document.getElementById("brandid15")
     const offersbox=document.getElementById("offers-id")
     if(offersbox.style.display==="none"||offersbox.style.display===""){
         offersbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         offersbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function featuresclick(){
+    const svg=document.getElementById("brandid16")
     const featuresbox=document.getElementById("features-id")
     if(featuresbox.style.display==="none"||featuresbox.style.display===""){
         featuresbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         featuresbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function typeclick(){
+    const svg=document.getElementById("brandid17")
     const typebox=document.getElementById("type-id")
     if(typebox.style.display==="none"||typebox.style.display===""){
         typebox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         typebox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function cores(){
+    const svg=document.getElementById("brandid18")
     const corebox=document.getElementById("no-of-cores-id")
     if(corebox.style.display==="none"||corebox.style.display===""){
         corebox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         corebox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function availabilityclick(){
+    const svg=document.getElementById("brandid19")
     const availabilitybox=document.getElementById("availability-id")
     if(availabilitybox.style.display==="none"||availabilitybox.style.display===""){
         availabilitybox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         availabilitybox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function discountclick(){
+    const svg=document.getElementById("brandid20")
     const discountbox=document.getElementById("discount-id")
     if(discountbox.style.display==="none"||discountbox.style.display===""){
         discountbox.style.display="block"
+         svg.style.transform="rotate(90deg)"
     }else{
         discountbox.style.display="none"
+        svg.style.transform="rotate(-90deg)"
     }
 }
 function osversionclick(){
+    const svg=document.getElementById("brandid21")
     const osversionbox=document.getElementById("os-version-id")
     if(osversionbox.style.display==="none"||osversionbox.style.display===""){
        osversionbox.style.display="block"
+        svg.style.transform="rotate(90deg)"
     }else{
        osversionbox.style.display="none"
+       svg.style.transform="rotate(-90deg)"
     }
 }
 function clockclick(){
+    const svg=document.getElementById("brandid22")
     const clockbox=document.getElementById("clock-id")
     if(clockbox.style.display==="none"||clockbox.style.display===""){
        clockbox.style.display="block"
+        svg.style.transform="rotate(90deg)"
     }else{
        clockbox.style.display="none"
+       svg.style.transform="rotate(-90deg)"
     }
 }
 
@@ -256,6 +328,7 @@ function electromouse1(){
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
+   
 }
 function electroout1(){
     const font1=document.getElementById("sub1")
@@ -626,12 +699,13 @@ const data = [
 
 
     clone.querySelector(".product-img").src = item.image;
-    clone.querySelector("#title").textContent = item.title;
+    clone.querySelector(".titleclass").textContent = item.title;
     clone.querySelector(".memory").textContent = item.memory;
     clone.querySelector(".display").textContent = item.display;
     clone.querySelector(".frontcamera").textContent = item.frontcamera;
     clone.querySelector(".battery").textContent = item.battery;
     clone.querySelector(".processor").textContent = item.processor;
+    clone.querySelector(".charger").textContent=item.charger
     clone.querySelector(".warrenty").textContent = item.warrenty;
     clone.querySelector(".flip-cart-img" ).src=item.flipimage;
     clone.querySelector(".price").textContent=item.price;
@@ -655,20 +729,25 @@ const data = [
 
 
   //---TITLE OVER---------------
-  function titleover(){
-    const titles=document.getElementById("title")
-    if(titles.style.color==="black"){
-        titles.style.color="blue"
-    }else{
-        titles.style.color="black"
-    }
-}
+//   function titleover(){
+//     const titles=document.getElementById("title")
+//     if(titles.style.color==="black"){
+//         titles.style.color="blue"
+//     }else{
+//         titles.style.color="black"
+//     }
+// }
 
   
+function fulltext(){
+    const fulltextover=document.getElementById("homehover2")
+    fulltextover.textContent="mobiles & Accessories"
+}
 
-
-
-
+function fullhide(){
+    const fulltextover=document.getElementById("homehover2")
+    fulltextover.textContent="mobiles & A..."
+}
 
 
 
@@ -707,3 +786,93 @@ const data = [
 
 
   
+function popular(){
+    const pop=document.getElementById("popular-id")
+     const low=document.getElementById("low-high-id")
+     const newer=document.getElementById("newest-id")
+     const high=document.getElementById("high-low-id")
+    if(pop.style.color==="" || "black"){
+        (pop.style.color="blue" )&&( pop.style.borderBottom="2px solid blue")
+    }if (low.style.color==="blue" || ""){
+        (low.style.color="black")&&(low.style.borderBottom="none")
+    }if(low.style.color==="black"){
+        low.style.color="black"
+    }else if(newer.style.color==="blue"){
+        (newer.style.color="black")&&(newer.style.borderBottom="none")
+    }if(pop.style.color==="blue"){
+        (newer.style.color="black")&&(newer.style.borderBottom="none")
+
+    }
+     if(pop.style.color==="blue"){
+        (high.style.color="black")&&(high.style.borderBottom="none")
+
+     }   
+
+
+
+}
+function lowhigh(){
+    const low=document.getElementById("low-high-id")
+    const pop=document.getElementById("popular-id")
+    const newer=document.getElementById("newest-id")
+    const high=document.getElementById("high-low-id")
+
+     if(low.style.color===""|| "black"){
+        (low.style.color="blue")&&(low.style.borderBottom="2px solid blue")
+    }
+    if(high.style.color==="blue"){
+        (high.style.color="black")&&(high.style.borderBottom="none")
+    }
+    if(pop.style.color==="blue"){
+        (pop.style.color="black")&&(pop.style.borderBottom="none")
+    }
+    if(newer.style.color==="blue"){
+        (newer.style.color="black")&&(newer.style.borderBottom="none")
+    }
+   
+}   
+function highlow(){
+    const high=document.getElementById("high-low-id")
+    const low=document.getElementById("low-high-id")
+    const pop=document.getElementById("popular-id")
+    const newer=document.getElementById("newest-id")
+
+     if(high.style.color===""|| "black"){
+        (high.style.color="blue")&&(high.style.borderBottom="2px solid blue")
+    }
+     if(high.style.color==="blue"){
+        (pop.style.color="black")&&(pop.style.borderBottom="none")
+    }
+   
+    if(low.style.color==="blue"){
+        (low.style.color="black")&&(low.style.borderBottom="none")
+    }
+    if(high.style.color==="blue"){
+        (newer.style.color="black")&&(newer.style.borderBottom="none")
+    }
+     if(high.style.color==="blue"){
+        (pop.style.color="black")&&(pop.style.borderBottom="none")
+    }
+
+    
+}
+function newestfirst(){
+    const newer=document.getElementById("newest-id")
+    const high=document.getElementById("high-low-id")
+    const pop=document.getElementById("popular-id")
+     const low=document.getElementById("low-high-id")
+
+    if(newer.style.color===""||"black"){
+        (newer.style.color="blue")&&(newer.style.borderBottom="2px solid blue")&&(high.style.color="black")&&(high.style.borderBottom="none")
+
+    }
+    if(pop.style.color==="blue" || "black"){
+        (pop.style.color="black")&&(pop.style.borderBottom="none")
+    }
+    if(newer.style.color==="blue"){
+        (low.style.color="black")&&(low.style.borderBottom="none")
+    }
+}
+
+
+
