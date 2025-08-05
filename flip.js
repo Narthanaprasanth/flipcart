@@ -687,11 +687,6 @@ const data = [
 
   const container = document.getElementById("container");
   const template = document.getElementById("templates").firstElementChild;
-
-
-
-  
-  
  
   data.forEach(item => {
     const clone = template.cloneNode(true);
@@ -876,3 +871,10 @@ function newestfirst(){
 
 
 
+
+function motorola(){
+    const motorilaid=document.getElementById("motorolaid")
+}
+
+
+ 

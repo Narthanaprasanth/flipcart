@@ -215,11 +215,11 @@
                 <div class="Search-sign">
                     <div class="searching-box">
                     <svg width="12" height="20" viewBox="0 0 17 18" xmlns="http://www.w3.org/2000/svg"><g fill="grey" fill-rule="evenodd"><path class="JVQyl9" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="JVQyl9" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
-                    <input class="searching" type="text" placeholder="Search Brand"><br>
+                    <input onclick="searchclick" class="searching" id="searchid" type="text" placeholder="Search Brand"><br>
                     </div>
                     <div><label class="brand-label"><input type="checkbox">Apple</label></div></BR>
                     <div><label class="brand-label"><input type="checkbox">Google</label></div><br>
-                    <div><label class="brand-label"><input type="checkbox">MOTOROLA</label></div>
+                    <div><label class="brand-label"><input type="checkbox" id="motorolaid" onclick="motorolaclick()">MOTOROLA</label></div>
                 </div>
             </div>
             </div>     
@@ -565,13 +565,13 @@
                     </div>
                     <div class="next">
                      <h1 class="mobile-heading">Mobiles</h1>
-                        <span class="bracket">(Showing 1-24 products of 11,618 products)</span>
+                        <span class="bracket">(Showing 1-24 products of 11,707 products)</span>
                         </div>
                         <div class="sort">
                             <span class="sort-by">Sort By</span>
                             <span class="popularity" id="popular-id" onclick="popular()">Popularity</span>
-                            <span class="low-high" id="low-high-id" onclick="lowhigh()">Price--Low to high</span>
-                            <span class="hgih-low" id="high-low-id" onclick="highlow()">price--High to low</span>
+                            <span class="low-high" id="low-high-id" onclick="lowhigh()">Price -- Low to high</span>
+                            <span class="hgih-low" id="high-low-id" onclick="highlow()">price -- High to Low</span>
                             <span class="newest" id="newest-id" onclick="newestfirst()">Newest First</span>
                         </div>
                         </div> 
@@ -585,7 +585,7 @@
   <div class="card" style="display: flex; flex-direction: row;  border-bottom: 1px solid rgb(231, 228, 228); padding: 24px 0px 30px 24px;  width: 100%;">
     <div class="pic-phone">     
       <img class="product-img" width="150px" alt="" style="margin-left: 25px;">
-      <div style="margin-top: 16px;"><label  style="font-size: 14px; color: #212121;"> <input type="checkbox" style="margin-right: 8px;">Add to Compare</label></div>
+      <div style="margin-top: 16px;"><label  style="font-size: 13px; color: #212121; font-family: regular;"> <input type="checkbox" style="margin-right: 8px;">Add to Compare</label></div>
     </div>
             <!-- <svg xmlns="http://www.w3.org/2000/svg" class="N1bADF" width="16" height="16" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="grey" class="x1UMqG" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg> -->
 
@@ -607,7 +607,7 @@
   <path d="M12 2L14.945 8.757L22.25 9.63L17 14.57L18.39 21.84L12 18L5.61 21.84L7 14.57L1.75 9.63L9.055 8.757L12 2Z"/>
 </svg>
 </div></div> 
-        <div class="reviews&rating" style="color: #878787; display: flex; flex-direction: row; padding-left: 8px; font-size: 14px; font-weight: 800;" > 
+        <div class="reviews&rating" style="color: #878787; display: flex; flex-direction: row; padding-left: 8px; font-size: 13px; font-weight: 800;" > 
         <div class="stars" style="color: #878787;" ></div>
          Ratings  & &nbsp; 
         <div class="review" style="color: #878787;">1,171</div>   
@@ -634,28 +634,36 @@
 
      <div class="present"> <p class="tagline" style="margin-top: 5px; height: fit-content; width: fit-content; padding: 4px; border-radius: 2px; background-color: rgb(233, 222, 255); color: rgb(112, 72, 198); font-size: 12px; font-style: normal;"></p></div>
       <div class="exchange-mix" style="display: flex; flex-direction: row;">
-     <div style="color: black; font-size: 14px;">Upto &nbsp;</div>  <div class="exchange" style="color: black; font-size: 14px; font-weight: 800;"> </div> <div style="color: black; font-size: 14px;">&nbsp; off on exchange</div> 
+     <div class="upto" style="color: black; font-size: 13px;">Upto &nbsp;</div>  <div class="exchange" style="color: black; font-size: 13px; font-weight: 800; font-family:regular ;"> </div> <div class="off" style="color: black; font-size: 13px;">&nbsp; Off on Exchange</div> 
      </div>
           <div class="bankoffer" style="color: rgb(38, 165, 65); font-weight: 800; font-size: 14px; margin-top: 5px;">Bank Offer</div>
     </div>
     </div>
   </div>
-</div>                    
+</div>    
+<div class="last">  
+<div class="end" style="font-size: 13px; font-family: regular;"><span>Page 1 of 488</span></div>    
+<div class="end1" style="font-family: semibold;gap: 22px; font-weight:800; font-size: 13px;"><div class="endone">1</div>  <div>2</div><div>3</div>  <div>4</div> <div>5</div> <div>6</div>  <div>7</div> <div>8</div> <div>9</div>  <div>10</div> </div>   
+</div>       
     </section>
-    </section>  
-    
+
+    </section>
 
     <script src="flip.js"></script>
 
 
     
-</body>
-</html>
+</body>          
+</html>     
+       
      
 
 
 
 
+
+
+ 
 
     <!-- MODEL -->
 <!-- <div id="container"> -->
