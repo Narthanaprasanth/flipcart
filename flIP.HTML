@@ -10,7 +10,6 @@
     <header class="header">
             <div class="first"></div>
             <div class="header-content">
-
                 <div class="flip">
                     <img src="img/flip.png" width="75px" height="20px">
                     <div class="explore-plus">
@@ -18,39 +17,56 @@
                         <span>Plus</span>
                         <img src="img/explore.png" width="10px" height="10px">
                     </div>
-                </div>
+                </div>  
                 <div class="input-btn">
-              <input type="text" class="search-bar" placeholder="    Search for products, brands and more" >
+              <input type="text" class="search-bar" id="searchid" style="font-family: regular; outline: none;padding: 0px 16px;" placeholder="Search for products, brands and more">
               <svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="EwE-Fa" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="EwE-Fa" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
                 </div>
-              <button class="login-btn">Login</button>
-
+              <button class="login-btn" onmouseover="log()">Login</button>
+              
               <div class="nav-link">
                 <a href="#">Become a Seller</a>
-                <a href="#">More <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="-dC5Le"></path></svg></a>
-                <a href="#"> <svg class="GAbRIN" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="cziJ98" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg> Cart</a>
+                <a href="#" class="mored" id="moreid" onmouseover="moreclick()" style="position: relative; left: 20px;">More&nbsp;&nbsp;<svg id="svgid" width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="-dC5Le"></path></svg></a>
+                <a href="#" style="position: relative; left: 45px;"> <svg style= "position: relative;top:2px" class="GAbRIN" width="18" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="cziJ98" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg>&nbsp;&nbsp;Cart</a>
               </div>
-
                 </div>
-            <div class="second"></div>
-    </header>
-                  
-    <!-- 2ND HEADER -->
+                <div class="more-container" id="more-id" onmouseover="clicked()" style="width: 100%;">
+                    <div class="morebelow"  id="mousebelow" style="width: 230px; height: 200px; background-color: white; position: relative;left: 1300px;">
+                        <div class="more-cont"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class="" viewBox="0 0 12 14"><g fill="none" fill-rule="evenodd"><path d="M-4-3h20v20H-4z"></path><path fill="#2874F1" d="M6.17 13.61c-1.183 0-1.922-.723-1.922-1.88H8.09c0 1.157-.74 1.88-1.92 1.88zm4.222-5.028l1.465 1.104v1.07H0v-1.07l1.464-1.104v-2.31h.004c.035-2.54 1.33-4.248 3.447-4.652V.992C4.915.446 5.37 0 5.928 0c.558 0 1.014.446 1.014.992v.628c2.118.404 3.412 2.112 3.446 4.65h.004v2.312z"></path></g></svg><span style="margin: 0px 0px 0px 12px;"> Notification Preferences</span></div>
+                        <div class="more-cont"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="" viewBox="0 0 14 17"><g fill="none" fill-rule="evenodd"><path fill="#2874F0" fill-rule="nonzero" d="M12.25.542H1.75c-.833 0-1.5.675-1.5 1.5v10.5c0 .825.667 1.5 1.5 1.5h3L7 16.292l2.25-2.25h3c.825 0 1.5-.675 1.5-1.5v-10.5c0-.825-.675-1.5-1.5-1.5zm-4.5 12h-1.5v-1.5h1.5v1.5zM9.303 6.73l-.676.69c-.54.547-.877.997-.877 2.122h-1.5v-.375c0-.825.338-1.575.877-2.123l.93-.945c.278-.27.443-.646.443-1.058 0-.825-.675-1.5-1.5-1.5s-1.5.675-1.5 1.5H4c0-1.658 1.342-3 3-3s3 1.342 3 3c0 .66-.27 1.26-.697 1.687z"></path></g></svg><span style="margin: 0px 0px 0px 12px;"> 24 * 7 Customer Care</span></div>
+                        <div class="more-cont"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class="" viewBox="0 0 18 10"><g fill="none" fill-rule="evenodd"><path fill="#2874F0" fill-rule="nonzero" d="M12.333 0l1.91 1.908-4.068 4.067-3.333-3.333L.667 8.825 1.842 10l5-5 3.333 3.333 5.25-5.24L17.333 5V0"></path></g></svg><span style="margin: 0px 0px 0px 12px;">Advertise</span> </div>
+                        <div class="more-cont"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class="" viewBox="0 0 12 14"><g fill="none" fill-rule="evenodd"><path d="M-4-3h20v20H-4z"></path><path fill="#2874F0" fill-rule="nonzero" d="M12 4.94H8.57V0H3.43v4.94H0l6 5.766 6-5.765zM0 12.354V14h12v-1.647H0z"></path></g></svg><span> Download App </span> </div>
+                        <div></div>
+                    </div>
+                </div> 
+               <div class="login-container" id="logid" style="width: 100%;">
+                <div class="loginbelow" style="width: 230px; background-color: white; position: relative; left: 1000px; ;">
+                    <div class="login-cont" style="display: flex; justify-content: space-between;"> <h1>New Customer?</h1> <a style="color: blue;">Sign Up</a> </div>
+                    <div class="login-cont"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="" viewBox="0 0 16 14"><path fill="#2874F1" fill-rule="nonzero" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm0 2c1.107 0 2 .894 2 2 0 1.107-.893 2-2 2s-2-.893-2-2c0-1.106.893-2 2-2zM7 11.8a4.8 4.8 0 0 1-4-2.147C3.02 8.327 5.667 7.6 7 7.6c1.327 0 3.98.727 4 2.053A4.8 4.8 0 0 1 7 11.8z"></path></svg><span>My Profile</span></div>
+                    <div class="login-cont"><svg width="16" height="16" class="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g id="Desktop_VIP" stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(7.873 .143)"><path d="M6.484 4.94s2.476 1.227 3.698 1.748c1.188.506 1.323 2.4.016 3.04-1.307.64-1.67.744-1.67.744s.208-.53.178-1.044c-.085-.914-2.787-1.656-4.576-2.094 0 0-1.375-4.311-1.995-5.512C1.509.612.242.11.242.11l2.995.04s1.03-.05 1.488 1.055c.456 1.106 1.76 3.734 1.76 3.734" fill="#2873F0" mask="url(#b)"></path></g><g transform="translate(8.635 8.27)"><path d="M5.547 6.265S4.334 8.713 3.8 9.965c-.507 1.187-2.44 1.322-3.079.015C.081 8.673.015 8.44.015 8.44s.387.076 1 .048c.915-.084 1.7-2.786 2.138-4.575 0 0 4.311-1.377 5.513-1.997 1.21-.624 1.71-1.892 1.71-1.892l-.04 3.44s.05.587-1.055 1.044c-1.105.455-3.734 1.757-3.734 1.757" fill="#2873F0" mask="url(#d)"></path></g><g transform="translate(0 8.778)"><path d="M4.655 5.573S2.193 4.353.956 3.826C-.232 3.32-.367 1.423.94.786 2.248.145 2.774.026 2.774.026s-.34.545-.255 1.157C2.606 2.1 5.22 2.74 7.008 3.179c0 0 1.427 4.287 1.997 5.513.695 1.493 1.848 1.72 1.848 1.72l-3.396-.05s-.585.05-1.042-1.055c-.458-1.106-1.76-3.734-1.76-3.734" fill="#2873F0" mask="url(#f)"></path></g><g transform="translate(0 .143)"><path d="M4.857 4.754s1.219-2.46 1.747-3.699c.506-1.188 2.4-1.321 3.04-.016.64 1.308.701 1.544.701 1.544s-.482.007-.993.035c-.916.087-1.663 2.702-2.101 4.49 0 0-4.296 1.405-5.513 1.996C.066 9.916 0 10.957 0 10.957l.068-3.4s-.05-.586 1.055-1.043c1.105-.457 3.734-1.76 3.734-1.76" fill="#2873F0" mask="url(#h)"></path></g></g></svg><span>FlipKart Plus Zone</span></div>
+                    <div class="login-cont"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" class="" viewBox="0 0 16 12"><g fill="none" fill-rule="evenodd"><path fill="#2874F1" d="M6.038 11.682h8.407c.565 0 1.018-.38 1.13-.855V.847H.426v9.98c0 .475.452.855 1.017.855h2.232v-2.98H1.94L4.776 6l2.996 2.703H6.038v2.98z"></path></g></svg><span>Orders</span></div>
+                    <div class="login-cont"><svg xmlns="http://www.w3.org/2000/svg" class="" width="16" height="14" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#2874F0" class="" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg><span>Wishlist</span></div>
+                    <div class="login-cont"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" class="" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M0 0h16v16H0z"></path><path fill="#2874F0" d="M16 9.25v2.5c0 .69-.597 1.25-1.333 1.25H1.333C.597 13 0 12.44 0 11.75v-2.5c.736 0 1.333-.56 1.333-1.25S.736 6.75 0 6.75v-2.5C0 3.56.597 3 1.333 3h13.334C15.403 3 16 3.56 16 4.25v2.5c-.736 0-1.333.56-1.333 1.25S15.264 9.25 16 9.25zM4.4 3.625v1.25h.533v-1.25H4.4zm0 2.5v1.25h.533v-1.25H4.4zm0 2.5v1.25h.533v-1.25H4.4zm0 2.5v1.25h.533v-1.25H4.4z"></path></g></svg><span>Rewards</span></div>
+                    <div class="login-cont"> <svg width="16" height="16" class="" viewBox="0 0 23 22" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" transform="translate(-9.694 -9)"><ellipse cx="20.557" cy="20" rx="20.557" ry="20"></ellipse><path d="M7 6h28v28H7z"></path><path fill="#2874F0" fill-rule="nonzero" d="M31.5 27v1.167a2.34 2.34 0 0 1-2.333 2.333H12.833a2.333 2.333 0 0 1-2.333-2.333V11.833A2.333 2.333 0 0 1 12.833 9.5h16.334a2.34 2.34 0 0 1 2.333 2.333V13H21a2.333 2.333 0 0 0-2.333 2.333v9.334A2.333 2.333 0 0 0 21 27h10.5zM21 24.667h11.667v-9.334H21v9.334zm4.667-2.917c-.97 0-1.75-.782-1.75-1.75s.78-1.75 1.75-1.75c.968 0 1.75.782 1.75 1.75s-.782 1.75-1.75 1.75z"></path></g></svg><span>Gift Cards</span></div>
+                </div>   
+               </div> 
+    </header>   
+      <!-- 2ND HEADER -->
     <div class="sub-head-containter">
             <div class="mini">
-                <span id="sub" class="electronics" onmouseenter="electromouse()"  onmouseleave="electroout()">Electronics   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
-                <span id="sub1" class="tv" onmouseover="electromouse1()"  onmouseout="electroout1()">TVs & Appliances    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
-                <span id="sub2" class="men" onmouseover="electromouse2()"  onmouseout="electroout2()">Men   <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
-                <span id="sub3" class="women" onmouseover="electromouse3()"  onmouseout="electroout3()">Women    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
-                <span id="sub4" class="Baby&kids" onmouseover="electromouse4()"  onmouseout="electroout4()">Baby & Kids    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
-                <span id="sub5" class="Home & Furnitre" onmouseover="electromouse5()"  onmouseout="electroout5()">Home & Furnitre    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="CPYntE"></path></svg></span>
-                <span id="sub6" class="Sports,Books&More" onmouseover="electromouse6()"  onmouseout="electroout6()">Sports, Books & More    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub" class="electronics" onmouseenter="electromouse()"  onmouseleave="electroout()">Electronics &nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub1" class="tv" onmouseover="electromouse1()"  onmouseout="electroout1()">TVs & Appliances&nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub2" class="men" onmouseover="electromouse2()"  onmouseout="electroout2()">Men &nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub3" class="women" onmouseover="electromouse3()"  onmouseout="electroout3()">Women &nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub4" class="Baby&kids" onmouseover="electromouse4()"  onmouseout="electroout4()">Baby & Kids &nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub5" class="Home & Furnitre" onmouseover="electromouse5()"  onmouseout="electroout5()">Home & Furniture &nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="CPYntE"></path></svg></span>
+                <span id="sub6" class="Sports,Books&More" onmouseover="electromouse6()"  onmouseout="electroout6()">Sports, Books & More &nbsp;<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
                 <span id="sub7" class="Flights" onmouseover="electromouse7()"  onmouseout="electroout7()">Flights    </span>
                 <span id="sub8" class="Offer Zone" onmouseover="electromouse8()"  onmouseout="electroout8()" >Offer Zone    </span>
            </div>
            </div>
 
-    <!-- ELECTRONICS-BOX -->
+    <!-- ELECTRONICS-BOX -->                                           
      <div  class="main-cont" id="eachid" onmouseenter="boxmouse()">
      <div class="inside-container" id="some" >
         <div class="inside" >
@@ -70,8 +86,8 @@
            <a href="#" class="mob-1">Motorola razr</a>
            <a href="#" class="mob-1">realme Narzo 10A</a>
            <a href="#" class="mob-1">Motorola g8 power lite</a>
-
-        </div>
+       
+        </div>                     
         <div class="inside-2">
            <h1><a style="color: black; text-decoration: none; padding: 10px; padding-left: 0px;" href="#" class="accessory">Mobile Accessories</a></h1> 
             <a href="#" class="accessory">Mobile Cases</a>
@@ -152,6 +168,7 @@
         </div>
      </div>
      </div>
+     <section main-body>
     
     <section class="body">
         <section class="side-bar">
@@ -222,11 +239,11 @@
                     <div><label class="brand-label"><input type="checkbox" id="motorolaid" onclick="motorolaclick()">MOTOROLA</label></div>
                 </div>
             </div>
-            </div>     
-            <!-- F-ASSURED -->
+            </div>
+            <!-- F-ASSURED -->  
             <div class="f-assured">
                 <div class="check">
-                <input type="checkbox" >
+                <input type="checkbox"  >
                 <img src="img/f-assurerd.png" alt="" height="21px" style="padding-left: 11px;">
                 </div>
                 <div class="questionmark"><span>?</span></div>
@@ -243,7 +260,7 @@
             </div>
             <!-- GST-INVOICE AVAILABLE -->
              <div class="main-gst">
-              <div class="gst-invoice" onclick="gstclick()">GSTINVOICE AVAILABLE
+              <div class="gst-invoice" onclick="gstclick()">GST INVOICE AVAILABLE
                 <svg id="brandid2" width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="grey" class="SV+H35"></path></svg>
             </div>
             <div class="gst-filter" id="gst-id">
@@ -548,38 +565,37 @@
             </div>
             </div>
         </section>
-        <section class="main-body">
+        <section class="main-body"> 
+            <section class="main-body1">
             <div class="body-head">
                 <div class="home-one">
                     <a class="home-svg" id="homehover1" href="#">Home </a>
                     <svg  width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="home-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="wMLTcO"></path></svg>
                     
                     
-                    <a class="mobile-svg" id="homehover2" onmouseover="fulltext()" onmouseleave="fullhide()" href="#">Mobile &  A... </a>
+                    <a class="mobile-svg" id="homehover2" onmouseover="fulltext()" onmouseleave="fullhide()" href="#">Mobiles &  A...&nbsp;</a>
                     <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="mobile-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="wMLTcO"></path></svg>
                         
                         
                     <a class="mob-svg" id="homehover3" href="#">Mobiles</a>
                     <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="mob-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="wMLTcO"></path></svg>
-                    
                     </div>
                     <div class="next">
                      <h1 class="mobile-heading">Mobiles</h1>
-                        <span class="bracket">(Showing 1-24 products of 11,707 products)</span>
+                        <span class="bracket">(Showing 1 – 24 products of 11,723 products)</span>
                         </div>
                         <div class="sort">
                             <span class="sort-by">Sort By</span>
                             <span class="popularity" id="popular-id" onclick="popular()">Popularity</span>
                             <span class="low-high" id="low-high-id" onclick="lowhigh()">Price -- Low to high</span>
-                            <span class="hgih-low" id="high-low-id" onclick="highlow()">price -- High to Low</span>
+                            <span class="hgih-low" id="high-low-id" onclick="highlow()">Price -- High to Low</span>
                             <span class="newest" id="newest-id" onclick="newestfirst()">Newest First</span>
                         </div>
                         </div> 
-                       
-                       <!-- Container where cards will be added -->
-<!-- Main container for cards -->
+                      
+<!-- Main container for cards -- Container where each will be added -->
 <div id="container"></div>
-
+ 
 <!-- Hidden template -->
 <div id="templates" style="display: none;">
   <div class="card" style="display: flex; flex-direction: row;  border-bottom: 1px solid rgb(231, 228, 228); padding: 24px 0px 30px 24px;  width: 100%;">
@@ -629,41 +645,139 @@
       </div>
       <div class="discount-mix" style="display: flex; flex-direction: row;">
         <div class="strike" style="text-decoration: line-through; font-size: 14px; color: #878787;"> <p></p></div>
-        <div class="discount" style="margin-left: 8px; color:  #388e3c; font-size: 13px; letter-spacing: -.2px; font-weight: 800;"><p></p></div>
+        <div class="discount" style="margin-left: 8px; color:  #388e3c; font-size: 13px; letter-spacing: -.2px; font-weight: 800; font-family: regular;"><p></p></div>
       </div>
 
-     <div class="present"> <p class="tagline" style="margin-top: 5px; height: fit-content; width: fit-content; padding: 4px; border-radius: 2px; background-color: rgb(233, 222, 255); color: rgb(112, 72, 198); font-size: 12px; font-style: normal;"></p></div>
+     <div class="present"> <p class="tagline" style="margin: 3px; height: fit-content; width: fit-content; padding: 4px; border-radius: 2px; background-color: rgb(233, 222, 255); color: rgb(112, 72, 198); font-size: 12px; font-style: normal; font-family: semibold; font-weight: 500;"></p></div>
       <div class="exchange-mix" style="display: flex; flex-direction: row;">
      <div class="upto" style="color: black; font-size: 13px;">Upto &nbsp;</div>  <div class="exchange" style="color: black; font-size: 13px; font-weight: 800; font-family:regular ;"> </div> <div class="off" style="color: black; font-size: 13px;">&nbsp; Off on Exchange</div> 
      </div>
-          <div class="bankoffer" style="color: rgb(38, 165, 65); font-weight: 800; font-size: 14px; margin-top: 5px;">Bank Offer</div>
+          <div class="bankoffer" style="color: rgb(38, 165, 65); font-weight: 800; font-size: 13px; margin-top: 5px; font-family:regular;">Bank Offer</div>
     </div>
     </div>
   </div>
 </div>    
-<div class="last">  
+<div class="last">      
 <div class="end" style="font-size: 13px; font-family: regular;"><span>Page 1 of 488</span></div>    
-<div class="end1" style="font-family: semibold;gap: 22px; font-weight:800; font-size: 13px;"><div class="endone">1</div>  <div>2</div><div>3</div>  <div>4</div> <div>5</div> <div>6</div>  <div>7</div> <div>8</div> <div>9</div>  <div>10</div> </div>   
-</div>       
+<div class="end1" style="font-family: semibold;gap: 22px; font-weight:800; font-size: 13px;"><div class="endone"><span>1</span></div>  <div>2</div><div>3</div>  <div>4</div> <div>5</div> <div>6</div>  <div>7</div> <div>8</div> <div>9</div>  <div>10</div> <div class="nexts" style="color: #2874f0;">NEXT</div> </div>   
+</div>     
     </section>
-
+    <section class="main-body2">
+         <div class="last-container">
+    <div class="writings">
+        <span>Did you find what you were looking for</span>
+    </div>
+    <div class="yesno"><span class="yes">Yes</span> <span class="no">No</span></div>
+</div>
     </section>
+    </section>
+    </section>
+    <footer class="footer-container">
+        <div class="footer-sub"  >
+            <div class="about">
+                <div class="about-text"> <span>ABOUT</span> </div>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Flipkart Stories</a>
+                <a href="#">Press</a>
+                <a href="#">Corporate information</a>
+               
+            </div>
+            <div class="about">
+                <div class="about-text"> <span>GROUP COMPANIES</span> </div>
+                <a href="#">Myntra</a>
+                <a href="#">Cleartrip</a>
+                <a href="#">Shopsy</a>
+            </div>
+            <div class="about">
+                <div class="about-text"><span>HELP</span></div>
+                <a href="#">Payments</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="about">
+                <div class="about-text"> <span>CONSUMER POLICY</span> </div>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">Terms Of Use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Grievance Redressal</a>
+                <a href="#"> EPR Compliance</a>
+            </div>
+            <div class="about" style="border-left: 1px solid #454d5e; padding: 0px 25px;">
+            <div class="about-text"> <span>Mail Us:</span> </div>
+            <a href="#">Flipkart Internet Private Limited,</a>
+            <a href="#"> Bulding Alyssa, Begonia &</a>
+            <a href="#"> Clove Embassy Tech Village, </a>
+            <a href="#"> Outer Ring Road, Devarabeesanahalli Village, </a>
+            <a href="#"> Bengaluru, 560103, </a>
+            <a href="#"> Karnataka, India</a>
+            <div class="social-main">
+                <div class="about-text"><span>Social</span></div>
+                <div class="social">
+                   <img style="padding: 2px; margin-right: 16px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjkzMzEgMjFDMTcuOTAzNyAyMSAyMS45MzMxIDE2Ljk3MDYgMjEuOTMzMSAxMkMyMS45MzMxIDcuMDI5NDQgMTcuOTAzNyAzIDEyLjkzMzEgM0M3Ljk2MjU0IDMgMy45MzMxMSA3LjAyOTQ0IDMuOTMzMTEgMTJDMy45MzMxMSAxNi45NzA2IDcuOTYyNTQgMjEgMTIuOTMzMSAyMVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE2LjY4MzEgOC4yNUgxNS4xODMxQzE0LjU4NjQgOC4yNSAxNC4wMTQxIDguNDg3MDUgMTMuNTkyMSA4LjkwOTAxQzEzLjE3MDIgOS4zMzA5NyAxMi45MzMxIDkuOTAzMjYgMTIuOTMzMSAxMC41VjIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik05LjkzMzExIDEzLjVIMTUuOTMzMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" height="24" width="24">
+                   <img  style="padding: 2px; margin-right: 16px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4M18yMCkiPgo8cGF0aCBkPSJNMTMuNTQzNiAxMC42MTc5TDIwLjA5NzEgM0gxOC41NDQxTDEyLjg1MzcgOS42MTQ0OEw4LjMwODg3IDNIMy4wNjY4OUw5LjkzOTY0IDEzLjAwMjNMMy4wNjY4OSAyMC45OTA4SDQuNjE5OTRMMTAuNjI5MSAxNC4wMDU2TDE1LjQyODggMjAuOTkwOEgyMC42NzA4TDEzLjU0MzIgMTAuNjE3OUgxMy41NDM2Wk0xMS40MTY1IDEzLjA5MDRMMTAuNzIwMiAxMi4wOTQ0TDUuMTc5NTMgNC4xNjkxMUg3LjU2NDkxTDEyLjAzNjMgMTAuNTY1MUwxMi43MzI2IDExLjU2MTFMMTguNTQ0OCAxOS44NzQ4SDE2LjE1OTVMMTEuNDE2NSAxMy4wOTA4VjEzLjA5MDRaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE4M18yMCI+CjxyZWN0IHg9IjMuMDY2ODkiIHk9IjMiIHdpZHRoPSIxNy42MDM5IiBoZWlnaHQ9IjE4IiByeD0iMC4yIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=" height="24" width="24">
+                   <img  style="padding: 2px; margin-right: 16px;" src="img/YoutubeLogo_958b78.svg" alt="">
+                   <img  style="padding: 2px; margin-right: 16px;" src="img/InstagramLogo_854a2c.svg" width="20px" height="20px" alt="">
+                   
+                </div>
+            </div>
+            </div>
 
+            <div class="about">
+            <div class="about-text"> <span>Registered Office Address:</span> </div>
+            <a href="#">Flipkart Internet Private Limited,</a>
+            <a href="#"> Bulding Alyssa, Begonia &</a>
+            <a href="#"> Clove Embassy Tech Village, </a>
+            <a href="#"> Outer Ring Road, Devarabeesanahalli Village, </a>
+            <a href="#"> Bengaluru, 560103, </a>
+            <a href="#"> Karnataka, India</a>
+            <a href="#"> CIN : U51109KA2012PTC066107 </a>
+            <div class="tele" style="display: flex;">
+            <a href="#">Telephone: <a href="#" style="color: #2874f0;">044-45614700 </a> <a href="#" style="color: white;"> &nbsp;/ &nbsp;  </a> <a href="#" style="color: #2874f0;">  044-67415800</a></a>
+            </div>
+            </div>
+        </div>
+
+        <div class="bottom-container">
+            <div class="bottom-inner">
+                <div class="content">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTJoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuOTMgNS42MTRoLTIuOTQ4VjQuMTRjMC0uODE4LS42NTUtMS40NzMtMS40NzMtMS40NzNIOC41NmMtLjgxNyAwLTEuNDczLjY1NS0xLjQ3MyAxLjQ3M3YxLjQ3NEg0LjE0Yy0uODE4IDAtMS40NjYuNjU2LTEuNDY2IDEuNDc0bC0uMDA3IDguMTA1YzAgLjgxOC42NTUgMS40NzQgMS40NzMgMS40NzRoMTEuNzljLjgxOCAwIDEuNDc0LS42NTYgMS40NzQtMS40NzRWNy4wODhjMC0uODE4LS42NTYtMS40NzQtMS40NzQtMS40NzR6bS00LjQyMSAwSDguNTZWNC4xNGgyLjk0OHYxLjQ3NHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yIC0yKSIvPgogICAgPC9nPgo8L3N2Zz4K">
+                    <a href="#">Become a Seller</a>
+                </div>
+                <div class="content">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0zLTNoMjB2MjBILTN6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTAuNDkyIDNDNi4zNTMgMyAzIDYuMzYgMyAxMC41YzAgNC4xNCAzLjM1MyA3LjUgNy40OTIgNy41QzE0LjY0IDE4IDE4IDE0LjY0IDE4IDEwLjUgMTggNi4zNiAxNC42NCAzIDEwLjQ5MiAzem0zLjE4IDEyTDEwLjUgMTMuMDg4IDcuMzI3IDE1bC44NC0zLjYwN0w1LjM3IDguOTdsMy42OS0uMzE1TDEwLjUgNS4yNWwxLjQ0IDMuMzk4IDMuNjkuMzE1LTIuNzk4IDIuNDIyLjg0IDMuNjE1eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=">
+                    <a href="#">Advertise</a>
+                </div>
+                <div class="content">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE4IDE3Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0xLTFoMjB2MjBILTF6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTYuNjY3IDVIMTQuODVjLjA5Mi0uMjU4LjE1LS41NDIuMTUtLjgzM2EyLjQ5NyAyLjQ5NyAwIDAgMC00LjU4My0xLjM3NUwxMCAzLjM1bC0uNDE3LS41NjdBMi41MSAyLjUxIDAgMCAwIDcuNSAxLjY2N2EyLjQ5NyAyLjQ5NyAwIDAgMC0yLjUgMi41YzAgLjI5MS4wNTguNTc1LjE1LjgzM0gzLjMzM2MtLjkyNSAwLTEuNjU4Ljc0Mi0xLjY1OCAxLjY2N2wtLjAwOCA5LjE2NkExLjY2IDEuNjYgMCAwIDAgMy4zMzMgMTcuNWgxMy4zMzRhMS42NiAxLjY2IDAgMCAwIDEuNjY2LTEuNjY3VjYuNjY3QTEuNjYgMS42NiAwIDAgMCAxNi42NjcgNXptMCA2LjY2N0gzLjMzM3YtNWg0LjIzNEw1LjgzMyA5LjAyNWwxLjM1Ljk3NSAxLjk4NC0yLjdMMTAgNi4xNjdsLjgzMyAxLjEzMyAxLjk4NCAyLjcgMS4zNS0uOTc1LTEuNzM0LTIuMzU4aDQuMjM0djV6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMSAtMSkiLz4KICAgIDwvZz4KPC9zdmc+Cg==">
+                    <a href="#">Gift Cards</a>
+                </div>
+                <div class="content">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTNoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNOS41IDNDNS4zNiAzIDIgNi4zNiAyIDEwLjUgMiAxNC42NCA1LjM2IDE4IDkuNSAxOGM0LjE0IDAgNy41LTMuMzYgNy41LTcuNUMxNyA2LjM2IDEzLjY0IDMgOS41IDN6bS43NSAxMi43NWgtMS41di0xLjVoMS41djEuNXptMS41NTMtNS44MTNsLS42NzYuNjljLS41NC41NDgtLjg3Ny45OTgtLjg3NyAyLjEyM2gtMS41di0uMzc1YzAtLjgyNS4zMzgtMS41NzUuODc3LTIuMTIzbC45My0uOTQ1Yy4yNzgtLjI3LjQ0My0uNjQ1LjQ0My0xLjA1NyAwLS44MjUtLjY3NS0xLjUtMS41LTEuNVM4IDcuNDI1IDggOC4yNUg2LjVhMyAzIDAgMSAxIDYgMGMwIC42Ni0uMjcgMS4yNi0uNjk3IDEuNjg4eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=">
+                    <a href="#">Help Center</a>
+                </div>
+                <div class="content"> <span>© 2007-2025 Flipcart.com</span></div>
+                <div class="all">
+                    <img src="img/payment-method_69e7ec.svg" alt="">
+                </div>
+            
+               
+            </div>
+        </div>
+    </footer> 
     <script src="flip.js"></script>
-
-
-    
 </body>          
 </html>     
-       
-     
-
-
-
-
-
-
+         
  
+ 
+
+  
+
 
     <!-- MODEL -->
 <!-- <div id="container"> -->

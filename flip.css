@@ -27,7 +27,7 @@ body {
   z-index: 999999;
 }
 .first {
-  width: 124px;
+ min-width: 124px;
 }
 .header-content {
   width: 100%;
@@ -35,7 +35,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 11px;
   height: 56px;
   align-items: center;
   margin-left: 360px;
@@ -46,38 +46,60 @@ body {
 .flip {
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
 }
 .explore-plus {
-  font-size: 11px;
-  font-style: italic;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 0;
+  letter-spacing: 0.2px;
+}
+.explore-plus:hover{
+  text-decoration: underline;
+  color: white;
+ 
 }
 .explore-plus a {
   color: white;
   text-decoration: none;
+  font-family: "italic";
 }
 .explore-plus span {
   color: #ffe500;
+  font-weight: 500;
+  font-family: "semibold italic";
 }
 .login-btn {
   width: 123px;
+   height: 31px;
   color: #2874f0;
-  font-weight: 500;
   background-color: #fff;
   cursor: pointer;
   border-radius: 2px;
-  height: 32px;
   padding: 5px 40px;
   border: 1px solid #dbdbdb;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15.5px;
+  margin: 0px 20px;
+  flex: 0 0 auto;
+  font-family: "semibold";
+  position: relative;
+  left: 5px;
+ 
+  
 }
 .nav-link a {
   color: white;
   text-decoration: none;
-  margin: 0px 20px;
-  font-family: nter, -apple-system, Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  margin: 0px 10px;
+  font-family: "semibold";
+ 
+  font-size: 16px;
+  letter-spacing: -0.39px;
+  position: relative;
+  left: 4.5px;
+  bottom: 1px;
 }
+
 .input-btn {
   position: relative;
   display: inline-block;
@@ -85,12 +107,67 @@ body {
 .input-btn input {
   padding-right: 30px;
   height: 32px;
-  width: 531px;
+  width: 530px;  
+}                 
+.mored :hover .arrow{
+  color: green;
 }
+.more-container{
+  display: none;
+}
+.more-cont{
+  border-bottom: 1px solid rgb(233, 230, 230);
+  font-family: "regular";
+  align-content: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 16px 12px;
+}
+.login-container{
+  display: none;
+}
+.morebelow{
+  width: 230px;
+  height: 200px;
+  position: relative;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+
+}
+.loginbelow{
+
+  position: relative;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.login-cont{
+  display: flex;
+  /* justify-content: space-between; */
+  border-bottom: 1px solid rgb(233, 230, 230);
+  font-family: "regular";
+  align-content: center; 
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 16px 12px; 
+}
+.login-cont h1{
+  font-size: 12px;
+  font-family: "regular";
+}
+.login-cont span{
+  font-size: 12px;
+  font-family: "regular";
+  margin-left: 12px;
+}
+
+
 .input-btn svg {
   position: absolute;
-  top: 21px;
-  right: 8px;
+  top: 19.5px;
+  right: 9px;
+  padding-right: 5px;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
@@ -101,12 +178,12 @@ body {
 /* 2ND HEADER */
 .sub-head-containter {
   background-color: #fff;
-  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16);
-  height: 40px;
+  box-shadow:  0 1px 1px 0 rgba(0,0,0,.16);
+  min-height: 42px;
   width: 100%;
   display: flex;
-  align-items: center;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  align-items: center;  
+  font-family: "semibold";
   font-size: 13px;
   position: relative;
   top: 54px;
@@ -122,8 +199,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 59px;
-  margin: auto;
+  width: 100%;
+  gap: 49px;
+  font-family: "semibold";
+  font-weight: 500;
+  letter-spacing: .3px;
 }
 .main-cont {
   width: 70%;
@@ -194,10 +274,9 @@ body {
   color: #666;
   font-size: 13px;
   padding: 5px 0px;
-}
-
+}           
 .inside-4 {
-  display: flex;
+  display: flex;          
   flex-direction: column;
   padding: 0px 25px;
 }
@@ -227,10 +306,9 @@ body {
   color: #666;
   font-size: 13px;
   padding: 5px 0px;
-}
+}    
 
 /* MAIN SECTION */
-
 .body {
   margin: 0 auto;
   min-width: 978px;
@@ -244,7 +322,6 @@ body {
   top: 54px;
   z-index: 1;
 }
-
 /* SIDE-BAR */
 
 .side-bar {
@@ -268,7 +345,7 @@ body {
 .filters span {
   font-size: 18px;
   font-weight: 550;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
   color: #212121;
   line-height: 1.4;
   letter-spacing: 0.1px;
@@ -282,43 +359,40 @@ body {
 }
 .category span {
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 800;
   color: #212121;
   margin-bottom: 7px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "regular";
 }
-
 .mobile-acc a {
   text-decoration: none;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"regular";
   color: #878787;
   font-size: 13px;
-  letter-spacing: 0.5px;
+
 }
 .mobile {
   text-decoration: none;
   color: black;
   font-size: 13px;
   letter-spacing: 0.5px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
   margin-left: 15px;
   margin-top: 10px;
-  font-weight: 600;
 }
-
-
+.price{
+  font-family: "regular";
+}
 .price-container {
   padding: 14px;
   border-bottom: 1px solid #f0f0f0;
 }
-.price-container span {
+.price-inner span {
   font-size: 12px;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
-
 .grey {
   height: 100%;
   position: relative;
@@ -394,7 +468,7 @@ body {
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "regular";
 }
 .brand {
   display: flex;
@@ -430,6 +504,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.f-assured img{
+  padding-left: 5px;
+}
 .questionmark {
   border-radius: 50%;
   background-color: white;
@@ -461,14 +538,14 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .customer-rating {
   display: flex;
   justify-content: space-between;
-  font-weight: 600;
+
+  color: #212121;
 }
 .customer-rating svg {
   transform: rotate(270deg);
@@ -489,14 +566,12 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .gst-invoice {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
 }
 .gst-label {
   font-weight: 300;
@@ -516,9 +591,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .ram-filter {
   margin: 10px 0px;
@@ -528,7 +602,6 @@ body {
 .ram {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
 }
 .ram-label {
   font-weight: 300;
@@ -542,14 +615,12 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .internal-storage {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
 }
 .internal-label {
   font-weight: 300;
@@ -568,14 +639,12 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .battery-capacity {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
 }
 .battery-filter {
   margin: 10px 0px;
@@ -594,9 +663,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .screen-size {
   display: flex;
@@ -616,9 +684,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
 }
 .primary {
   display: flex;
@@ -638,9 +705,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .secondary-camera {
   display: flex;
@@ -660,9 +726,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .processor-brand {
   display: flex;
@@ -682,9 +747,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .speciality {
   display: flex;
@@ -704,9 +768,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
 }
 .resolution {
   display: flex;
@@ -726,9 +789,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .operating-filter {
   margin: 10px 0px;
@@ -748,9 +810,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .network-filter {
   margin: 10px 0px;
@@ -770,9 +831,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .sim-filter {
   margin: 10px 0px;
@@ -793,9 +853,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 
 .offers {
@@ -817,9 +876,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .features {
   display: flex;
@@ -840,9 +898,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
 }
 .type {
   display: flex;
@@ -862,9 +919,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
 }
 .no-of-cores {
   display: flex;
@@ -885,9 +941,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
 }
 .availability {
   display: flex;
@@ -908,9 +963,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"semibold";
 }
 .discout {
   display: flex;
@@ -930,9 +984,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .os-version-name {
   display: flex;
@@ -953,9 +1006,8 @@ body {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "semibold";
 }
 .clock-speed {
   display: flex;
@@ -983,7 +1035,7 @@ body {
   cursor: pointer;
   justify-content: center;
   display: flex;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "regular";
   font-size: 14px;
 }
 .help-2 {
@@ -999,7 +1051,7 @@ body {
   width: 100%;
   margin: auto;
   letter-spacing: 0.3px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"regular";
   font-size: 17px;
 }
 .help-2 svg {
@@ -1022,42 +1074,45 @@ body {
   box-sizing: border-box;
 }
 .home-one a {
-  font-size: 12px;
+  font-size: 11px;
   color: #878787;
   display: inline-block;
   text-decoration: none;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family:"regular";
+  letter-spacing: .1px;
 }
 .home-one {
   display: flex;
   flex-direction: row;
   height: 20px;
   width: 924px;
+  align-items: center;
 }
 .home-one svg {
   transform: rotate(180deg);
-  position: relative;
-  top: 5px;
+ 
+  
 }
 .mobile-heading {
   margin-top: 8px;
-  font-weight: 700;
   font-size: 16px;
   display: inline-block;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "regular";
+  font-weight: 700;
   margin-bottom: 0px;
+  letter-spacing: -.5px;
 }
 .bracket {
   margin-left: 10px;
   color: #878787;
   display: inline-block;
   font-size: 12px;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "regular";
 }
 
 .sort {
   display: flex;
-  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: "regular";
   font-size: 13px;
   letter-spacing: 0.3px;
 }
@@ -1155,11 +1210,12 @@ li::before {
   height: 60px;
   display: flex;
   align-items: center;
-}
+}  
 .last{
   display: flex;
   flex-direction: row;
   margin: auto;
+  padding: 10px;
 }
 .end1{
   display: flex;
@@ -1168,3 +1224,138 @@ li::before {
   justify-content: center;
   align-items: center;
 }
+.endone{
+  border-radius: 50%;
+  background-color: #2874f0;
+  width: 30px;
+  height: 30px;
+}
+.endone span{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+    width: 30px;
+  height: 30px;
+  color: white;
+}
+.nexts span{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.main-body2{
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 16px;
+}
+.last-container{
+ display: flex;
+ flex-direction: row;
+ 
+}
+.yesno{
+  margin-left: 24px;
+}
+.yes{
+  border-radius: 2px;
+  border: 1px solid #d7d7d7;
+  padding: 6px 28px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+.no{
+  border-radius: 2px;
+  border: 1px solid #d7d7d7;
+  padding: 6px 28px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+.writings{
+  font-family: "semibold";
+  font-size: 16px;
+  font-weight: 500;
+  
+}
+.yesno{
+  font-family: "semibold";
+  font-size: 13.5px;
+}
+/* ----FOOTER ------*/
+.footer-container{
+  background-color: #172337;;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  margin-top: 80px;
+}
+.footer-sub{
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 65px;
+  margin-top: 40px;
+  width: 90% !important;
+  box-sizing: border-box;
+ 
+}
+.about-text{
+    margin-bottom: 8px;
+}
+.about{
+  flex: 1;
+  white-space: nowrap;
+}   
+.about-text span{
+  color: #878787;
+  font-family: "regular";
+  font-size: 11.5px;
+}
+.about a{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  font-family: "regular";
+  font-size: 11.5px;
+  display: block;
+   line-height: 2;
+   
+}
+.about a:hover{
+   text-decoration: underline;
+}
+
+
+/*-- BOTTOM CONTAINER --*/
+.bottom-container{
+  border-top: 1px solid #454d5e;
+  padding: 25px 0px;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content a{
+  color: white;
+  text-decoration: none;
+  font-family: "regular";
+  margin-left: 8px;
+  font-size: 13px;
+}
+.bottom-inner{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content span{
+   color: white;
+  text-decoration: none;
+  font-family: "regular";
+  margin-left: 8px;
+  font-size: 13px;
+}
+

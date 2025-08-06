@@ -719,7 +719,7 @@ const data = [
     container.appendChild(clone);
     
   });                            
-  
+      
   
 
 
@@ -872,9 +872,26 @@ function newestfirst(){
 
 
 
-function motorola(){
-    const motorilaid=document.getElementById("motorolaid")
+//--MORE--
+ 
+function moreclick(){
+    const moreid=document.getElementById("more-id")
+
+    if(moreid.style.display==="none"||moreid.style.display===""){
+        moreid.style.display="block"
+    }else{
+        moreid.style.display="none"
+    }
+}
+ 
+//--LOGIN---
+
+function log(){
+    const loginid=document.getElementById("logid")
+    if(loginid.style.display==="none"||loginid.style.display===""){
+        loginid.style.display="block"
+    }else{
+        loginid.style.display="none"
+    }
 }
 
-
- 
