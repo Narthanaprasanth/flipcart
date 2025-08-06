@@ -892,6 +892,5 @@ function log(){
         loginid.style.display="block"
     }else{
         loginid.style.display="none"
-    }
+    }  
 }
-
