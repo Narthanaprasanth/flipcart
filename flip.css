@@ -403,12 +403,15 @@ body {
 .price-container {
   padding: 14px;
   border-bottom: 1px solid #f0f0f0;
+  height: 105px;
 }
 .price-inner span {
-  font-size: 12px;
+  font-size: 12.5px;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: .3px;
   font-family: "semibold";
+  position: relative;
+  bottom: 2px;
 }
 .grey {
   height: 100%;
@@ -423,44 +426,65 @@ body {
   left: 4px;
 }
 .handle-one {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  border: 1px solid #4b2525;
+  border: 1px solid #bababa;
   position: absolute;
   background-color: #fff;
 }
 .range {
   display: flex;
   flex-direction: row;
-}
+  position: relative;
+  right: 5px;
+} 
 .track {
   background-color: #2874f0;
   position: relative;
   height: 6px;
-  width: 236.81px;
+  width: 250px;
   top: 4px;
-}
+}       
 .handle-two {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  border: 1px solid #4b2525;
+  border: 1px solid #bababa;
   position: absolute;
   background-color: #fff;
-  left: 260px;
+  left: 237px;
+
 }
-.min-max {
+.dots{
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+}
+.dot1{
+  width: 60.362px;
+  color: #c2c2c2;
+  position: relative;
+  bottom: 25px;
+  font-size: 20px;
+  position: relative;
+  bottom: 30px;
+} 
+.min-max { 
   display: flex;
   flex-direction: row;
   margin: 5px -4px 0;
+  position: relative;
+  bottom: 33px;
 }
 .min-select {
   border-radius: 1px;
   border: 1px solid #e0e0e0;
   background-color: #fff;
-  width: 108px;
+  width: 99.2px;
   height: 24px;
+  padding: 0px 5px;
+  font-family: "regular";
 }
 .max-select {
   border-radius: 1px;
@@ -468,6 +492,8 @@ body {
   background-color: #fff;
   width: 108px;
   height: 24px;
+  padding: 0px 5px;
+  font-family:"regular";
 }
 .to {
   display: inline;
@@ -477,23 +503,31 @@ body {
   line-height: 1;
   flex: 1;
   text-align: center;
+  font-family: "regular";
+}    
+.heart{
+  position: relative;
+  left: 16px;
 }
-
 /* BRAND */
 .brand-main {
   padding: 16px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;  
   font-size: 12px;
   letter-spacing: 0.3px;
   font-family: "regular";
+
+  
 }
 .brand {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+
 }
 .brand-label {
   padding: 3px 0px;
+  accent-color: blue;
 }
 .searching {
   padding: 0px 0px 0px 15px;
@@ -507,7 +541,7 @@ body {
   margin-bottom: 7px;
 }
 .brand-filters {
-  display: none;
+  
   margin: 5px 0px;
   padding: 5px 0px;
 }
@@ -549,8 +583,9 @@ body {
   border: 1.4px solid #c2c2c2;
   border-radius: 1.5px;
   cursor: pointer;
-}
-/* CUSTOMER-RATING */
+  accent-color: blue;
+}   
+/* CUSTOMER-RATING */ 
 .main-customer {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
@@ -561,22 +596,22 @@ body {
 .customer-rating {
   display: flex;
   justify-content: space-between;
-
   color: #212121;
 }
 .customer-rating svg {
   transform: rotate(270deg);
 }
 .customer-filter {
-  display: none;
   margin: 5px 0px;
   padding: 5px 0px;
+  font-family: "regular";
 }
 .customer-label {
   padding: 3px 0px;
   font-size: 13px;
   font-weight: 400;
   padding: 5px;
+  accent-color: blue;
 }
 /* GST INVOICE */
 .main-gst {
@@ -593,11 +628,13 @@ body {
 .gst-label {
   font-weight: 300;
   font-size: 13px;
+  accent-color: blue;
 }
 .gst-filter {
   margin: 10px 0px;
   display: none;
   padding: 5px 0px;
+  font-family: "regular";
 }
 .gst-invoice svg {
   transform: rotate(270deg);
@@ -613,8 +650,8 @@ body {
 }
 .ram-filter {
   margin: 10px 0px;
-  display: none;
   padding: 5px 0px;
+  font-family: "regular";
 }
 .ram {
   display: flex;
@@ -623,6 +660,7 @@ body {
 .ram-label {
   font-weight: 300;
   font-size: 13px;
+  accent-color: blue;
 }
 .ram svg {
   transform: rotate(270deg);
@@ -642,6 +680,7 @@ body {
 .internal-label {
   font-weight: 300;
   font-size: 13px;
+  accent-color: blue;
 }
 .internal-storage svg {
   transform: rotate(270deg);
@@ -650,6 +689,7 @@ body {
   margin: 10px 0px;
   display: none;
   padding: 5px 0px;
+  font-family: "regular";
 }
 /* BATTERY-CAPACITY */
 .main-battery {
@@ -667,10 +707,12 @@ body {
   margin: 10px 0px;
   display: none;
   padding: 5px 0px;
+  font-family: "regular";
 }
 .battery-label {
   font-weight: 300;
   font-size: 13px;
+  accent-color: blue;
 }
 .battery-capacity svg {
   transform: rotate(270deg);
@@ -692,7 +734,10 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
+
 .screen-size svg {
   transform: rotate(270deg);
 }
@@ -713,6 +758,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .primary svg {
   transform: rotate(270deg);
@@ -734,6 +781,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .secondary-camera svg {
   transform: rotate(270deg);
@@ -755,6 +804,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .processor-brand svg {
   transform: rotate(270deg);
@@ -776,6 +827,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .speciality svg {
   transform: rotate(270deg);
@@ -797,6 +850,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .resolution svg {
   transform: rotate(270deg);
@@ -814,6 +869,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .operating-system {
   display: flex;
@@ -835,6 +892,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .network-type {
   display: flex;
@@ -856,6 +915,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .sim-type {
   display: flex;
@@ -880,9 +941,10 @@ body {
 }
 .offers-filter {
   margin: 10px 0px;
-  display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .offers svg {
   transform: rotate(270deg);
@@ -905,6 +967,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .features svg {
   transform: rotate(270deg);
@@ -927,6 +991,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .type svg {
   transform: rotate(270deg);
@@ -948,6 +1014,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .no-of-cores svg {
   transform: rotate(270deg);
@@ -970,6 +1038,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .availability svg {
   transform: rotate(270deg);
@@ -989,9 +1059,10 @@ body {
 }
 .discount-filter {
   margin: 10px 0px;
-  display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .discout svg {
   transform: rotate(270deg);
@@ -1012,7 +1083,9 @@ body {
   margin: 10px 0px;
   display: none;
   padding: 5px 0px;
+  accent-color: blue;
   font-weight: 300;
+  font-family: "regular";
 }
 .os-version-name svg {
   transform: rotate(270deg);
@@ -1035,6 +1108,8 @@ body {
   display: none;
   padding: 5px 0px;
   font-weight: 300;
+  accent-color: blue;
+  font-family: "regular";
 }
 .clock-speed svg {
   transform: rotate(270deg);
@@ -1109,6 +1184,9 @@ body {
   transform: rotate(180deg);
  
   
+}
+.ul-class{
+  position: relative;  
 }
 .mobile-heading {
   margin-top: 8px;
@@ -1218,9 +1296,6 @@ li::before {
 .warrenty{
   font-family: "regular";
   font-size: 13px;
-}
-.side-bar{
-  height: auto;
 }
 
 .end{

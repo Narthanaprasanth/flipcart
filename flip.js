@@ -292,7 +292,7 @@ boxout3.addEventListener("mouseout",function(){
 
 
 //ELECTRONICS---------
-
+  
 function electromouse(){
     const font=document.getElementById("sub")
     if(font.style.color===""){
@@ -496,6 +496,7 @@ const data = [
         frontcamera:"50MP + 2 MP | 8MP Front Camera",
         battery:"5000 mAh Battery",
         processor:"Dimensity 6300 Processor",
+        charger:"",
         warrenty:"1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
         image: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/u/t/-original-imahbk7pnjgxudgz.jpeg?q=70",
         flipimage:"img/f-assurerd.png",
@@ -624,7 +625,7 @@ const data = [
         num:"4.4",
         star:"2,16,993",
         review:"11,150",
-          bankoffer:"BankOffer",
+        bankoffer:"BankOffer",
     },
     {
         title:"Motorola G85 5G (Viva Magenta, 128 GB)",
@@ -680,10 +681,8 @@ const data = [
         review:"4,112",
         bankoffer:"BankOffer"
     }
-  ];
+  ];   
 
-
-  
 
   const container = document.getElementById("container");
   const template = document.getElementById("templates").firstElementChild;
@@ -716,12 +715,12 @@ const data = [
     
     
 
-    container.appendChild(clone);
+    container.appendChild(clone);    
     
-  });                            
-      
+  });                               
+         
   
-
+ 
 
   //---TITLE OVER---------------
 //   function titleover(){
@@ -767,7 +766,7 @@ function fullhide(){
 //     const clone = template.cloneNode(true);
 //     clone.style.display = "block";
 
-//     // Insert dynamic data
+//     // Insert dynamic data   
 //     clone.querySelector(".title").textContent = item.title;
 //     clone.querySelector(".memory").textContent = item.memory;
 //       clone.querySelector(".display").textContent = item.display;
@@ -786,6 +785,12 @@ function popular(){
      const low=document.getElementById("low-high-id")
      const newer=document.getElementById("newest-id")
      const high=document.getElementById("high-low-id")
+
+     pop.style.fontFamily="semibold"
+     low.style.fontFamily="regular"
+     high.style.fontFamily="regular"
+     newer.style.fontFamily="regular"
+
     if(pop.style.color==="" || "black"){
         (pop.style.color="blue" )&&( pop.style.borderBottom="2px solid blue")
     }if (low.style.color==="blue" || ""){
@@ -801,16 +806,18 @@ function popular(){
      if(pop.style.color==="blue"){
         (high.style.color="black")&&(high.style.borderBottom="none")
 
-     }   
-
-
-
+     }
 }
 function lowhigh(){
     const low=document.getElementById("low-high-id")
     const pop=document.getElementById("popular-id")
     const newer=document.getElementById("newest-id")
     const high=document.getElementById("high-low-id")
+
+      low.style.fontFamily="semibold"
+       pop.style.fontFamily="regular"
+       high.style.fontFamily="regular"
+       newer.style.fontFamily="regular"
 
      if(low.style.color===""|| "black"){
         (low.style.color="blue")&&(low.style.borderBottom="2px solid blue")
@@ -824,13 +831,17 @@ function lowhigh(){
     if(newer.style.color==="blue"){
         (newer.style.color="black")&&(newer.style.borderBottom="none")
     }
-   
 }   
 function highlow(){
     const high=document.getElementById("high-low-id")
     const low=document.getElementById("low-high-id")
     const pop=document.getElementById("popular-id")
     const newer=document.getElementById("newest-id")
+
+    high.style.fontFamily="semibold"
+    pop.style.fontFamily="regular"
+    low.style.fontFamily="regular"
+    newer.style.fontFamily="regular"
 
      if(high.style.color===""|| "black"){
         (high.style.color="blue")&&(high.style.borderBottom="2px solid blue")
@@ -855,7 +866,12 @@ function newestfirst(){
     const newer=document.getElementById("newest-id")
     const high=document.getElementById("high-low-id")
     const pop=document.getElementById("popular-id")
-     const low=document.getElementById("low-high-id")
+    const low=document.getElementById("low-high-id")
+
+    newer.style.fontFamily="semibold"
+    low.style.fontFamily="regular"
+    high.style.fontFamily="regular"
+    pop.style.fontFamily="regular"
 
     if(newer.style.color===""||"black"){
         (newer.style.color="blue")&&(newer.style.borderBottom="2px solid blue")&&(high.style.color="black")&&(high.style.borderBottom="none")
@@ -894,3 +910,7 @@ function log(){
         loginid.style.display="none"
     }  
 }
+
+
+
+
