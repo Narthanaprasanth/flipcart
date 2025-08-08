@@ -294,30 +294,30 @@ boxout3.addEventListener("mouseout",function(){
 //ELECTRONICS---------
   
 function electromouse(){
-    const font=document.getElementById("sub")
-    if(font.style.color===""){
-        font.style.color="blue"
-    }
     const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
-   
-}
+    const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){     
+        over1.style.display="block"
+    }  
+   const font=document.getElementById("sub")
+   if(font.style.color==="black"){
+    font.style.color="blue"
+   }
+}  
 function electroout(){
-    const font=document.getElementById("sub")
-    if(font.style.color==="blue"){
-        font.style.color=""
-    }
-    
-     const over=document.getElementById("eachid")
+    const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
-    } 
-}
-
-
-//TV AND AAPLIANCES---------
+        (over.style.display="none")
+    }
+     const font=document.getElementById("sub")
+    if(font.style.color==="blue"){
+        font.style.color="black"
+    }    
+}  
+//--TV AND AAPLIANCES----------
 
 function electromouse1(){
     const font1=document.getElementById("sub1")
@@ -328,44 +328,45 @@ function electromouse1(){
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
-   
+     const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){
+        over1.style.display="block"
+    }  
 }
-function electroout1(){
-    const font1=document.getElementById("sub1")
-    if(font1.style.color==="blue"){
-        font1.style.color=""
-    }
-    const over=document.getElementById("eachid")
+function electroout(){
+       const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
         over.style.display="none"
     }
+    const font=document.getElementById("sub1")
+    if(font.style.color==="blue"){
+        font.style.color="black"
+    }
 }
-
 
 //MEN---------
 
 function electromouse2(){
     const font2=document.getElementById("sub2")
-    if(font2.style.color===""){
+    if(font2.style.color===""){  
         font2.style.color="blue"
     }
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
+     const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){
+        over1.style.display="block"
+    } 
 }
-function electroout2(){
-    const font2=document.getElementById("sub2")
-    if(font2.style.color==="blue"){
-        font2.style.color=""
-    }
+
+function electroout(){
     const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
         over.style.display="none"
     }
 }
-
-
 //WOMEN---
 function electromouse3(){
     const font3=document.getElementById("sub3")
@@ -376,20 +377,17 @@ function electromouse3(){
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
+     const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){
+        over1.style.display="block"
+    } 
 }
-function electroout3(){
-    const font3=document.getElementById("sub3")
-    if(font3.style.color==="blue"){
-        font3.style.color=""
-    }
+function electroout(){
     const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
         over.style.display="none"
     }
 }
-
-
-      
 
 //BABY & KIDS---------
 function electromouse4(){
@@ -401,12 +399,12 @@ function electromouse4(){
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
+     const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){
+        over1.style.display="block"
+    } 
 }
-function electroout4(){
-    const font4=document.getElementById("sub4")
-    if(font4.style.color==="blue"){
-        font4.style.color=""
-    }
+function electroout(){
     const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
         over.style.display="none"
@@ -422,18 +420,19 @@ function electromouse5(){
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
+     const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){
+        over1.style.display="block"
+    } 
 }
-function electroout5(){
-    const font5=document.getElementById("sub5")
-    if(font5.style.color==="blue"){
-        font5.style.color=""
-    }
+function electroout7(){
+  
     const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
         over.style.display="none"
-    }
+    } 
 }
-//SPORTS BOOKS & MORE----------
+// SPORTS BOOKS & MORE----------
 function electromouse6(){
     const font6=document.getElementById("sub6")
     if(font6.style.color===""){
@@ -443,12 +442,13 @@ function electromouse6(){
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
+     const over1=document.getElementById("some")
+    if(over1.style.display==="none"||over1.style.display===""){
+        over1.style.display="block"
+    } 
 }
-function electroout6(){
-    const font6=document.getElementById("sub6")
-    if(font6.style.color==="blue"){
-        font6.style.color=""
-    }
+function electroout(){
+  
     const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
         over.style.display="none"
@@ -465,7 +465,7 @@ function electromouse7(){
 function electroout7(){
     const font7=document.getElementById("sub7")
     if(font7.style.color==="blue"){
-        font7.style.color=""
+        font7.style.color="black"
     }
    
 }
@@ -477,20 +477,16 @@ function electromouse8(){
     if(font8.style.color===""){
         font8.style.color="blue"
     }
-   
 }
 function electroout8(){
     const font8=document.getElementById("sub8")
     if(font8.style.color==="blue"){
-        font8.style.color=""
+        font8.style.color="black"
     }
-   
-}
-
-
+} 
 const data = [
     {
-        title:"Samsung Galaxy F06 5G (Lit Violet,128 GB)",
+        title:"Samsung Galaxy F06 5G (Lit Violet, 128 GB)",
         memory:"4 GB RAM | 128 GB ROM| Expandable Upto 1500 GB",
         display: "17.02 cm (6.7 inch) Full HD+ Display",
         frontcamera:"50MP + 2 MP | 8MP Front Camera",
@@ -501,8 +497,8 @@ const data = [
         image: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/u/t/-original-imahbk7pnjgxudgz.jpeg?q=70",
         flipimage:"img/f-assurerd.png",
         price:"₹8,699",
-        strike:"₹13.999",
-        discount:"37% off",
+        strike:"₹13.999",    
+        discount:"37% off",           
         tagline:"Top discount of the sale",
         exchange:"₹7,150",
         num:"4.1",
@@ -527,7 +523,6 @@ const data = [
       stars:"12,708",
       review:"1,037",
       bankoffer:"BankOffer",
-
     },
     {
         title:"MOTOROLA Edge 60 Fusion 5G (PANTONE Mykonos Blue, 256 GB)",
@@ -913,4 +908,13 @@ function log(){
 
 
 
-
+let availablekeywords=[
+    'html',
+    'css',
+    'easy tutorials',
+    'website desing tutorials',
+    'javascript',
+    'hwere to learn coding online',
+    'where to learn web design',
+    'how to create website'
+]
