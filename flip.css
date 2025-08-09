@@ -1470,14 +1470,33 @@ li::before {
 }
 .featured-item{
     font-family: "regular";
+}
+/* SEARCH-BOX */
+.search-bar{
+  border: 1px solid white;
+  box-shadow: 0px 4px 16px 0px rgba(82, 81, 81, 0.2);
+}
+.result-box{
+position: absolute;
+top: 45.4px;
+background-color: white;
+width: 564px;
+box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
 
 }
-
-
-
-
-
-
-
-
-      
+.result-box ul{
+  list-style: none;
+  border-top: 1px solid #ffffff;
+}
+.result-box li{ 
+  list-style: none;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.structure{
+ padding: 10px 8px;
+ font-family: "regular";
+ font-size: 13px;
+ letter-spacing: .3px;
+}

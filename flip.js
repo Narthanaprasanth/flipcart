@@ -503,7 +503,8 @@ const data = [
         exchange:"₹7,150",
         num:"4.1",
         stars:"16,864",
-        review:"1,171", 
+        review:"1,171",
+
     },
     {
       title: "Samsung Galaxy S24 FE 5G (Mint,128 GB)",
@@ -712,9 +713,7 @@ const data = [
 
     container.appendChild(clone);    
     
-  });                               
-         
-  
+  });      
  
 
   //---TITLE OVER---------------
@@ -906,15 +905,51 @@ function log(){
     }  
 }
 
-
+//SEARCH BOX
 
 let availablekeywords=[
-    'html',
-    'css',
-    'easy tutorials',
-    'website desing tutorials',
-    'javascript',
-    'hwere to learn coding online',
-    'where to learn web design',
-    'how to create website'
+    'shoes',
+    't-shirts',
+    'laptops',
+    'watches',
+    'tv',
+    'sares'
 ]
+
+
+
+
+
+const resultbox=document.querySelector(".result-box")
+const inputbox=document.getElementById("searchids")
+
+   inputbox.onkeyup=function(){
+    let result=[];  
+    let input=inputbox.value
+    if(input.length){
+        result=availablekeywords.filter((keyword)=>{
+           return keyword.toLowerCase().includes(input.toLowerCase())
+        }) 
+    }
+    display(result)
+   }
+
+function display(result) {
+    if (!result.length) {
+        resultbox.innerHTML = '';
+        return;
+    }
+    const content = result.map((list) => {
+        return '<div  class="structure">' +  list + '</div>';
+    }).join(""); // join the array into a single string
+
+    resultbox.innerHTML = "<ul>" + content + "</ul>";
+}
+
+
+
+
+
+ 
+
+                                                                    
