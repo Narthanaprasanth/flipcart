@@ -484,236 +484,43 @@ function electroout8(){
         font8.style.color="black"
     }
 } 
-const data = [
-    {
-        title:"Samsung Galaxy F06 5G (Lit Violet, 128 GB)",
-        memory:"4 GB RAM | 128 GB ROM| Expandable Upto 1500 GB",
-        display: "17.02 cm (6.7 inch) Full HD+ Display",
-        frontcamera:"50MP + 2 MP | 8MP Front Camera",
-        battery:"5000 mAh Battery",
-        processor:"Dimensity 6300 Processor",
-        charger:"",
-        warrenty:"1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
-        image: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/u/t/-original-imahbk7pnjgxudgz.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹8,699",
-        strike:"₹13.999",    
-        discount:"37% off",           
-        tagline:"Top discount of the sale",
-        exchange:"₹7,150",
-        num:"4.1",
-        stars:"16,864",
-        review:"1,171",
-
-    },
-    {
-      title: "Samsung Galaxy S24 FE 5G (Mint,128 GB)",
-      memory: "8 GB RAM | 128 GB ROM",
-      display: "17.02 cm (6.7 inch) Full HD+ Display",
-      frontcamera: "50MP + 12MP | 10MP Front Camera",
-      battery: "4700 mAh Battery",
-      processor: "Exynos 2400e Processor",
-      warrenty: "1 year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
-      image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/s/z/-original-imahcfwmdvbcgdzs.jpeg?q=70",
-      flipimage:"img/f-assurerd.png",
-      price:"₹35,999",
-      strike:"₹59,999",
-      discount:"40% off",
-      exchange:"₹31,050",
-      num:"4.5",
-      stars:"12,708",
-      review:"1,037",
-      bankoffer:"BankOffer",
-    },
-    {
-        title:"MOTOROLA Edge 60 Fusion 5G (PANTONE Mykonos Blue, 256 GB)",
-        memory:"8 GB RAM | 256 GB ROM |Expandable upto 1 TB ",
-        display:"50MP + 13MP | 32 MP Front Camera",
-        frontcamera:"50MP + 13MP | 32MP Front Camera",
-        battery:"5500 mAh Battery",
-        processor:"Dimensity 7400 Processor",
-        charger:"68W Charger",
-        warrenty:"1 year Warrenty on Headset and 6 Months Warrenty on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/b/c/-original-imahcjrax7j8fyuf.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹22,999",
-        strike:"₹25,999",
-        discount:"11% off",
-        exchange:"₹19,600",
-        num:"4.5",
-        stars:"41,179",
-        review:"2,359",
-        bankoffer:"BankOffer",
-    },
-    {
-        title:"Motorola G85 5G (Cobalt Blue, 128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        display:"16.94 cm (6.67 inch) Full HD + Display",
-        frontcamera:"50MP + * MP |32 MP Front Camera",
-        battery:"5000 mAh battery",
-        processor:"6s Gen 3 Processor",
-        warrenty:"1 Year on Handset and 6 Month on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/p/l/-original-imah2fjcxjdjykpc.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"₹20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        stars:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer",
-    },
-    {
-        title:"MOTOROLA Edge 60 Fusion 5G (PANTONE Slipstream, 256 GB)",
-        memory:"8 GB RAM | 256 GB ROM | Expandable upto 1 TB",
-        display:"16.94 cm (6.67 inch) Display",
-        frontcamera:"50MP + 13MP | 32 MP Front Camera",
-        battery:"5500 mAh Battery",
-        processor:"Dimensity 7400 Processor",
-        charger:"68W Charger",
-        warrenty:"1 Year Warrenty on Handset and 6 Months Warrenty on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/i/c/-original-imahbfmdzukyctut.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹22,999",
-        strike:"₹25,999",
-        discount:"11% off",
-        exchange:"₹19,600",
-        num:"4.5",
-        star:"41,179",
-        review:"2,359",
-        bankoffer:"BankOffer",
-    },
-    {
-        title:"Tecno Pova 7 5G (Oasis Green,128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        display:"17.22 cm (6.78 inch) Full HD+ Display",
-        frontcamera:"50MP + AI | 13MP Front Camera",
-        battery:"6000 mAh Battery",
-        processor:"Dimensity 7300 Ultimate Processor",
-        warrenty:"1 year Manuufacturer Warrenty for Phone",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/v/v/-original-imahe8nfmrhvqx6a.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹14,999",
-        strike:"₹18,999",
-        discount:"21% off",
-        exchange:"₹12,650",
-        num:"4.5",
-        star:"1,298",
-        review:"121",
-        bankoffer:"BankOffer"
-
-    },
-    {
-        title:"Motorola G85 5G (Olive Green, 128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        display:"16.94 cm (6.67 inch) Full HD+ Display",
-        frontcamera:"50MP + 8MP | 32MP Front Camera",
-        battery:"5000mAh Battery",
-        processor:"6s Gen 3 Processor",
-        warrenty:"1 Year on Handset and 6 Months on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"₹20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        star:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer",
-    },
-    {
-        title:"Motorola G85 5G (Viva Magenta, 128 GB)",
-        memory:"16.94 cm (6.67 inch) Full HD+ Display ",
-        frontcamera:"50MP + 5MP | 32MP Front Camera",
-        battery:"5000 mAh Battery",
-        processor:"6s GEN 3 Processor",
-        warrenty:"1 year on Handset and 6 Months on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imah4qtgjtzprg3g.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"₹20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        star:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"Motorola G85 5G(Urban Grey,128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        frontcamera:"50 MP +  8MP | 32 MP Front Camera",
-        battery:"5000 mAh Battery",
-        processor:"6s Gen 3 processor",
-        warrenty:"1 Year on Headset and 6 Months on Acceessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/z/q/f/-original-imah2fjd75hkcynr.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        star:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"POCO C75 5G (Silver Stardust, 64 GB)",
-        memory:"4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-        frontcamera:"50MP Rear Camera | 5MP Front Camera",
-        battery:"5160 mAh Battery",
-        processor:"4s Gen 2 5G Processor",
-        warrenty:"1 Year Manufacturer Warrenty for Phone and 6 Months Warranty for In the Box Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/b/b/-original-imahbr2czzcrgfx7.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"7,699",
-        strike:"₹10,999",
-        discount:"30% off",
-        exchange:"₹6,250",
-        num:"4.3",
-        star:"83,280",
-        review:"4,112",
-        bankoffer:"BankOffer"
-    }
-  ];   
 
 
-  const container = document.getElementById("container");
-  const template = document.getElementById("templates").firstElementChild;
+
+//   const container = document.getElementById("container");
+//   const template = document.getElementById("templates").firstElementChild;
  
-  data.forEach(item => {
-    const clone = template.cloneNode(true);
-    clone.style.display = "flex";
+//   data.forEach(item => {
+//     const clone = template.cloneNode(true);
+//     clone.style.display = "flex";
 
 
-    clone.querySelector(".product-img").src = item.image;
-    clone.querySelector(".titleclass").textContent = item.title;
-    clone.querySelector(".memory").textContent = item.memory;
-    clone.querySelector(".display").textContent = item.display;
-    clone.querySelector(".frontcamera").textContent = item.frontcamera;
-    clone.querySelector(".battery").textContent = item.battery;
-    clone.querySelector(".processor").textContent = item.processor;
-    clone.querySelector(".charger").textContent=item.charger
-    clone.querySelector(".warrenty").textContent = item.warrenty;
-    clone.querySelector(".flip-cart-img" ).src=item.flipimage;
-    clone.querySelector(".price").textContent=item.price;
-    clone.querySelector(".strike").textContent=item.strike;
-    clone.querySelector(".discount").textContent=item.discount;
-    clone.querySelector(".tagline").textContent=item.tagline;
-    clone.querySelector(".exchange").textContent=item.exchange;
-    clone.querySelector(".num").textContent=item.num;
-    clone.querySelector(".stars").textContent=item.stars;
-    clone.querySelector(".review").textContent=item.review;
-    clone.querySelector(".bankoffer").textContent=item.bankoffer;
+//     clone.querySelector(".product-img").src = item.image;
+//     clone.querySelector(".titleclass").textContent = item.title;
+//     clone.querySelector(".memory").textContent = item.memory;
+//     clone.querySelector(".display").textContent = item.display;
+//     clone.querySelector(".frontcamera").textContent = item.frontcamera;
+//     clone.querySelector(".battery").textContent = item.battery;
+//     clone.querySelector(".processor").textContent = item.processor;
+//     clone.querySelector(".charger").textContent=item.charger
+//     clone.querySelector(".warrenty").textContent = item.warrenty;
+//     clone.querySelector(".flip-cart-img" ).src=item.flipimage;
+//     clone.querySelector(".price").textContent=item.price;
+//     clone.querySelector(".strike").textContent=item.strike;
+//     clone.querySelector(".discount").textContent=item.discount;
+//     clone.querySelector(".tagline").textContent=item.tagline;
+//     clone.querySelector(".exchange").textContent=item.exchange;
+//     clone.querySelector(".num").textContent=item.num;
+//     clone.querySelector(".stars").textContent=item.stars;
+//     clone.querySelector(".review").textContent=item.review;
+//     clone.querySelector(".bankoffer").textContent=item.bankoffer;
 
     
     
 
-    container.appendChild(clone);    
+//     container.appendChild(clone);    
     
-  });      
+//   });      
  
 
   //---TITLE OVER---------------
@@ -952,4 +759,60 @@ function display(result) {
 
  
 
-                                                                    
+//FILTERS
+
+
+ //let checkcat=["samsung","motorola"]
+
+let productDiv=document.querySelector(".product")
+var CategoryListDiv=document.querySelector(".categoryList")
+let allCat=[];  
+
+let displayproduct=async(allCheckcat=[])=>{
+    productDiv.innerHTML=""
+    let product=await fetch('fil.json')
+    let finalproduct=await product.json()
+    finalproduct.forEach(element => {
+        //CATEGORY DISPLAY--       
+        if(!allCat.includes(element.category)){
+
+        
+
+        CategoryListDiv.innerHTML+=`    <label>
+                    <input type="checkbox" onclick='categoryfilter()' value="${element.category}" >${element.category}
+                </label>   `
+            allCat.push(element.category)
+        }
+
+        if(allCheckcat.length==0){
+            allCheckcat=allCat
+        }
+
+        if(allCheckcat.includes(element.category)){
+            //DISPLAY
+             productDiv.innerHTML+=` <div class="productItems">
+                <img src="${element.image}">
+                <p>Price ${element.price} | 3.9</p>
+                <h3>${element.title}</h3>
+            </div>`       
+        }
+    });  
+}                   
+displayproduct();
+
+let categoryfilter=()=>{
+    let checkinput=document.querySelectorAll("input[type='checkbox']")
+    let checkdata=[]    
+    checkinput.forEach((e)=>{
+       if(e.checked){            
+            checkdata.push(e.value)
+       }
+    })
+   displayproduct(checkdata)
+}
+
+
+
+
+  
+                                                       
