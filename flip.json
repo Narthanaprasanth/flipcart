@@ -3,28 +3,35 @@
         "title":"Samsung Galaxy F06 5G (Lit Violet, 128 GB)",
         "memory":"4 GB RAM | 128 GB ROM| Expandable Upto 1500 GB",
         "display": "17.02 cm (6.7 inch) Full HD+ Display",
+         "displayval":"6.4 inch & Above",
         "frontcamera":"50MP + 2 MP | 8MP Front Camera",
         "battery":"5000 mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"Dimensity 6300 Processor",
         "charger":"",
         "warrenty":"1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/u/t/-original-imahbk7pnjgxudgz.jpeg?q=70",
         "flipimage":"img/f-assurerd.png",
         "price":"₹8,699",
-        "strike":"₹13.999",    
+        "strike":"₹13,999",    
         "discount":"37% off",           
         "tagline":"Top discount of the sale",
         "exchange":"₹7,150",
         "num":"4.1",
         "stars":"16,864",
-        "review":"1,171"
-    },
+        "review":"1,171" ,
+         "bankoffer":"Bank Offer",
+        "category":"samsung",
+        "rat":"4★ & above"
+    },                   
     {
       "title": "Samsung Galaxy S24 FE 5G (Mint,128 GB)",
       "memory": "8 GB RAM | 128 GB ROM",
       "display": "17.02 cm (6.7 inch) Full HD+ Display",
+      "displayval":"6.4 inch & Above",
       "frontcamera": "50MP + 12MP | 10MP Front Camera",
       "battery": "4700 mAh Battery",
+      "batteryVal":"4000 - 4999 mAh",
       "processor": "Exynos 2400e Processor",
       "warrenty": "1 year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
       "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/s/z/-original-imahcfwmdvbcgdzs.jpeg?q=70",
@@ -35,15 +42,17 @@
       "exchange":"₹31,050",
       "num":"4.5",
       "stars":"12,708",
-      "review":"1,  ",
-      "bankoffer":"BankOffer"
+      "review":"1,125",
+      "bankoffer":"Bank Offer",
+      "category":"samsung"
     },
     {
         "title":"MOTOROLA Edge 60 Fusion 5G (PANTONE Mykonos Blue, 256 GB)",
         "memory":"8 GB RAM | 256 GB ROM |Expandable upto 1 TB ",
-        "display":"50MP + 13MP | 32 MP Front Camera",
+        "display":"16.94 cm (6.5 inch) HD+ Display",
         "frontcamera":"50MP + 13MP | 32MP Front Camera",
         "battery":"5500 mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"Dimensity 7400 Processor",
         "charger":"68W Charger",
         "warrenty":"1 year Warrenty on Headset and 6 Months Warrenty on Accessories",
@@ -56,15 +65,17 @@
         "num":"4.5",
         "stars":"41,179",
         "review":"2,359",
-        "bankoffer":"BankOffer",
-        "category":"motorolabrand"
+        "bankoffer":"Bank Offer",
+        "category":"motorola"
     },
     {
         "title":"Motorola G85 5G (Cobalt Blue, 128 GB)",
         "memory":"8 GB RAM | 128 GB ROM",
         "display":"16.94 cm (6.67 inch) Full HD + Display",
+         "displayval":"6.4 inch & Above",
         "frontcamera":"50MP + * MP |32 MP Front Camera",
         "battery":"5000 mAh battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"6s Gen 3 Processor",
         "warrenty":"1 Year on Handset and 6 Month on Accessories",
         "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/p/l/-original-imah2fjcxjdjykpc.jpeg?q=70",
@@ -76,14 +87,17 @@
         "num":"4.4",
         "stars":"2,16,993",
         "review":"11,150",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"motorola"
     },
     {
         "title":"MOTOROLA Edge 60 Fusion 5G (PANTONE Slipstream, 256 GB)",
         "memory":"8 GB RAM | 256 GB ROM | Expandable upto 1 TB",
         "display":"16.94 cm (6.67 inch) Display",
+         "displayval":"6.4 inch & Above",
         "frontcamera":"50MP + 13MP | 32 MP Front Camera",
         "battery":"5500 mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"Dimensity 7400 Processor",
         "charger":"68W Charger",
         "warrenty":"1 Year Warrenty on Handset and 6 Months Warrenty on Accessories",
@@ -96,14 +110,17 @@
         "num":"4.5",
         "star":"41,179",
         "review":"2,359",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"motorola"
     },
     {
         "title":"Tecno Pova 7 5G (Oasis Green,128 GB)",
         "memory":"8 GB RAM | 128 GB ROM",
         "display":"17.22 cm (6.78 inch) Full HD+ Display",
+         "displayval":"6.4 inch & Above",
         "frontcamera":"50MP + AI | 13MP Front Camera",
         "battery":"6000 mAh Battery",
+        "batteryVal":"6000 mAh & Above",
         "processor":"Dimensity 7300 Ultimate Processor",
         "warrenty":"1 year Manuufacturer Warrenty for Phone",
         "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/v/v/-original-imahe8nfmrhvqx6a.jpeg?q=70",
@@ -115,14 +132,17 @@
         "num":"4.5",
         "star":"1,298",
         "review":"121",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"Tecno"
     },
     {
         "title":"Motorola G85 5G (Olive Green, 128 GB)",
         "memory":"8 GB RAM | 128 GB ROM",
         "display":"16.94 cm (6.67 inch) Full HD+ Display",
+         "displayval":"6.4 inch & Above",
         "frontcamera":"50MP + 8MP | 32MP Front Camera",
         "battery":"5000mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"6s Gen 3 Processor",
         "warrenty":"1 Year on Handset and 6 Months on Accessories",
         "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70",
@@ -134,13 +154,16 @@
         "num":"4.4",
         "star":"2,16,993",
         "review":"11,150",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"motorola"
     },
     {
         "title":"Motorola G85 5G (Viva Magenta, 128 GB)",
         "memory":"16.94 cm (6.67 inch) Full HD+ Display ",
+        "display":"",
         "frontcamera":"50MP + 5MP | 32MP Front Camera",
         "battery":"5000 mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"6s GEN 3 Processor",
         "warrenty":"1 year on Handset and 6 Months on Accessories",
         "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imah4qtgjtzprg3g.jpeg?q=70",
@@ -152,13 +175,16 @@
         "num":"4.4",
         "star":"2,16,993",
         "review":"11,150",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"motorola"
     },
     {
         "title":"Motorola G85 5G(Urban Grey,128 GB)",
         "memory":"8 GB RAM | 128 GB ROM",
+        "display":"",
         "frontcamera":"50 MP +  8MP | 32 MP Front Camera",
         "battery":"5000 mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"6s Gen 3 processor",
         "warrenty":"1 Year on Headset and 6 Months on Acceessories",
         "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/z/q/f/-original-imah2fjd75hkcynr.jpeg?q=70",
@@ -170,16 +196,19 @@
         "num":"4.4",
         "star":"2,16,993",
         "review":"11,150",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"motorola"
     },
     {
         "title":"POCO C75 5G (Silver Stardust, 64 GB)",
         "memory":"4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
+        "display":"",
         "frontcamera":"50MP Rear Camera | 5MP Front Camera",
         "battery":"5160 mAh Battery",
+        "batteryVal":"5000-5999 mAh",
         "processor":"4s Gen 2 5G Processor",
         "warrenty":"1 Year Manufacturer Warrenty for Phone and 6 Months Warranty for In the Box Accessories",
-        "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/b/b/-original-imahbr2czzcrgfx7.jpeg?q=70",
+        "image":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/b/b/-original-imahbr2czzcrgfx7.jpeg?q=70 ",
         "flipimage":"img/f-assurerd.png",
         "price":"7,699",
         "strike":"₹10,999",
@@ -188,7 +217,8 @@
         "num":"4.3",
         "star":"83,280",
         "review":"4,112",
-        "bankoffer":"BankOffer"
+        "bankoffer":"Bank Offer",
+        "category":"poco"
     }
   ]
 

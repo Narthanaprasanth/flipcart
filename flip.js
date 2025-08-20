@@ -289,199 +289,6 @@ boxout3.addEventListener("mouseout",function(){
     boxout3.style.color="grey"
 })
 
-const data=[
-    {
-        title:"Samsung Galaxy F06 5G (Lit Violet, 128 GB)",
-        memory:"4 GB RAM | 128 GB ROM| Expandable Upto 1500 GB",
-        display: "17.02 cm (6.7 inch) Full HD+ Display",
-        frontcamera:"50MP + 2 MP | 8MP Front Camera",
-        battery:"5000 mAh Battery",
-        processor:"Dimensity 6300 Processor",
-        charger:"",
-        warrenty:"1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
-        image: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/u/t/-original-imahbk7pnjgxudgz.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹8,699",
-        strike:"₹13.999",    
-        discount:"37% off",           
-        tagline:"Top discount of the sale",
-        exchange:"₹7,150",
-        num:"4.1",
-        stars:"16,864",
-        review:"1,171"
-    },
-    {
-      title: "Samsung Galaxy S24 FE 5G (Mint,128 GB)",
-      memory: "8 GB RAM | 128 GB ROM",
-      display: "17.02 cm (6.7 inch) Full HD+ Display",
-      frontcamera: "50MP + 12MP | 10MP Front Camera",
-      battery: "4700 mAh Battery",
-      processor: "Exynos 2400e Processor",
-      warrenty: "1 year Manufacturer Warranty for Device and 6 Months for In-Box Accessories",
-      image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/s/z/-original-imahcfwmdvbcgdzs.jpeg?q=70",
-      flipimage:"img/f-assurerd.png",
-      price:"₹35,999",
-      strike:"₹59,999",
-      discount:"40% off",
-      exchange:"₹31,050",
-      num:"4.5",
-      stars:"12,708",
-      review:"1,  ",
-      bankoffer:"BankOffer"
-    },
-    {
-        title:"MOTOROLA Edge 60 Fusion 5G (PANTONE Mykonos Blue, 256 GB)",
-        memory:"8 GB RAM | 256 GB ROM |Expandable upto 1 TB ",
-        display:"50MP + 13MP | 32 MP Front Camera",
-        frontcamera:"50MP + 13MP | 32MP Front Camera",
-        battery:"5500 mAh Battery",
-        processor:"Dimensity 7400 Processor",
-        charger:"68W Charger",
-        warrenty:"1 year Warrenty on Headset and 6 Months Warrenty on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/b/c/-original-imahcjrax7j8fyuf.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹22,999",
-        strike:"₹25,999",
-        discount:"11% off",
-        exchange:"₹19,600",
-        num:"4.5",
-        stars:"41,179",
-        review:"2,359",
-        bankoffer:"BankOffer",
-        category:"motorolabrand"
-    },
-    {
-        title:"Motorola G85 5G (Cobalt Blue, 128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        display:"16.94 cm (6.67 inch) Full HD + Display",
-        frontcamera:"50MP + * MP |32 MP Front Camera",
-        battery:"5000 mAh battery",
-        processor:"6s Gen 3 Processor",
-        warrenty:"1 Year on Handset and 6 Month on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/p/l/-original-imah2fjcxjdjykpc.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"₹20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        stars:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"MOTOROLA Edge 60 Fusion 5G (PANTONE Slipstream, 256 GB)",
-        memory:"8 GB RAM | 256 GB ROM | Expandable upto 1 TB",
-        display:"16.94 cm (6.67 inch) Display",
-        frontcamera:"50MP + 13MP | 32 MP Front Camera",
-        battery:"5500 mAh Battery",
-        processor:"Dimensity 7400 Processor",
-        charger:"68W Charger",
-        warrenty:"1 Year Warrenty on Handset and 6 Months Warrenty on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/i/c/-original-imahbfmdzukyctut.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹22,999",
-        strike:"₹25,999",
-        discount:"11% off",
-        exchange:"₹19,600",
-        num:"4.5",
-        star:"41,179",
-        review:"2,359",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"Tecno Pova 7 5G (Oasis Green,128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        display:"17.22 cm (6.78 inch) Full HD+ Display",
-        frontcamera:"50MP + AI | 13MP Front Camera",
-        battery:"6000 mAh Battery",
-        processor:"Dimensity 7300 Ultimate Processor",
-        warrenty:"1 year Manuufacturer Warrenty for Phone",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/v/v/-original-imahe8nfmrhvqx6a.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹14,999",
-        strike:"₹18,999",
-        discount:"21% off",
-        exchange:"₹12,650",
-        num:"4.5",
-        star:"1,298",
-        review:"121",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"Motorola G85 5G (Olive Green, 128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        display:"16.94 cm (6.67 inch) Full HD+ Display",
-        frontcamera:"50MP + 8MP | 32MP Front Camera",
-        battery:"5000mAh Battery",
-        processor:"6s Gen 3 Processor",
-        warrenty:"1 Year on Handset and 6 Months on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"₹20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        star:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"Motorola G85 5G (Viva Magenta, 128 GB)",
-        memory:"16.94 cm (6.67 inch) Full HD+ Display ",
-        frontcamera:"50MP + 5MP | 32MP Front Camera",
-        battery:"5000 mAh Battery",
-        processor:"6s GEN 3 Processor",
-        warrenty:"1 year on Handset and 6 Months on Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imah4qtgjtzprg3g.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"₹20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        star:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"Motorola G85 5G(Urban Grey,128 GB)",
-        memory:"8 GB RAM | 128 GB ROM",
-        frontcamera:"50 MP +  8MP | 32 MP Front Camera",
-        battery:"5000 mAh Battery",
-        processor:"6s Gen 3 processor",
-        warrenty:"1 Year on Headset and 6 Months on Acceessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/z/q/f/-original-imah2fjd75hkcynr.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"₹15,999",
-        strike:"20,999",
-        discount:"23% off",
-        exchange:"₹13,550",
-        num:"4.4",
-        star:"2,16,993",
-        review:"11,150",
-        bankoffer:"BankOffer"
-    },
-    {
-        title:"POCO C75 5G (Silver Stardust, 64 GB)",
-        memory:"4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-        frontcamera:"50MP Rear Camera | 5MP Front Camera",
-        battery:"5160 mAh Battery",
-        processor:"4s Gen 2 5G Processor",
-        warrenty:"1 Year Manufacturer Warrenty for Phone and 6 Months Warranty for In the Box Accessories",
-        image:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/b/b/-original-imahbr2czzcrgfx7.jpeg?q=70",
-        flipimage:"img/f-assurerd.png",
-        price:"7,699",
-        strike:"₹10,999",
-        discount:"30% off",
-        exchange:"₹6,250",
-        num:"4.3",
-        star:"83,280",
-        review:"4,112",
-        bankoffer:"BankOffer"
-    }
-  ]
 
 
 //ELECTRONICS---------
@@ -677,60 +484,7 @@ function electroout8(){
         font8.style.color="black"
     }
 } 
-  const container = document.getElementById("container");
-  const template = document.getElementById("templates").firstElementChild;
-
-
-  let products = [];
-
-// Fetch products from JSON
-async function loadProducts() {
-  const response = await fetch("flip.json");
-  products = await response.json();
-  displayProducts(products); // show all initially
-}
-//DISPLAY PRODUCT--------
-function displayProducts(items) {
- container.innerHTML = "";
-  items.forEach(p => {
-    const div = document.createElement("div");
-    div.className = "product";
-    div.textContent = `${p.title} (${p.memory})`;
-    container.appendChild(div);
-  });
-}
-
  
-  data.forEach(item => {
-    const clone = template.cloneNode(true);  
-    clone.style.display = "flex";
-                         
-
-    clone.querySelector(".product-img").src = item.image;
-    clone.querySelector(".titleclass").textContent = item.title;
-    clone.querySelector(".memory").textContent = item.memory;
-    clone.querySelector(".display").textContent = item.display;
-    clone.querySelector(".frontcamera").textContent = item.frontcamera;
-    clone.querySelector(".battery").textContent = item.battery;
-    clone.querySelector(".processor").textContent = item.processor;
-    clone.querySelector(".charger").textContent=item.charger
-    clone.querySelector(".warrenty").textContent = item.warrenty;
-    clone.querySelector(".flip-cart-img" ).src=item.flipimage;
-    clone.querySelector(".price").textContent=item.price;
-    clone.querySelector(".strike").textContent=item.strike;
-    clone.querySelector(".discount").textContent=item.discount;
-    clone.querySelector(".tagline").textContent=item.tagline;
-    clone.querySelector(".exchange").textContent=item.exchange;
-    clone.querySelector(".num").textContent=item.num;
-    clone.querySelector(".stars").textContent=item.stars;
-    clone.querySelector(".review").textContent=item.review;
-    clone.querySelector(".bankoffer").textContent=item.bankoffer;
-                                  
-    container.appendChild(clone);    
-    
-  });
- 
-
 //---TITLE OVER---------------
 //   function titleover(){
 //     const titles=document.getElementById("title")
@@ -750,33 +504,6 @@ function fullhide(){
     const fulltextover=document.getElementById("homehover2")
     fulltextover.textContent="mobiles & A..."
 }
-
-  //MODEL--
-//   const data = [
-//     { title: "Card nnn1", memory: "This is card 1",display:"displaing",camera:"hio",battery:"iop",processor:"30ram",warrenty:'poi' },
-//     { title: "Card mmm1", memory: "This is card 1",display:"displaing",camera:"hio",battery:"iop",processor:"30ram",warrenty:'poi'  },
-//     { title: "Card uuu1", memory: "This is card 1",display:"displaing",camera:"hio",battery:"iop",processor:"30ram",warrenty:'poi' }
-//   ];  
-        
-//   const container = document.getElementById("container");
-//   const template = document.getElementById("template").firstElementChild;
-
-//   data.forEach(item => {
-//     // Clone the card structure
-//     const clone = template.cloneNode(true);
-//     clone.style.display = "block";
-
-//     // Insert dynamic data   
-//     clone.querySelector(".title").textContent = item.title;
-//     clone.querySelector(".memory").textContent = item.memory;
-//       clone.querySelector(".display").textContent = item.display;
-//     clone.querySelector(".camera").textContent = item.camera;
-//       clone.querySelector(".battery").textContent = item.battery;
-//     clone.querySelector(".processor").textContent = item.processor;
-
-//     // Append to container
-//     container.appendChild(clone);
-//   });
 
 
   
@@ -952,6 +679,322 @@ function display(result) {
     resultbox.innerHTML = "<ul>" + content + "</ul>";
 }
 
+//FILTER-BOX--
+
+//BRAND--
+
+let productDiv=document.querySelector(".product")
+var CategoryListDiv=document.querySelector(".CategoryList")
+let allCat=[];                                   
+
+let displayproduct=async(allCheckcat=[])=>{  
+    productDiv.innerHTML="" 
+    let product=await fetch('flip.json')
+    let finalproduct=await product.json()
+    finalproduct.forEach(element => {
+        //CATEGORY DISPLAY--       
+        if(!allCat.includes(element.category)){  
+
+        CategoryListDiv.innerHTML+=`    <label>
+                    <input type="checkbox" onclick='categoryfilter()' value="${element.category}" >${element.category}
+                </label>   `
+            allCat.push(element.category)
+        }
+
+        if(allCheckcat.length==0){
+            allCheckcat=allCat 
+        }
 
 
+
+
+
+        if(allCheckcat.includes(element.category)){
+
+            
+            
+            //PRODUCT DISPLAY --- 
+         
+            productDiv.innerHTML += `
+  <div class="productCard">
+      <div class="productItems">
+          <img src="${element.image}" alt="${element.title}">
+      </div>
+      <div class="productItemsmid">
+          <h3>${element.title}</h3>
+          <div class="ratings">
+    <div class="ppp">
+          <p class="nam">${element.num} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+     width="20" height="20" fill="white">   
+  <polygon points="12,2 15.09,8.26 22,9.27 
+                   17,14.14 18.18,21.02 
+                   12,17.77 5.82,21.02 
+                   7,14.14 2,9.27 
+                   8.91,8.26"/>
+</svg>
+</p>
+</div>
+          <p class="st">${element.stars} Ratings &</p>z
+          <p class="re">${element.review} Reviews</p>
+          </div>                         
+          <p>${element.memory}</p> 
+          <p>${element.display}</p>
+          <p>${element.frontcamera}</p>
+          <p>${element.battery}</p>
+          <p>${element.processor}</p>
+          <p>${element.warrenty}</p> 
+      </div>
+       <div class="productItemslast">
+       <div class="sep">
+       <p> ${element.price}</p>
+        <img src="img/f-assurerd.png" alt="" width="70px" height="21px">
+       </div>
+         <div class="sep1">
+           <p class="strike">${element.strike}</p>
+           <p class="discount">${element.discount}</p>
+           </div>
+           <div class="bank">
+           <p >${element.bankoffer}</p>
+           </div>
+      </div>  
+  </div>
+`;
+} 
+    });
+}
+displayproduct();
+
+
+
+
+
+
+
+let categoryfilter=()=>{
+    let checkinput=document.querySelectorAll("input[type='checkbox']")
+    let checkdata=[]    
+    checkinput.forEach((e)=>{
+       if(e.checked){            
+            checkdata.push(e.value)
+       }
+    })
+   displayproduct(checkdata)
+}
+
+
+
+
+
+
+
+
+let products = [];   // global array for products
+
+// Load products from JSON
+async function loadProducts() {
+  let res = await fetch("flip.json");
+  products = await res.json();
+  displayProducts(products);
+}
+
+// Display products
+function displayProducts(list) {
+  productDiv.innerHTML = "";
+  list.forEach(element => {
+    productDiv.innerHTML += `  
+      <div class="productCard">
+        <div class="productItems">
+          <img src="${element.image}" alt="${element.title}">
+        </div>
+        <div class="productItemsmid">
+          <h3>${element.title}</h3>
+          <div class="ratings">
+            <div class="ppp">
+              <p class="nam">${element.num} 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                     width="20" height="20" fill="white">   
+                  <polygon points="12,2 15.09,8.26 22,9.27 
+                                   17,14.14 18.18,21.02 
+                                   12,17.77 5.82,21.02 
+                                   7,14.14 2,9.27 
+                                   8.91,8.26"/>      
+                </svg>
+              </p>
+            </div>                                         
+            <p class="st">${element.stars} Ratings &</p>
+            <p class="re">${element.review} Reviews</p>
+          </div>                         
+          <p>${element.memory}</p> 
+          <p>${element.display}</p>
+          <p>${element.frontcamera}</p>
+          <p>${element.battery}</p>
+          <p>${element.processor}</p>
+          <p>${element.warrenty}</p> 
+        </div>
+        <div class="productItemslast">
+          <div class="sep">
+            <p>${element.price}</p>
+            <img src="img/f-assurerd.png" alt="" width="70px" height="21px">
+          </div>
+          <div class="sep1">
+            <p class="strike">${element.strike}</p>
+            <p class="discount">${element.discount}</p>
+          </div>
+          <div class="bank">
+            <p>${element.bankoffer}</p>
+          </div>
+        </div>  
+      </div>
+    `;
+  });
+}
+
+// ------------------- FILTERS -------------------
+
+// Filter by RAM
+function filterByRAM() {
+  let checked = Array.from(document.querySelectorAll('.memoryList input:checked'))
+                     .map(cb => cb.value);
+
+  let filtered = checked.length === 0 
+    ? products 
+    : products.filter(p => checked.some(ram => p.memory.includes(ram)));
+
+  displayProducts(filtered);
+}
+
+// Filter by Internal Storage
+function filterByInternal() {
+  let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
+                     .map(cb => cb.value);
+
+  let filtered = checked.length === 0 
+    ? products 
+    : products.filter(p => checked.some(internal => p.title.includes(internal)));
+
+  displayProducts(filtered);
+}
+
+//Filter by Battery Storage
+function filterByBattery() {
+  let checked = Array.from(document.querySelectorAll('.batteryList input:checked'))
+                     .map(cb => cb.value);
+
+  let filtered = checked.length === 0
+    ? products
+    : products.filter(p => checked.includes(p.batteryVal));
+
+  displayProducts(filtered);
+}
+// Filter by Screen size
+    function filterByScreen() {
+  let checked = Array.from(document.querySelectorAll('.screenList input:checked'))
+                     .map(cb => cb.value);
+
+  let filtered = checked.length === 0
+    ? products
+    : products.filter(p => checked.includes(p.displayval));
+
+  displayProducts(filtered);
+}    
+   
+// ------------------- EVENT LISTENERS -------------------
+document.querySelectorAll('.memoryList input')
+  .forEach(cb => cb.addEventListener('change', filterByRAM));
+
+document.querySelectorAll('.internalList input')
+  .forEach(cb => cb.addEventListener('change', filterByInternal));
+
+document.querySelectorAll('.batteryList input')
+  .forEach(cb=>cb.addEventListener('change', filterByBattery));
+
+document.querySelectorAll('.screenList input')
+.forEach(cb=>cb.addEventListener('change',filterByScreen));
+
+// ------------------- INITIAL LOAD -------------------
+loadProducts();
+                             
+    
+
+
+                                         
+
+
+
+    
+                           
+
+
+
+
+
+
+
+
+
+function svgclick(){
+    const svg=document.getElementById("brandid")
+    const will=document.getElementById("cattid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+}
+    
+function ramclick(){
+    const svg=document.getElementById("ramid")
+    const will=document.getElementById("memoryid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+}
+function customerclick(){
+    const svg=document.getElementById("custid")
+    const will=document.getElementById("customerid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+}
+
+function internalclick(){
+     const svg=document.getElementById("internal-svg")
+    const will=document.getElementById("internalid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+
+}
+function batteryclick(){
+         const svg=document.getElementById("battery-svg")
+         const will=document.getElementById("batteryid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+
+}
+function screenclick(){
+         const svg=document.getElementById("screen-svg")
+         const will=document.getElementById("screenid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+
+}
 
