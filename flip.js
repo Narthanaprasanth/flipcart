@@ -696,111 +696,10 @@ function display(result) {
 
 //FILTER-BOX--
 
-//BRAND--
+
 
 let productDiv=document.querySelector(".product")
 var CategoryListDiv=document.querySelector(".CategoryList")
-let allCat=[];                                   
-
-let displayproduct=async(allCheckcat=[])=>{  
-    productDiv.innerHTML="" 
-    let product=await fetch('flip.json')
-    let finalproduct=await product.json()
-    finalproduct.forEach(element => {
-        //CATEGORY DISPLAY--       
-        if(!allCat.includes(element.category)){  
-
-        CategoryListDiv.innerHTML+=`    <label>
-                    <input type="checkbox" onclick='categoryfilter()' value="${element.category}" >${element.category}
-                </label>   `
-            allCat.push(element.category)
-        }
-
-        if(allCheckcat.length==0){
-            allCheckcat=allCat 
-        }
-
-
-
-
-
-        if(allCheckcat.includes(element.category)){
-
-            
-            
-            //PRODUCT DISPLAY --- 
-         
-            productDiv.innerHTML += `
-  <div class="productCard">
-      <div class="productItems">
-          <img src="${element.image}" alt="${element.title}">
-      </div>
-      <div class="productItemsmid">
-          <h3>${element.title}</h3>
-          <div class="ratings">
-    <div class="ppp">
-          <p class="nam">${element.num} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
-     width="20" height="20" fill="white">   
-  <polygon points="12,2 15.09,8.26 22,9.27 
-                   17,14.14 18.18,21.02 
-                   12,17.77 5.82,21.02 
-                   7,14.14 2,9.27 
-                   8.91,8.26"/>
-</svg>
-</p>
-</div>
-          <p class="st">${element.stars} Ratings &</p>z
-          <p class="re">${element.review} Reviews</p>
-          </div>                         
-          <p>${element.memory}</p> 
-          <p>${element.display}</p>
-          <p>${element.frontcamera}</p>
-          <p>${element.battery}</p>
-          <p>${element.processor}</p>
-          <p>${element.warrenty}</p> 
-      </div>
-       <div class="productItemslast">
-       <div class="sep">
-       <p> ${element.price}</p>
-        <img src="img/f-assurerd.png" alt="" width="70px" height="21px">
-       </div>
-         <div class="sep1">
-           <p class="strike">${element.strike}</p>
-           <p class="discount">${element.discount}</p>
-           </div>
-           <div class="bank">
-           <p >${element.bankoffer}</p>
-           </div>
-      </div>  
-  </div>
-`;
-} 
-    });
-}
-displayproduct();
-
-
-
-
-
-
-
-let categoryfilter=()=>{
-    let checkinput=document.querySelectorAll("input[type='checkbox']")
-    let checkdata=[]    
-    checkinput.forEach((e)=>{
-       if(e.checked){            
-            checkdata.push(e.value)
-       }
-    })
-   displayproduct(checkdata)
-}
-
-
-
-
-
-
 
 
 let products = [];   // global array for products
@@ -865,6 +764,35 @@ function displayProducts(list) {
 }                 
 
 // ------------------- FILTERS -------------------
+//Filter by BRAND--
+function filterbyram(){
+    let checked=Array.from(document.querySelectorAll('.CategoryList input:checked'))
+                    .map(cb=>cb.value)
+     let filtered = checked.length === 0 
+    ? products 
+    : products.filter(p => checked.some(brand => p.titlename.includes(brand)));
+
+  displayProducts(filtered);               
+
+
+  //FILTER TOP------
+
+   let activeBox = document.getElementById("activeFilters");
+let clear = document.getElementsByClassName("clearall")[0];
+
+if (checked.length === 0) {
+    activeBox.innerHTML = "";
+    clear.innerHTML = "";
+} else {
+    activeBox.innerHTML = checked
+        .map(val => `<span>✕ ${val}</span>`)
+        .join(" ");
+    clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
+}     
+}
+
+
+
 //Filter by Customer Rating
 function filterbycustomer() {
     let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
@@ -882,7 +810,24 @@ function filterbycustomer() {
     }); 
 
     displayProducts(filtered);
+
 }
+//---------------------FILTER TOP--------------------
+ function filtercustomer() {
+    let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
+                       .map(cb => cb.value + "★ & above");
+
+    let activeBox = document.getElementById("activeFilters");
+    let clear = document.getElementsByClassName("clearall")[0];
+
+    if (checked.length === 0) {
+        activeBox.innerHTML = "";
+        clear.innerHTML = ""; 
+    } else {
+        activeBox.innerHTML = checked.map(val => `<span>✕<span>${val}</span></span>`).join(" ");
+        clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
+    }                     
+}       
 // Filter by RAM
 function filterByRAM() {
   let checked = Array.from(document.querySelectorAll('.memoryList input:checked'))
@@ -893,22 +838,27 @@ function filterByRAM() {
     : products.filter(p => checked.some(ram => p.memory.includes(ram)));
 
   displayProducts(filtered);
+  //FILTER TOP------
+
+   let activeBox = document.getElementById("activeFilters");
+let clear = document.getElementsByClassName("clearall")[0];
+
+if (checked.length === 0) {
+    activeBox.innerHTML = "";
+    clear.innerHTML = "";
+} else {
+    activeBox.innerHTML = checked
+        .map(val => `<span>✕ ${val}</span>`)
+        .join(" ");
+    clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
+}     
+
 }
 
-// Filter by Internal Storage
-// function filterByInternal() {
-//   let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
-//                      .map(cb => cb.value);
-
-//   let filtered = checked.length === 0 
-//     ? products 
-//     : products.filter(p => checked.some(internal => p.title.includes(internal)));
-
-//   displayProducts(filtered);
-// }
 
 
 
+//Filter by INTERNAL
 function filterByInternal() {
   let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
                      .map(cb => cb.value);
@@ -928,9 +878,25 @@ function filterByInternal() {
             }
         });
     }); 
+    displayProducts(filtered);
+    //FILTER TOP----------
+    let activeBox = document.getElementById("activeFilters");
+let clear = document.getElementsByClassName("clearall")[0];
 
-  displayProducts(filtered);
+if (checked.length === 0) {
+    activeBox.innerHTML = "";
+    clear.innerHTML = "";
+} else {
+    activeBox.innerHTML = checked
+        .map(val => `<span>✕ ${val}</span>`)
+        .join(" ");
+    clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
 }
+   
+}
+
+
+
 
 //Filter by Battery Storage
 function filterByBattery() {
@@ -942,7 +908,22 @@ function filterByBattery() {
     : products.filter(p => checked.includes(p.batteryVal));
 
   displayProducts(filtered);
+  //FILTER TOP
+   let activeBox = document.getElementById("activeFilters");
+let clear = document.getElementsByClassName("clearall")[0];
+
+if (checked.length === 0) {
+    activeBox.innerHTML = "";
+    clear.innerHTML = "";
+} else {
+    activeBox.innerHTML = checked
+        .map(val => `<span>✕ ${val}</span>`)
+        .join(" ");
+    clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
 }
+}
+
+
 // Filter by Screen size
     function filterByScreen() {
   let checked = Array.from(document.querySelectorAll('.screenList input:checked'))
@@ -953,6 +934,13 @@ function filterByBattery() {
     : products.filter(p => checked.includes(p.displayval));
 
   displayProducts(filtered);
+  //FILTER TOP
+  let activeBox=document.getElementById('activeFilters')
+  if(checked.length===0){
+    activeBox.innerHTML=""
+  }else{
+    activeBox.innerHTML=checked.map(val=>`<span>✕<span>${val}</span></span>`).join(" ")
+  }
 }    
 //Filter by primary Camera
 function filterbyprimary(){
@@ -960,22 +948,68 @@ function filterbyprimary(){
                     .map(cb=>cb.value)
     let filtered=checked.length===0
     ?products
-    :products.filter(p=>checked.includes(p.primaryval))
+    :products.filter(p=>{
+        return checked.some(val=>{
+            if(val.includes("13")){
+                return parseFloat(p.primaryval)>=13 && (p.primaryval)<=15.9
+            }
+            if(val.includes("16")){
+                return parseFloat(p.primaryval)>=16 && (p.primaryval)<=20.9
+            }
+            if(val.includes("21")){
+                return parseFloat(p.primaryval)>=21
+            }
+        })
+    })
     displayProducts(filtered);
+
+    //FILTER TOP
+    let activeBox=document.getElementById("activeFilters")
+    if(checked.length===0){
+        activeBox.innerHTML=""
+    }else{
+        activeBox.innerHTML=checked.map(val=>`<span>✕<span>${val}</span></span>`).join(" ")
+    }
 }
-//filter by secindary camera
+//filter by secondary camera
 function filterbysecondary(){
     let checked=Array.from(document.querySelectorAll('.secondaryList input:checked'))
                         .map(cb=>cb.value)
     let filtered=checked.length===0
     ?products
-    :products.filter(p=>checked.includes(p.secondaryval))
-        displayProducts(filtered);
+    :products.filter(p=>{
+        return checked.some(val => {
+        if(val.includes("5")){
+            return parseFloat(p.secondaryval)>=5 && parseFloat(p.secondaryval)<=7.9;
+        }
+        if(val.includes("8")){
+            return parseFloat(p.secondaryval)>=8 && parseFloat(p.secondaryval)<=11.9;
+        }
+        if(val.includes(" 14")){
+            return parseFloat(p.secondaryval)>=13 && parseFloat(p.secondaryval)<=15.9;
+        }
+        if(val.includes("21")){
+            return parseFloat(p.secondaryval)>=21 
+        }
+        return false 
+    })
+    })                       
+     
+    //FILTER TOP-------
+     let activeBox=document.getElementById("activeFilters")
+    if(checked.length===0){
+        activeBox.innerHTML=""
+    }else{
+        activeBox.innerHTML=checked.map(val=>`<span>✕<span>${val}</span></span>`).join(" ")
+    }
+   
 
+  displayProducts(filtered);
 
 }
 // ------------------- EVENT LISTENERS -------------------
-
+document.querySelectorAll('.CategoryList input')
+.forEach(cb => cb.addEventListener('change', filterbyram));
 document.querySelectorAll('.customerList input')
 .forEach(cb => cb.addEventListener('change', filterbycustomer));
 
@@ -997,7 +1031,7 @@ document.querySelectorAll('.primaryList input')
 document.querySelectorAll('.secondaryList input')
 .forEach(cb=>cb.addEventListener('change',filterbysecondary));
 
-
+  
 
 
 // ------------------- INITIAL LOAD -------------------
@@ -1114,5 +1148,8 @@ function secondaryclick(){
 
 
 
-// SORT PRICE FROM LOW TO HIGH---------
+ 
 
+
+
+//CLEAR ALL
