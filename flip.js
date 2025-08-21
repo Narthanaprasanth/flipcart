@@ -534,6 +534,7 @@ function popular(){
         (high.style.color="black")&&(high.style.borderBottom="none")
 
      }
+     displayProducts(products)
 }
 function lowhigh(){
     const low=document.getElementById("low-high-id")
@@ -558,6 +559,12 @@ function lowhigh(){
     if(newer.style.color==="blue"){
         (newer.style.color="black")&&(newer.style.borderBottom="none")
     }
+    let sorted = [...products].sort((a, b) => {
+    let priceA = parseInt(a.price.replace(/[₹,]/g, "")); 
+    let priceB = parseInt(b.price.replace(/[₹,]/g, ""));
+    return priceA - priceB; 
+  });
+  displayProducts(sorted);
 }   
 function highlow(){
     const high=document.getElementById("high-low-id")
@@ -586,7 +593,12 @@ function highlow(){
      if(high.style.color==="blue"){
         (pop.style.color="black")&&(pop.style.borderBottom="none")
     }
-
+    let sorted=[...products].sort((a,b)=>{
+        let priceA=parseInt(a.price.replace(/[₹,]/g,""));
+        let priceB=parseInt(b.price.replace(/[₹,]/g,""));
+        return priceB - priceA
+    })
+    displayProducts(sorted);
     
 }
 function newestfirst(){
@@ -610,6 +622,9 @@ function newestfirst(){
     if(newer.style.color==="blue"){
         (low.style.color="black")&&(low.style.borderBottom="none")
     }
+   let sorted=[...products].sort((a,b)=>a.id-b.id);
+   displayProducts(sorted)
+   
 }
 
 
@@ -845,12 +860,29 @@ function displayProducts(list) {
           </div>
         </div>  
       </div>
-    `;
+    `;     
   });
-}
+}                 
 
 // ------------------- FILTERS -------------------
+//Filter by Customer Rating
+function filterbycustomer() {
+    let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
+                       .map(cb => cb.value);
 
+    let filtered = checked.length === 0 ? products : products.filter(p => {
+        return checked.some(val => {
+            if (val.includes("4")) {
+                return parseFloat(p.num) >= 4;  
+            }
+            if (val.includes("3")) {
+                return parseFloat(p.num) >= 3;  
+            }
+        });
+    }); 
+
+    displayProducts(filtered);
+}
 // Filter by RAM
 function filterByRAM() {
   let checked = Array.from(document.querySelectorAll('.memoryList input:checked'))
@@ -864,13 +896,38 @@ function filterByRAM() {
 }
 
 // Filter by Internal Storage
+// function filterByInternal() {
+//   let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
+//                      .map(cb => cb.value);
+
+//   let filtered = checked.length === 0 
+//     ? products 
+//     : products.filter(p => checked.some(internal => p.title.includes(internal)));
+
+//   displayProducts(filtered);
+// }
+
+
+
 function filterByInternal() {
   let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
                      .map(cb => cb.value);
 
   let filtered = checked.length === 0 
     ? products 
-    : products.filter(p => checked.some(internal => p.title.includes(internal)));
+     : products.filter(p => {
+        return checked.some(val => {
+            if (val.includes("256")) {
+                return parseFloat(p.titval) >= 256;  
+            }
+            if (val.includes("128")) {
+                return parseFloat(p.titval) >= 128 && parseFloat(p.titval) <= 255;  
+            }
+            if(val.includes("64")){
+                return parseFloat(p.titval)>=64 && parseFloat(p.titval)<=127
+            }
+        });
+    }); 
 
   displayProducts(filtered);
 }
@@ -897,8 +954,31 @@ function filterByBattery() {
 
   displayProducts(filtered);
 }    
-   
+//Filter by primary Camera
+function filterbyprimary(){
+    let checked=Array.from(document.querySelectorAll('.primaryList input:checked'))
+                    .map(cb=>cb.value)
+    let filtered=checked.length===0
+    ?products
+    :products.filter(p=>checked.includes(p.primaryval))
+    displayProducts(filtered);
+}
+//filter by secindary camera
+function filterbysecondary(){
+    let checked=Array.from(document.querySelectorAll('.secondaryList input:checked'))
+                        .map(cb=>cb.value)
+    let filtered=checked.length===0
+    ?products
+    :products.filter(p=>checked.includes(p.secondaryval))
+        displayProducts(filtered);
+
+
+}
 // ------------------- EVENT LISTENERS -------------------
+
+document.querySelectorAll('.customerList input')
+.forEach(cb => cb.addEventListener('change', filterbycustomer));
+
 document.querySelectorAll('.memoryList input')
   .forEach(cb => cb.addEventListener('change', filterByRAM));
 
@@ -910,6 +990,15 @@ document.querySelectorAll('.batteryList input')
 
 document.querySelectorAll('.screenList input')
 .forEach(cb=>cb.addEventListener('change',filterByScreen));
+
+document.querySelectorAll('.primaryList input')
+.forEach(cb=>cb.addEventListener('change',filterbyprimary));
+
+document.querySelectorAll('.secondaryList input')
+.forEach(cb=>cb.addEventListener('change',filterbysecondary));
+
+
+
 
 // ------------------- INITIAL LOAD -------------------
 loadProducts();
@@ -976,8 +1065,8 @@ function internalclick(){
 
 }
 function batteryclick(){
-         const svg=document.getElementById("battery-svg")
-         const will=document.getElementById("batteryid")
+    const svg=document.getElementById("battery-svg")
+    const will=document.getElementById("batteryid")
  if(will.style.display==="none" || will.style.display===""){
     will.style.display="flex"
      
@@ -987,8 +1076,8 @@ function batteryclick(){
 
 }
 function screenclick(){
-         const svg=document.getElementById("screen-svg")
-         const will=document.getElementById("screenid")
+    const svg=document.getElementById("screen-svg")
+    const will=document.getElementById("screenid")
  if(will.style.display==="none" || will.style.display===""){
     will.style.display="flex"
      
@@ -997,4 +1086,33 @@ function screenclick(){
  }
 
 }
+function primaryclick(){
+const svg=document.getElementById("screen-svg")
+    const will=document.getElementById("primid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+
+
+}
+function secondaryclick(){
+    const svg=document.getElementById("secondary-svg")
+    const will=document.getElementById("secondid")
+ if(will.style.display==="none" || will.style.display===""){
+    will.style.display="flex"
+     
+ }else{
+    will.style.display="none"
+ }
+
+
+
+}
+
+
+
+// SORT PRICE FROM LOW TO HIGH---------
 

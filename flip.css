@@ -896,8 +896,6 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
  font-size: 13px;
  letter-spacing: .3px;
 }
-
-
 .productItems img{
   width: 155px;
   height: 200px;
@@ -920,7 +918,7 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 0px;
 }
 .productItemsmid{
-
+  width: 35%;
   font-family: "semibold";
   padding-left: 25px;
 }
@@ -1006,41 +1004,53 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
 .ppp p{
   font-size: 10px;
   align-items: center;
-}         
+} 
+ /*BRAND  */
 
 .brand{
   font-size: 13px;
-  padding: 16px;
   font-family: "semibold";
 
 }
 .filterBox{
-  border-bottom: 1px solid #f0f0f0;
+  padding: 13px;
 }
 .brand-svg{
   transform: rotate(270deg);
 }
 .CategoryList{                                                                      
-  font-size: 14px;     
+  font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0; 
+  font-family: "regular"; 
+   margin: 7px 0px;
+   padding: 0px 12px 12px 12px;
+   
                                                      
 }
 .CategoryList label{
   margin: 3px 0px;
+  padding: 3px 0px;
+  color: #212121;
 }
-.main{
+
+.border-bottom{
    border-bottom: 1px solid #f0f0f0;
-  padding-top: 0px;
+  
 }
 /* CUSTOMER RATINGS */
+.customerbox{
+  padding: 13px;
+}
 .customer{
   font-size: 13px;
-  padding: 16px;
   font-family: "semibold";
+
+}
+.customerList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+  color: #212121;
 
 }
 .customer-svg{
@@ -1048,12 +1058,13 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
 
 }
 .customerList{
-    font-size: 14px;     
+   font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0; 
+  font-family: "regular"; 
+   margin: 7px 0px;
+   padding: 0px 12px 12px 12px;
+   
 }
 
 
@@ -1064,16 +1075,23 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
   font-family: "semibold";
 
 }
+
+.memoryList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+  color: #212121;
+
+}
 .ram-svg{
   transform: rotate(270deg);
 }
 .memoryList{                                                                      
-  font-size: 14px;     
+  font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0; 
+  font-family: "regular"; 
+   
+   padding: 12px 12px;
                                                      
 }
 /* INTERNAL STORAGE */
@@ -1086,14 +1104,20 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
     transform: rotate(270deg);
 
 }
+.internalList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+    color: #212121;
+
+}
 .internalList{
-    font-size: 14px;     
+   font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0;
+  font-family: "regular"; 
+   padding: 12px 12px;
 }
+
 
 /* BATTERY STORAGE */
 .batteryy{
@@ -1105,13 +1129,19 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
    transform: rotate(270deg);
 }
 .batteryList{
-    font-size: 14px;     
+  font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0;
+  font-family: "regular"; 
+   padding: 12px 12px;
 }
+.batteryList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+    color: #212121;
+
+}
+
 /* SCREEN SIZE */
 .screen{
   font-size: 13px;
@@ -1123,13 +1153,19 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
    transform: rotate(270deg);
 }
 .screenList{
-    font-size: 14px;     
+     font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0;
+  font-family: "regular"; 
+   padding: 12px 12px;
 }
+.screenList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+    color: #212121;
+
+}
+
 
 /* PRIMARY SCREEN */
 .primary{
@@ -1141,11 +1177,39 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
      transform: rotate(270deg);
 }
 .primaryList{
-  font-size: 14px;     
+   font-size: 13px;     
   display: flex;                     
   flex-direction: column;
-  font-family: "regular";
-  padding: 7px 0px;   
-   border-bottom: 1px solid #f0f0f0;
+  font-family: "regular"; 
+   padding: 12px 12px;
+}
+.primaryList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+  color: #212121;
+
+}
+
+
+/* SECONDARY CAMERA */
+.secondary{
+  font-size: 13px;
+  padding: 16px;
+  font-family: "semibold";
+}
+.secondary-svg{
+   transform: rotate(270deg);
+}
+.secondaryList{
+  font-size: 13px;     
+  display: flex;                     
+  flex-direction: column;
+  font-family: "regular"; 
+   padding: 12px 12px;
+}
+.secondaryList label{
+  margin: 3px 0px;
+  padding: 3px 0px;
+  color: #212121;
 
 }
