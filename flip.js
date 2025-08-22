@@ -757,77 +757,106 @@ function displayProducts(list) {
           <div class="bank">
             <p>${element.bankoffer}</p>
           </div>
-        </div>  
+        </div>
       </div>
-    `;     
+    `;
   });
-}                 
+} 
 
 // ------------------- FILTERS -------------------
 //Filter by BRAND--
 function filterbyram(){
     let checked=Array.from(document.querySelectorAll('.CategoryList input:checked'))
                     .map(cb=>cb.value)
+
      let filtered = checked.length === 0 
     ? products 
     : products.filter(p => checked.some(brand => p.titlename.includes(brand)));
 
-  displayProducts(filtered);               
-
-
+  displayProducts(filtered);                 
+                            
   //FILTER TOP------
 
-   let activeBox = document.getElementById("activeFilters");
+   let activeBox = document.getElementById("activeFilters");  
 let clear = document.getElementsByClassName("clearall")[0];
 
-if (checked.length === 0) {
+if (checked.length === 0){
     activeBox.innerHTML = "";
     clear.innerHTML = "";
 } else {
-    activeBox.innerHTML = checked
-        .map(val => `<span>✕ ${val}</span>`)
+    activeBox.innerHTML = checked            
+        .map(val => `<span class="active-tag" data-value="${val}" >✕ ${val}</span>`)
         .join(" ");
     clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
-}     
+} 
+document.querySelectorAll(".active-tag").forEach(tag=>{
+    tag.addEventListener("click",function(){
+        let value=this.getAttribute("data-value");
+
+        document.querySelectorAll('.CategoryList input[type="checkbox"]').forEach(cb=>{
+            if(cb.value===value)cb.checked=false
+        })
+        filterbyram()
+    })
+})                         
 }
-
-
-
-//Filter by Customer Rating
+                             
+// Filter by Customer Rating
 function filterbycustomer() {
     let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
                        .map(cb => cb.value);
 
-    let filtered = checked.length === 0 ? products : products.filter(p => {
-        return checked.some(val => {
-            if (val.includes("4")) {
-                return parseFloat(p.num) >= 4;  
-            }
-            if (val.includes("3")) {
-                return parseFloat(p.num) >= 3;  
-            }
-        });
-    }); 
-
+    let filtered = checked.length === 0 
+        ? products 
+        : products.filter(p => {
+            return checked.some(val => {
+                if (val === "4") {
+                    return parseFloat(p.num) >= 4;  
+                }
+                if (val === "3") {
+                    return parseFloat(p.num) >= 3;  
+                }
+            });          
+        });                                   
     displayProducts(filtered);
-
 }
-//---------------------FILTER TOP--------------------
- function filtercustomer() {
-    let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
-                       .map(cb => cb.value + "★ & above");
 
-    let activeBox = document.getElementById("activeFilters");
-    let clear = document.getElementsByClassName("clearall")[0];
+//---------------------FILTER TOP--------------------
+function filtercustomer() {
+    let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
+                       .map(cb => cb.value);
+
+    let activeBox = document.getElementById("activeFilters2");
+    let clear = document.getElementsByClassName("clearall")[0];  
 
     if (checked.length === 0) {
         activeBox.innerHTML = "";
         clear.innerHTML = ""; 
     } else {
-        activeBox.innerHTML = checked.map(val => `<span>✕<span>${val}</span></span>`).join(" ");
+        activeBox.innerHTML = checked
+            .map(val => `<span class="active-tag" data-value="${val}">✕ ${val}★ & above</span>`)
+            .join(" ");
         clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
-    }                     
-}       
+    }  
+
+    document.querySelectorAll(".active-tag").forEach(tag => {
+        tag.addEventListener("click", function () {
+            let value = this.getAttribute("data-value");
+
+            // Uncheck the right checkbox
+            document.querySelectorAll('.customerList input[type="checkbox"]').forEach(cb => {
+                if (cb.value === value) cb.checked = false;
+            });
+
+            // Remove just this tag
+            this.remove();
+
+            // Refresh product list
+            filterbycustomer();
+        });
+    });                   
+}
+
 // Filter by RAM
 function filterByRAM() {
   let checked = Array.from(document.querySelectorAll('.memoryList input:checked'))
@@ -840,7 +869,7 @@ function filterByRAM() {
   displayProducts(filtered);
   //FILTER TOP------
 
-   let activeBox = document.getElementById("activeFilters");
+let activeBox = document.getElementById("activeFilters3");
 let clear = document.getElementsByClassName("clearall")[0];
 
 if (checked.length === 0) {
@@ -848,55 +877,73 @@ if (checked.length === 0) {
     clear.innerHTML = "";
 } else {
     activeBox.innerHTML = checked
-        .map(val => `<span>✕ ${val}</span>`)
+        .map(val => `<span class="active-tag" data-value="${val}">✕ ${val}</span>`)
         .join(" ");
     clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
-}     
+}  
+document.querySelectorAll(".active-tag").forEach(tag=>{
+    tag.addEventListener("click",function(){
+        let value=this.getAttribute("data-value");
+
+        document.querySelectorAll('.memoryList input[type="checkbox"]').forEach(cb=>{
+            if(cb.value===value)cb.checked=false;
+        })
+        filterByRAM()
+    })
+})                                 
 
 }
 
-
+               
 
 
 //Filter by INTERNAL
 function filterByInternal() {
   let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
-                     .map(cb => cb.value);
+                     .map(cb => cb.value);   
 
-  let filtered = checked.length === 0 
+  let filtered = checked.length === 0
     ? products 
      : products.filter(p => {
         return checked.some(val => {
             if (val.includes("256")) {
                 return parseFloat(p.titval) >= 256;  
-            }
+            } 
             if (val.includes("128")) {
-                return parseFloat(p.titval) >= 128 && parseFloat(p.titval) <= 255;  
+                return parseFloat(p.titval) >= 128 && parseFloat(p.titval) <= 255;    
             }
             if(val.includes("64")){
-                return parseFloat(p.titval)>=64 && parseFloat(p.titval)<=127
+                return parseFloat(p.titval)>=64 && parseFloat(p.titval)<=127;
             }
         });
-    }); 
-    displayProducts(filtered);
+    });   
+    displayProducts(filtered);  
     //FILTER TOP----------
-    let activeBox = document.getElementById("activeFilters");
-let clear = document.getElementsByClassName("clearall")[0];
+    let activeBox = document.getElementById("activeFilters4");
+    let clear = document.getElementsByClassName("clearall")[0];
 
 if (checked.length === 0) {
     activeBox.innerHTML = "";
     clear.innerHTML = "";
 } else {
     activeBox.innerHTML = checked
-        .map(val => `<span>✕ ${val}</span>`)
+        .map(val => `<span class="active-tag" data-value="${val}">✕ ${val}</span>`)
         .join(" ");
     clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
 }
-   
-}
+document.querySelectorAll(".active-tag").forEach(tag=>{
+    tag.addEventListener("click",function(){
+        let value=this.getAttribute("data-value");
 
-
-
+        document.querySelectorAll('.internalList input[type="checkbox"]').forEach(cb=>{
+            if(cb.value===value)cb.checked=false;
+        })
+        this.remove();
+        filterByInternal();
+    
+    })
+})                                                   
+}                                           
 
 //Filter by Battery Storage
 function filterByBattery() {
@@ -909,7 +956,7 @@ function filterByBattery() {
 
   displayProducts(filtered);
   //FILTER TOP
-   let activeBox = document.getElementById("activeFilters");
+   let activeBox = document.getElementById("activeFilters5");
 let clear = document.getElementsByClassName("clearall")[0];
 
 if (checked.length === 0) {
@@ -917,10 +964,22 @@ if (checked.length === 0) {
     clear.innerHTML = "";
 } else {
     activeBox.innerHTML = checked
-        .map(val => `<span>✕ ${val}</span>`)
+        .map(val => `<span class="active-tag" data-value="${val}">✕ ${val}</span>`)
         .join(" ");
     clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
 }
+document.querySelectorAll(".active-tag").forEach(tag=>{
+    tag.addEventListener("click",function(){
+        let value=this.getAttribute("data-value")
+
+        document.querySelectorAll('.batteryList input[type="checkbox"]').forEach(cb=>{
+            if(cb.value===value)cb.checked=false
+        })
+        this.remove();
+        filterByBattery();
+
+    })
+})
 }
 
 
@@ -935,13 +994,28 @@ if (checked.length === 0) {
 
   displayProducts(filtered);
   //FILTER TOP
-  let activeBox=document.getElementById('activeFilters')
+  let activeBox=document.getElementById('activeFilters6')
+  let clear = document.getElementsByClassName("clearall")[0];
+
   if(checked.length===0){
     activeBox.innerHTML=""
   }else{
-    activeBox.innerHTML=checked.map(val=>`<span>✕<span>${val}</span></span>`).join(" ")
+    activeBox.innerHTML=checked
+    .map(val=>`<span class="active-tag" data-value="${val}">✕<span>${val}</span></span>`).join(" ")
+     clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
   }
-}    
+  document.querySelectorAll(".active-tag").forEach(tag=>{
+    tag.addEventListener("click",function(){
+        let value=this.getAttribute("data-value")
+
+    document.querySelectorAll('.screenList input[type="checkbox"]').forEach(cb=>{
+        if(cb.value===value)cb.checked=false;
+    })
+    this.remove();
+    filterByScreen();                 
+    })
+  })
+}       
 //Filter by primary Camera
 function filterbyprimary(){
     let checked=Array.from(document.querySelectorAll('.primaryList input:checked'))
@@ -951,28 +1025,45 @@ function filterbyprimary(){
     :products.filter(p=>{
         return checked.some(val=>{
             if(val.includes("13")){
-                return parseFloat(p.primaryval)>=13 && (p.primaryval)<=15.9
+                return parseFloat(p.primaryval)>=13 && (p.primaryval)<=15.9;
             }
             if(val.includes("16")){
-                return parseFloat(p.primaryval)>=16 && (p.primaryval)<=20.9
+                return parseFloat(p.primaryval)>=16 && (p.primaryval)<=20.9;
             }
             if(val.includes("21")){
-                return parseFloat(p.primaryval)>=21
+                return parseFloat(p.primaryval)>=21;
             }
         })
-    })
+    })       
     displayProducts(filtered);
-
+        
     //FILTER TOP
-    let activeBox=document.getElementById("activeFilters")
+    let activeBox=document.getElementById("activeFilters7")
+    let clear = document.getElementsByClassName("clearall")[0];
     if(checked.length===0){
         activeBox.innerHTML=""
     }else{
-        activeBox.innerHTML=checked.map(val=>`<span>✕<span>${val}</span></span>`).join(" ")
+        activeBox.innerHTML=checked
+        .map(val=>`<span class="active-tag" data-value="${val}">✕${val}</span>`)
+        .join(" ")
+         clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
     }
-}
+    document.querySelectorAll(".active-tag").forEach(tag=>{         
+        tag.addEventListener("click",function(){           
+            let value=this.getAttribute("data-value");         
+
+            document.querySelectorAll('.primaryList input[type="checkbox"]').forEach(cb=>{
+                if(cb.value===value)cb.checked=false;
+            })
+            this.remove();
+            filterbyprimary();
+
+        })
+    })  
+}                        
+
 //filter by secondary camera
-function filterbysecondary(){
+function filterbysecondary(){       
     let checked=Array.from(document.querySelectorAll('.secondaryList input:checked'))
                         .map(cb=>cb.value)
     let filtered=checked.length===0
@@ -994,18 +1085,32 @@ function filterbysecondary(){
         return false 
     })
     })                       
-     
+    displayProducts(filtered);
     //FILTER TOP-------
-     let activeBox=document.getElementById("activeFilters")
+     let activeBox=document.getElementById("activeFilters8")
+     let clear = document.getElementsByClassName("clearall")[0]; 
+
     if(checked.length===0){
         activeBox.innerHTML=""
     }else{
-        activeBox.innerHTML=checked.map(val=>`<span>✕<span>${val}</span></span>`).join(" ")
+        activeBox.innerHTML=checked
+        .map(val=>`<span class="active-tag" data-value="${val}">✕${val}</span>`)
+        .join(" ")
+         clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
     }
-   
+    document.querySelectorAll(".active-tag").forEach(tag=>{
+        tag.addEventListener("click",function(){
+            let value=this.getAttribute("data-value");   
 
-  displayProducts(filtered);
-
+            document.querySelectorAll('.secondaryList input[type="checkbox"]').forEach(cb=>{
+                if(cb.value===value)cb.checked=false;
+            })
+            this.remove();
+            filterbysecondary();
+        })
+        
+    })
+        
 }
 // ------------------- EVENT LISTENERS -------------------
 document.querySelectorAll('.CategoryList input')
@@ -1039,18 +1144,11 @@ loadProducts();
                              
     
 
-
+ 
                                          
 
 
-
-    
-                           
-
-
-
-
-
+ 
 
 
 
@@ -1140,16 +1238,54 @@ function secondaryclick(){
      
  }else{
     will.style.display="none"
- }
-
-
-
+ }          
 }
+                   
+
+
 
 
 
  
 
 
-
 //CLEAR ALL
+function clearAll(){
+    const activeFilters=document.getElementById("activeFilters")
+    const activeFilters2=document.getElementById("activeFilters2")
+    const activeFilters3=document.getElementById("activeFilters3")
+    const activeFilters4=document.getElementById("activeFilters4")
+    const activeFilters5=document.getElementById("activeFilters5")
+    const activeFilters6=document.getElementById("activeFilters6")
+    const activeFilters7=document.getElementById("activeFilters7")
+    const activeFilters8=document.getElementById("activeFilters8")
+               
+    const clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+
+
+
+     activeFilters.innerHTML=""
+     activeFilters2.innerHTML=""
+     activeFilters3.innerHTML=""
+     activeFilters4.innerHTML=""
+     activeFilters5.innerHTML=""
+     activeFilters6.innerHTML=""
+     activeFilters7.innerHTML=""
+     activeFilters8.innerHTML=""
+
+    document.querySelectorAll('#cattid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#customerid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#memoryid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#internalid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#batteryid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#screenid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#primid input[type=checkbox]').forEach(cb=>cb.checked=false)
+    document.querySelectorAll('#secondid input[type=checkbox]').forEach(cb=>cb.checked=false)
+
+
+     displayProducts(products)
+}
+
+
+

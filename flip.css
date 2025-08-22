@@ -1217,6 +1217,7 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
 
 
 /* FILTER TOP */
+/* 1 */
 .active-filters{
   display: flex;
   flex-wrap: wrap;
@@ -1235,6 +1236,139 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
 }
 
+/* 2 */
+
+.active-filters2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters2 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters2 :hover{
+  text-decoration: line-through;
+}
+
+/* 3 */
+.active-filters3{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters3 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters3 :hover{
+  text-decoration: line-through;
+}
+
+/*4  */
+.active-filters4{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters4 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters4 :hover{
+  text-decoration: line-through;
+}
+
+/* 5 */
+.active-filters5{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters5 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters5 :hover{
+  text-decoration: line-through;
+}
+
+/* 6 */
+.active-filters6{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters6 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters6 :hover{
+  text-decoration: line-through;
+}
+/* 7 */
+.active-filters7{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters7 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters7 :hover{
+  text-decoration: line-through;
+}
+/* 8 */
+.active-filters8{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active-filters8 span{
+  background-color: #e0e0e0;
+  font-size: 10px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  margin: 2px 4px;
+  font-family: "regular";
+
+}
+
+.active-filters8 :hover{
+  text-decoration: line-through;
+}
+
+
 
 
 
@@ -1249,3 +1383,10 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
   font-size: 11px;
   font-family: "semibold";
 }
+
+
+
+
+
+
+
