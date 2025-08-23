@@ -766,19 +766,24 @@ function displayProducts(list) {
 // ------------------- FILTERS -------------------
 //Filter by BRAND--
 function filterbyram(){
+    window.scroll({
+    top:0
+})
     let checked=Array.from(document.querySelectorAll('.CategoryList input:checked'))
                     .map(cb=>cb.value)
 
      let filtered = checked.length === 0 
     ? products 
     : products.filter(p => checked.some(brand => p.titlename.includes(brand)));
+    window.scroll({
+    top:0
+})
 
-  displayProducts(filtered);                 
-                            
+  displayProducts(filtered);
   //FILTER TOP------
 
    let activeBox = document.getElementById("activeFilters");  
-let clear = document.getElementsByClassName("clearall")[0];
+   let clear = document.getElementsByClassName("clearall")[0];
 
 if (checked.length === 0){
     activeBox.innerHTML = "";
@@ -798,11 +803,14 @@ document.querySelectorAll(".active-tag").forEach(tag=>{
         })
         filterbyram()
     })
-})                         
-}
-                             
+})                      
+} 
+                       
 // Filter by Customer Rating
 function filterbycustomer() {
+    window.scroll({
+    top:0
+})
     let checked = Array.from(document.querySelectorAll('.customerList input:checked'))
                        .map(cb => cb.value);
 
@@ -843,15 +851,13 @@ function filtercustomer() {
         tag.addEventListener("click", function () {
             let value = this.getAttribute("data-value");
 
-            // Uncheck the right checkbox
             document.querySelectorAll('.customerList input[type="checkbox"]').forEach(cb => {
                 if (cb.value === value) cb.checked = false;
             });
 
-            // Remove just this tag
             this.remove();
 
-            // Refresh product list
+
             filterbycustomer();
         });
     });                   
@@ -859,6 +865,9 @@ function filtercustomer() {
 
 // Filter by RAM
 function filterByRAM() {
+    window.scroll({
+    top:0
+})
   let checked = Array.from(document.querySelectorAll('.memoryList input:checked'))
                      .map(cb => cb.value);
 
@@ -899,6 +908,9 @@ document.querySelectorAll(".active-tag").forEach(tag=>{
 
 //Filter by INTERNAL
 function filterByInternal() {
+    window.scroll({
+    top:0
+})
   let checked = Array.from(document.querySelectorAll('.internalList input:checked'))
                      .map(cb => cb.value);   
 
@@ -942,11 +954,13 @@ document.querySelectorAll(".active-tag").forEach(tag=>{
         filterByInternal();
     
     })
-})                                                   
-}                                           
-
+})                                                          
+}        
 //Filter by Battery Storage
 function filterByBattery() {
+    window.scroll({
+    top:0
+})
   let checked = Array.from(document.querySelectorAll('.batteryList input:checked'))
                      .map(cb => cb.value);
 
@@ -985,6 +999,9 @@ document.querySelectorAll(".active-tag").forEach(tag=>{
 
 // Filter by Screen size
     function filterByScreen() {
+        window.scroll({
+    top:0
+})
   let checked = Array.from(document.querySelectorAll('.screenList input:checked'))
                      .map(cb => cb.value);
 
@@ -1018,6 +1035,9 @@ document.querySelectorAll(".active-tag").forEach(tag=>{
 }       
 //Filter by primary Camera
 function filterbyprimary(){
+    window.scroll({
+    top:0
+})
     let checked=Array.from(document.querySelectorAll('.primaryList input:checked'))
                     .map(cb=>cb.value)
     let filtered=checked.length===0
@@ -1042,6 +1062,7 @@ function filterbyprimary(){
     let clear = document.getElementsByClassName("clearall")[0];
     if(checked.length===0){
         activeBox.innerHTML=""
+        clear.innerHTML = ""
     }else{
         activeBox.innerHTML=checked
         .map(val=>`<span class="active-tag" data-value="${val}">✕${val}</span>`)
@@ -1060,10 +1081,13 @@ function filterbyprimary(){
 
         })
     })  
-}                        
-
+}                           
+                               
 //filter by secondary camera
-function filterbysecondary(){       
+function filterbysecondary(){  
+    window.scroll({
+    top:0
+})     
     let checked=Array.from(document.querySelectorAll('.secondaryList input:checked'))
                         .map(cb=>cb.value)
     let filtered=checked.length===0
@@ -1091,7 +1115,8 @@ function filterbysecondary(){
      let clear = document.getElementsByClassName("clearall")[0]; 
 
     if(checked.length===0){
-        activeBox.innerHTML=""
+        activeBox.innerHTML="";
+        clear.innerHTML=""
     }else{
         activeBox.innerHTML=checked
         .map(val=>`<span class="active-tag" data-value="${val}">✕${val}</span>`)
@@ -1115,6 +1140,7 @@ function filterbysecondary(){
 // ------------------- EVENT LISTENERS -------------------
 document.querySelectorAll('.CategoryList input')
 .forEach(cb => cb.addEventListener('change', filterbyram));
+
 document.querySelectorAll('.customerList input')
 .forEach(cb => cb.addEventListener('change', filterbycustomer));
 
@@ -1243,13 +1269,7 @@ function secondaryclick(){
                    
 
 
-
-
-
- 
-
-
-//CLEAR ALL
+//CLEAR ALL---UPPER
 function clearAll(){
     const activeFilters=document.getElementById("activeFilters")
     const activeFilters2=document.getElementById("activeFilters2")
@@ -1262,7 +1282,23 @@ function clearAll(){
                
     const clearid=document.getElementById("clearallid")
     clearid.innerHTML=""
-
+    
+    const clearid1=document.getElementById("clearmainid")
+    const clearid2=document.getElementById("clearmainid2")
+    const clearid3=document.getElementById("clearmainid3")
+    const clearid4=document.getElementById("clearmainid4")
+    const clearid5=document.getElementById("clearmainid5")
+    const clearid6=document.getElementById("clearmainid6")
+    const clearid7=document.getElementById("clearmainid7")
+    const clearid8=document.getElementById("clearmainid8")
+    clearid1.style.display = "none";
+    clearid2.style.display = "none";
+    clearid3.style.display = "none";
+    clearid4.style.display = "none";
+    clearid5.style.display = "none";
+    clearid6.style.display = "none";
+    clearid7.style.display = "none";
+    clearid8.style.display = "none";
 
 
      activeFilters.innerHTML=""
@@ -1283,9 +1319,308 @@ function clearAll(){
     document.querySelectorAll('#primid input[type=checkbox]').forEach(cb=>cb.checked=false)
     document.querySelectorAll('#secondid input[type=checkbox]').forEach(cb=>cb.checked=false)
 
-
      displayProducts(products)
 }
 
+//CLEAR--1 BRAND
+const clearit = document.getElementById("clearmainid");
 
+// function to update visibility
+function updateClearButton() {
+    if (document.querySelectorAll('.CategoryList input:checked').length > 0) {
+        clearit.style.display = "flex";   
+    } else {
+        clearit.style.display = "none";   
+    }
+}
+function clearclick() {
+    let activeBox = document.getElementById("activeFilters");  
+    // uncheck all checkboxes inside #cattid  
+    document.querySelectorAll('#cattid input[type="checkbox"]').forEach(cb => cb.checked = false);
+
+    // hide the clear button
+    document.getElementById("clearmainid").style.display = "none";
+    activeBox.innerHTML = "";
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+
+   
+    displayProducts(products)
+}                  
+
+// attach listener to all checkboxes
+document.querySelectorAll('.CategoryList input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener("change", updateClearButton);
+});
+
+updateClearButton();
+
+
+//CLEAR --2 CUSTOMER RATING
+const clearit2=document.getElementById("clearmainid2")
+function updateClearButton2(){
+    if(document.querySelectorAll('.customerList input:checked').length > 0){
+        clearit2.style.display="flex";
+    }else{
+        clearit2.style.display="none"
+    }
+}
+function clearclick2(){
+    let activeBox=document.getElementById("activeFilters2")
+
+    document.querySelectorAll('#customerid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid2").style.display="none"
+    activeBox.innerHTML=""
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+
+    displayProducts(products)
+}
+
+document.querySelectorAll('.customerList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton2)
+})
+updateClearButton2()
+//CLEAR --3 RAM
+const clearit3=document.getElementById("clearmainid3")
+function updateClearButton3(){
+    if(document.querySelectorAll('.memoryList input:checked').length > 0){
+        clearit3.style.display="flex"
+    }else{
+        clearit3.style.display="none"
+    }
+}
+function clearclick3(){
+    let activeBox=document.getElementById("activeFilters3")
+    document.querySelectorAll('#memoryid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid3").style.display="none"
+    activeBox.innerHTML=""
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+
+    displayProducts(products)
+}
+document.querySelectorAll('.memoryList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton3)
+})
+updateClearButton3()
+
+/* CLEAR ALL--4 INTERNAL STORAGE */
+const clearit4=document.getElementById("clearmainid4")
+function updateClearButton4(){
+    if(document.querySelectorAll('.internalList input:checked').length > 0){
+        clearit4.style.display="flex"
+    }else{
+        clearit4.style.display="none"
+    }
+}
+function clearclick4(){
+    let activeBox=document.getElementById("activeFilters4")
+    document.querySelectorAll('#internalid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid4").style.display="none"
+    activeBox.innerHTML=""
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+}
+document.querySelectorAll('.internalList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton4)
+})
+updateClearButton4()
+
+/* CLEAR ALL--5 BATTERY CAPACITY */
+
+const clearit5=document.getElementById("clearmainid5")
+function updateClearButton5(){
+    if(document.querySelectorAll('.batteryList input:checked').length > 0){
+        clearit5.style.display="flex"
+    }else{
+        clearit5.style.display="none"
+    }
+}
+function clearclick5(){
+    let activeBox=document.getElementById("activeFilters5")
+    document.querySelectorAll('#batteryid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid5").style.display="none"
+    activeBox.innerHTML=""
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+}
+document.querySelectorAll('.batteryList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton5)
+})
+updateClearButton5()
+
+/* CLEAR ALL--6 SCREEN SIZE */
+const clearit6=document.getElementById("clearmainid6")
+function updateClearButton6(){
+    if(document.querySelectorAll('.screenList input:checked').length > 0){
+        clearit6.style.display="flex"
+    }else{
+        clearit6.style.display="none"
+    }
+}
+function clearclick6(){
+    let activeBox=document.getElementById("activeFilters6")
+    document.querySelectorAll('#screenid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid6").style.display="none"
+    activeBox.innerHTML=""
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""
+}
+document.querySelectorAll('.screenList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton6)
+})
+updateClearButton6()
+
+/* CLEAR ALL--7 PRIMARY CAMERA */                        
+
+const clearit7=document.getElementById("clearmainid7")
+function updateClearButton7(){
+    if(document.querySelectorAll('.primaryList input:checked').length > 0){
+        clearit7.style.display="flex"
+    }else{
+        clearit7.style.display="none"
+    }
+}
+function clearclick7(){
+    let activeBox=document.getElementById("activeFilters7")
+    document.querySelectorAll('#primid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid7").style.display="none"
+    activeBox.innerHTML=""
+    let clearid=document.getElementById("clearallid")
+    clearid.innerHTML=""            
+}
+document.querySelectorAll('.primaryList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton7)
+})
+updateClearButton7()
+
+/* CLEAR ALL--8 SECONDARY CAMERA */
+
+const clearit8=document.getElementById("clearmainid8")
+function updateClearButton8(){
+    if(document.querySelectorAll('.secondaryList input:checked').length>0){
+        clearit8.style.display="flex"
+    }else{                              
+        clearit8.style.display="none"
+    }
+}
+function clearclick8(){
+    let activeBox=document.getElementById("activeFilters8")
+    let clearid=document.getElementById("clearallid")
+    document.querySelectorAll('#secondid input[type="checkbox"]').forEach(cb=>cb.checked=false)
+    document.getElementById("clearmainid8").style.display="none"
+    activeBox.innerHTML=""
+    clearid.innerHTML=""
+
+}
+document.querySelectorAll('.secondaryList input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener("change",updateClearButton8)
+})
+updateClearButton8()
+                         
+
+
+//SEARCH INSIDE BRRAND-----------------
+const searchbox=document.getElementById("searchboxid")
+const brandlist=document.getElementById("brandlist")
+
+searchbox.addEventListener("keyup",()=>{
+    const query=searchbox.value.toLowerCase();
+
+    brandlist.querySelectorAll("label").forEach(label=>{
+        const text=label.textContent.toLowerCase()
+        if(text.includes(query)){
+    label.style.display="block"
+    }else{
+    label.style.display="none"
+        }
+    })
+})
+    // -----TO REMOVE clear all BELOW EACH CATEGORIES------------
+//BRAND
+function activefilterclick() {
+    const checked = document.querySelectorAll('#customerlist input[type="checkbox"]:checked');
+
+    if (checked.length === 0) {
+        document.getElementById("clearmainid").style.display = "none"; 
+    } else {
+        document.getElementById("clearmainid").style.display = "flex"; 
+    }
+}
+
+//CUSTOMER
+function activefilterclick2(){
+    const checked=document.querySelectorAll('#customerid input[type="checkbox"]:checked');
+
+    if (checked.length===0){
+        document.getElementById("clearmainid2").style.display="none";
+    }else{
+        document.getElementById("clearmainid2").style.display="flex"
+    }
+}
+//RAM
+function activefilterclick3(){
+    const checked=document.querySelectorAll('#memoryid input[type="checkbox"]:checked');
+
+    if(checked.length===0){
+        document.getElementById("clearmainid3").style.display="none";
+
+    }else{
+        document.getElementById("clearmainid3").style.display="flex"
+    }
+}
+//INTERNAL STORAGE
+function activefilterclick4(){
+    const checked=document.querySelectorAll('#internalid input[type="checkbox"]:checked');
+
+    if(checked.length===0){
+        document.getElementById("clearmainid4").style.display="none"
+    }else{
+        document.getElementById("clearmainid4").style.display="flex"
+    }
+}
+
+//BATTERY CAPACITY
+function activefilterclick5(){
+    const checked=document.querySelectorAll('#batteryid input[type="checkbox"]:checked')
+
+    if(checked.length===0){
+        document.getElementById("clearmainid5").style.display="none"
+    }else{
+        document.getElementById("clearmainid5").style.display="flex"
+    }
+}
+
+//SCREEN SIZE
+function activefilterclick6(){
+    const checked=document.querySelectorAll('#screenid input[type="checked"]:checked')
+
+    if(checked.length===0){
+        document.getElementById("clearmainid6").style.display="none"
+    }else{
+        document.getElementById("clearmainid6").style.display="flex"
+    }
+}
+
+//PRIMARY CAMERA
+function activefilterclick7(){
+    const checked=document.querySelectorAll('#primid input[type="checkbox"]:checked')
+
+    if(checked.length===0){
+        document.getElementById("clearmainid7").style.display="none"
+    }else{
+        document.getElementById("clearmainid7").style.display="flex"
+    }
+}
+//SECONDARY CAMERA
+function activefilterclick8(){
+    const checked=document.querySelectorAll('#secondid input[type="checkbox"]:checked')
+
+    if(checked.length===0){
+        document.getElementById("clearmainid8").style.display="none"
+    }else{
+        document.getElementById("clearmainid8").style.display="flex"
+    }
+}   
 

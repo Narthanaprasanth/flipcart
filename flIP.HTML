@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="flip.css">
     <title>Document</title>
 </head>
-<body>
+<body>         
     <header class="header">
             <div class="first"></div>
             <div class="header-content">
@@ -30,8 +30,6 @@
 
               </div>
               </div>
-              
-              
               <div class="nav-link">
                 <a href="#">Become a Seller</a>
                 <a href="#" class="mored" id="moreid" onmouseover="moreclick()" style="position: relative; left: 20px;">More&nbsp;&nbsp;<svg id="svgid" width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="-dC5Le"></path></svg></a>
@@ -183,12 +181,12 @@
         <section class="side-bar">
             
             <div class="filters" style="display: flex;flex-direction: column;">
-                <div class="beggining" style="display: flex; flex-direction: row;">
+                <div class="beggining" style="display: flex; flex-direction: row;justify-content: space-between;">
                 <div><span>Filters</span></div>
-                 <div class="clearall" id="clearallid">
+                 <div class="clearall" onclick="last()" id="clearallid"></div>
+                 
                 </div>
-                </div>
-
+                <div class="main-activefilter" id="mainactiveid">
                 <div class="active-filters"  id="activeFilters"  onclick="activefilterclick()" style="display: flex;"></div>
                 <div class="active-filters2" id="activeFilters2" onclick="activefilterclick2()"></div>
                 <div class="active-filters3" id="activeFilters3" onclick="activefilterclick3()"></div>
@@ -197,6 +195,7 @@
                 <div class="active-filters6" id="activeFilters6" onclick="activefilterclick6()"></div>
                 <div class="active-filters7" id="activeFilters7" onclick="activefilterclick7()"></div>
                 <div class="active-filters8" id="activeFilters8" onclick="activefilterclick8()"></div>  
+                </div>
             </div>
                                     
             <div class="category">           
@@ -253,28 +252,43 @@
                         </select> 
                     </div>    
                 </div>    
-            </div>   
-            
-            
+            </div>                   
+                                                         
             <!-- FILTER -BOX----------- -->
+             <!-- BRAND -->
              <div class="main">
         <div class="filterBox" style="display: flex; justify-content: space-between;">
             <div class="brand">BRAND</div>
             <div class="brand-svg" id="brandid" onclick="svgclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
             </div>
             <div class="CategoryList" id="cattid" style="display:flex;"> 
+                <div class="clear-main" onclick="clearclick()" id="clearmainid" style="display: none; ">
+                    <div class="clear-cros">✕</div>
+                    <div class="clear-text" >Clear all</div>
+                </div>
+                <div class="searchbar">
+                    <div search-svg><svg width="12" height="20" style="position: absolute;" viewBox="0 0 17 18" class="zmbstL" xmlns="http://www.w3.org/2000/svg"><g fill="grey" fill-rule="evenodd"><path class="JVQyl9" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="JVQyl9" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg></div>
+                    <input class="searchbox" id="searchboxid" type="text" placeholder="Search Brand" value="">
+                </div>
+                <div id="brandlist">
                 <form autocomplete="off" style="display: flex; flex-direction: column;">                                   
                 <label><input type="checkbox"  value="Samsung" onchange="filterProducts()">Samsung</label>
                 <label><input type="checkbox"  value="MOTOROLA" onchange="filterProducts()">MOTOROLA</label>
                 <label><input type="checkbox"  value="Tecno" onchange="filterProducts()">Tecno</label>
-            </div>
+                </div>
+            </div>                                                                                                                   
             <div class="border-bottom"></div>
             <!-- CUSTOMER RATTINGS -->
              <div class="customerbox" style="display: flex; justify-content: space-between;">
                 <div class="customer">CUSTOMER RATINGS</div>
                 <div class="customer-svg" id="custid" onclick="customerclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
              </div>
+             
              <div class="customerList" id="customerid" style="display: flex; ">
+                 <div class="clear-main2" onclick="clearclick2()" id="clearmainid2" style="display: none;">
+                    <div class="clear-cros2">✕</div>
+                    <div class="clear-text2">Clear all</div>
+                </div>
                 <label><input type="checkbox" value="4" onclick="filtercustomer()">4★ & above</label>
                 <label><input type="checkbox" value="3" onclick="filtercustomer()">3★ & above</label>
              </div>
@@ -284,7 +298,11 @@
                 <div class="ram">RAM</div>
                 <div class="ram-svg" id="ramid" onclick="ramclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
              </div>
-              <div class="memoryList" id="memoryid" style="display:flex;">  
+              <div class="memoryList"  id="memoryid" style="display:flex;">  
+               <div class="clear-main3" onclick="clearclick3()"  id="clearmainid3" style="display: none;">
+                    <div class="clear-cros3">✕</div>
+                    <div class="clear-text3">Clear all</div>
+                </div>
             <label><input type="checkbox"value="4 GB RAM "onclick="filterram()" >4GB</label>
             <label><input type="checkbox"value="8 GB RAM "onclick="filterram()" >8 GB</label>
             <label><input type="checkbox"value="2 GB" onclick="filterram()" >2 GB</label>
@@ -298,6 +316,10 @@
             <div class="internal-svg" id="intid" onclick="internalclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
             </div>
             <div class="internalList" id="internalid" style="display: flex;">
+                <div class="clear-main4" id="clearmainid4" onclick="clearclick4()" style="display: none;">
+                    <div class="clear-cros4">✕</div>
+                    <div class="clear-text4">Clear all</div>
+                </div>
                 <label><input type="checkbox" value="256 GB & Above" onclick="filterinternal()">256 GB & Above</label>
                 <label><input type="checkbox" value="128 - 255 GB" onclick="filterinternal()">128 - 255 GB</label>
                 <label><input type="checkbox" value="64GB - 127GB" onclick="filterinternal()">64GB - 127GB</label>
@@ -311,6 +333,10 @@
             <div class="battery-svg" i d="battid" onclick="batteryclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
           </div>
           <div class="batteryList" id="batteryid" style="display: flex;">
+             <div class="clear-main5" id="clearmainid5" onclick="clearclick5()" style="display: none;">
+                    <div class="clear-cros5">✕</div>
+                    <div class="clear-text5">Clear all</div>
+                </div>
             <label><input type="checkbox" value="4000 - 4999 mAh" onclick="filterbattery()">4000 - 4999 mAh</label>
             <label><input type="checkbox" value="5000-5999 mAh" onclick="filterbattery()">5000-5999 mAh</label>
             <label><input type="checkbox" value="6000 mAh & Above" onclick="filterbattery()" >6000 mAh & Above</label> 
@@ -323,6 +349,10 @@
             <div class="screen-svg" id="scrnid" onclick="screenclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
            </div>
            <div class="screenList" id="screenid" style="display: flex;">
+            <div class="clear-main6" onclick="clearclick6()" id="clearmainid6" style="display: none;">
+                    <div class="clear-cros6">✕</div>
+                    <div class="clear-text6">Clear all</div>
+                </div>
             <label><input type="checkbox" value="6.4 inch & Above">6.4 inch & Above</label>
            </div>                                          
            <div class="border-bottom"></div>
@@ -332,6 +362,10 @@
                 <div class="screen-svg" id="primaryid" onclick="primaryclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
             </div>
             <div class="primaryList" id="primid" style="display: flex;">
+               <div class="clear-main7" onclick="clearclick7()" id="clearmainid7" style="display: none;">
+                    <div class="clear-cros7">✕</div>
+                    <div class="clear-text7">Clear all</div>
+                </div>
                 <label><input type="checkbox"value="13 - 15.9 MP">13 - 15.9 MP</label>
                 <label><input type="checkbox"value="16 - 20.9 MP">16 - 20.9 MP</label>
                 <label><input type="checkbox" value="21 MP Above">21 MP Above</label>
@@ -343,6 +377,10 @@
                 <div class="secondary-svg" id="secondaryid" onclick="secondaryclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
                </div>
                <div class="secondaryList" id="secondid" style="display: flex;">
+                <div class="clear-main8" onclick="clearclick8()" id="clearmainid8" style="display: none;">
+                    <div class="clear-cros8">✕</div>
+                    <div class="clear-text8">Clear all</div>
+                </div>     
                 <label><input type="checkbox" value="5 - 7.9 MP">5 - 7.9 MP</label>
                 <label><input type="checkbox" value="8 - 11.9 MP">8 - 11.9 MP</label>
                 <label><input type="checkbox" value="13 - 15.9 MP">13 - 15.9 MP</label>
