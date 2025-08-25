@@ -207,9 +207,15 @@
                 <a class="mobile" href="#">Mobiles</a>
             </div>               
             <!-- PRICE-RANGE -->
-            <div class="price-container">                                                                                          
-                <div class="price-inner">    
-                     <span>PRICE</span>   
+            <div class="price-container">                                                                                         
+                <div class="price-inner" style="width: 100%;">  
+                    <div class="clearprice" style="display: flex; flex-direction: row; justify-content: space-between;">
+                         <span>PRICE</span>  
+                         <div class="price-clear" id="priceclearid" onclick="priceclear()">CLEAR</div>
+                    </div>  
+                     
+                    
+
                 <div class="grey" style="position: relative; right: 3px;top: 3px;">
                     <div class="one" style="height: 25px; width: 47.36px;"></div>
                     <div class="one" style="height: 25px; width: 47.36px;"></div>
@@ -220,21 +226,21 @@
                 <div class="range" style="height: 29px; width: 240px; position: relative; bottom: 3px;">
                      <div class="track" style="transform: translate(0px) scaleX(0.995);" ></div> 
                      <div class="handle-one" style="transform: translateX(0px);"></div>
-                    <div class="handle-two" style="transform: translateX(0px);"></div>
+                    <div class="handle-two" style="transform: translateX(0px); cursor: pointer;"></div>
                 </div>  
                 <div class="dots">
-                    <div class="dot1">.</div>
-                    <div class="dot1">.</div>
-                    <div class="dot1">.</div>
-                    <div class="dot1">.</div>
-                    <div class="dot1">.</div>
-                    <div class="dot1">.</div>
+                    <div class="dot1" id="1">.</div>
+                    <div class="dot1" id="2">.</div>
+                    <div class="dot1" id="3">.</div>
+                    <div class="dot1" id="4">.</div>
+                    <div class="dot1" id="5">.</div>
+                    <div class="dot1" id="6">.</div>
                 </div>
                 </div> 
                 <div class="min-max">
                     <div class="min">        
-                        <select class="min-select">
-                            <option value="minimum">Min</option>
+                        <select class="min-select" id="minPrice" onchange="filterbypricerange()">
+                             <option value="0">Min</option>
                             <option value="10000">₹10000</option>
                             <option value="15000">₹15000</option>
                             <option value="20000">₹20000</option>
@@ -243,12 +249,12 @@
                     </div>
                     <div class="to">to</div>
                     <div class="max">
-                        <select class="max-select">
-                            <option value="maximum">₹30000+</option>
+                        <select class="max-select" id="maxPrice" onchange="filterbypricerange()">
                             <option value="10000">₹10000</option>
                             <option value="15000">₹15000</option>
                             <option value="20000">₹20000</option>
                             <option value="30000">₹30000</option>
+                            <option value="30000+" selected>₹30000+</option>
                         </select> 
                     </div>    
                 </div>    
@@ -308,8 +314,7 @@
             <label><input type="checkbox"value="2 GB" onclick="filterram()" >2 GB</label>
             </div>
             </div>                     
-    <div class="border-bottom"></div>
-                                      
+    <div class="border-bottom"></div> 
         <!-- INTERNAL STORAGE -->                             
          <div class="'internalbox" style="display:flex;justify-content: space-between;">
             <div class="internal">INTERNAL STORAGE</div>
@@ -442,7 +447,7 @@
     </section>
     </section>
     </section>
-    <footer class="footer-container">
+    <footer class="footer-container"> 
         <div class="footer-sub"  >
             <div class="about">
                 <div class="about-text"> <span>ABOUT</span> </div>

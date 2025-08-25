@@ -649,6 +649,7 @@ body {
   border: 1px solid #bababa;
   position: absolute;
   background-color: #fff;
+  cursor: pointer;
 }
 .range {
   display: flex;
@@ -671,6 +672,7 @@ body {
   position: absolute;
   background-color: #fff;
   left: 237px;
+  cursor: pointer;
 
 }
 .dots{
@@ -1590,7 +1592,40 @@ box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.2);
   font-family: "semibold";
 }
 
+.productItems{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
-                         
+.compare-main{
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #212121;
+  font-family: "regular";
+}
+.compare{
+  margin-left: 8px;
+}
+
+
+#comparebox{
+  border: 1.4px solid #c2c2c2;
+  border-radius: 1.5px;
+  background-color: transparent;
+  border-radius: 1.4px;
+}
+
+
+.price-clear{
+  color: #2874f0;
+  font-size: 12px;
+  font-family: "semibold";
+  display: none;
+}
+.track { transform-origin: left center; }
+
+

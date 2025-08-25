@@ -719,7 +719,11 @@ function displayProducts(list) {
       <div class="productCard">
         <div class="productItems">
           <img src="${element.image}" alt="${element.title}">
+          <div class="compare-main">
+       <div> <input type="checkbox" id="comparebox"></div>
+          <div class=compare>add to compare</div>
         </div>
+        </div>               
         <div class="productItemsmid">
           <h3>${element.title}</h3>
           <div class="ratings">
@@ -728,7 +732,7 @@ function displayProducts(list) {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
                      width="20" height="20" fill="white">   
                   <polygon points="12,2 15.09,8.26 22,9.27 
-                                   17,14.14 18.18,21.02 
+                                   17,14.14 18.18,21.02                      
                                    12,17.77 5.82,21.02 
                                    7,14.14 2,9.27 
                                    8.91,8.26"/>      
@@ -745,6 +749,7 @@ function displayProducts(list) {
           <p>${element.processor}</p>
           <p>${element.warrenty}</p> 
         </div>
+        
         <div class="productItemslast">
           <div class="sep">
             <p>${element.price}</p>
@@ -1031,11 +1036,11 @@ document.querySelectorAll(".active-tag").forEach(tag=>{
     this.remove();
     filterByScreen();                 
     })
-  })
+  })                                             
 }       
 //Filter by primary Camera
 function filterbyprimary(){
-    window.scroll({
+    window.scroll({                          
     top:0
 })
     let checked=Array.from(document.querySelectorAll('.primaryList input:checked'))
@@ -1044,7 +1049,7 @@ function filterbyprimary(){
     ?products
     :products.filter(p=>{
         return checked.some(val=>{
-            if(val.includes("13")){
+            if(val.includes("13")){                                                  
                 return parseFloat(p.primaryval)>=13 && (p.primaryval)<=15.9;
             }
             if(val.includes("16")){
@@ -1081,8 +1086,8 @@ function filterbyprimary(){
 
         })
     })  
-}                           
-                               
+}                                                                                                                          
+                             
 //filter by secondary camera
 function filterbysecondary(){  
     window.scroll({
@@ -1555,6 +1560,7 @@ function activefilterclick2(){
 
     if (checked.length===0){
         document.getElementById("clearmainid2").style.display="none";
+        document.getElementById("clearallid").innerHTML=""
     }else{
         document.getElementById("clearmainid2").style.display="flex"
     }
@@ -1595,9 +1601,12 @@ function activefilterclick5(){
 //SCREEN SIZE
 function activefilterclick6(){
     const checked=document.querySelectorAll('#screenid input[type="checked"]:checked')
+    const cleared=document.getElementById("clearallid")
 
     if(checked.length===0){
         document.getElementById("clearmainid6").style.display="none"
+        document.getElementById("clearallid").innerHTML=""
+
     }else{
         document.getElementById("clearmainid6").style.display="flex"
     }
@@ -1622,5 +1631,179 @@ function activefilterclick8(){
     }else{
         document.getElementById("clearmainid8").style.display="flex"
     }
-}   
+}            
+  
 
+
+
+//PRICE FILTERING-------
+// function filterbypricerange() {
+//     const min = parseInt(document.getElementById("minPrice").value, 10);
+//   const max = parseInt(document.getElementById("maxPrice").value, 10);
+//   const filtered = products.filter(p => {
+//     const price = parseInt(p.price.replace(/[₹,]/g, ""), 10); // clean ₹ and commas
+//     return price >= min && price <= max;
+//   });
+//   displayProducts(filtered);
+// }
+
+
+
+function filterbypricerange(){
+    const minDropdown=document.getElementById("minPrice")
+    const maxDropdown=document.getElementById("maxPrice")
+
+    const handleOne=document.querySelector(".handle-one")
+    const handleTwo=document.querySelector(".handle-two")
+
+    const track=document.querySelector(".track")
+
+    //DROPDOWN VALUE
+    let minVal=minDropdown.value;
+    let maxVal=maxDropdown.value;
+
+    const steps={
+        "0":0,          //id
+        "10000":1,
+        "15000":2,
+        "20000":3,
+        "30000":4,
+        "30000+":5,
+    }
+
+    let minStep = steps[minVal];
+    let maxstep = steps[maxVal];
+
+    let minpos=minStep * 45;
+    let maxpos=maxstep * 45;
+    //HANDLE POSITION
+    handleOne.style.left=`${minpos}px` ;
+    handleTwo.style.left=`${maxpos}px` ;
+
+    //TRACK POSITION
+    track.style.left=`${minpos}px` ;
+    track.style.width=`${maxpos - minpos}px` ;
+
+//PRODUCT DISPLAY
+    const min=parseInt(minVal,10)
+    const max=(maxVal==="30000+")? Infinity: parseInt(maxVal,10);
+
+    const filtered=products.filter(p=>{
+        const price=parseInt(p.price.replace(/[₹,]/g,""),10)
+        return price>=min && price<=max;
+    })
+
+    document.getElementById("priceclearid").style.display="flex";
+    document.getElementById("clearmainid").style.display="flex";
+    displayProducts(filtered);
+}
+
+function priceclear(){
+    const maxDropdown=document.getElementById("maxPrice")
+    maxDropdown.value="30000+"
+    const minDropdown=document.getElementById("minPrice")
+    minDropdown.value="0"
+
+    document.getElementById("priceclearid").style.display="none"
+
+    filterbypricerange()
+    displayProducts(products)
+}
+
+window.addEventListener("load",priceclear);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const slider = document.querySelector(".range");
+const track = document.querySelector(".track");
+const handleOne = document.querySelector(".handle-one");
+const handleTwo = document.querySelector(".handle-two");
+
+let isDragging = null;
+
+const steps = [0, 10000, 15000, 20000, 30000, "30000+"]; 
+const stepWidth = 45; // pixel distance per step
+
+// drag start
+[handleOne, handleTwo].forEach(handle => {
+  handle.addEventListener("mousedown", () => {
+    isDragging = handle;
+    document.addEventListener("mousemove", onDrag);
+    document.addEventListener("mouseup", stopDrag);
+  });
+});
+
+// drag move
+function onDrag(e) {
+  const rect = slider.getBoundingClientRect();
+  let pos = e.clientX - rect.left;
+
+  // clamp to slider range
+  pos = Math.max(0, Math.min(pos, stepWidth * (steps.length - 1)));
+
+  // snap to nearest step
+  let stepIndex = Math.round(pos / stepWidth);
+  let snapPos = stepIndex * stepWidth;
+
+  // move handle
+  if (isDragging === handleOne) {
+    handleOne.style.left = snapPos + "px";
+  } else if (isDragging === handleTwo) {
+    handleTwo.style.left = snapPos + "px";
+  }
+
+  // get positions
+  let minPos = parseInt(handleOne.style.left) || 0;
+  let maxPos = parseInt(handleTwo.style.left) || stepWidth * (steps.length - 1);
+
+  if (minPos > maxPos) {
+    [minPos, maxPos] = [maxPos, minPos]; // swap
+    handleOne.style.left = minPos + "px";
+    handleTwo.style.left = maxPos + "px";
+  }
+
+  // update track
+  track.style.left = minPos + "px";
+  track.style.width = (maxPos - minPos) + "px";
+
+  // ✅ filter products on sliding
+  let minVal = steps[minPos / stepWidth];
+  let maxVal = steps[maxPos / stepWidth];
+
+  filterProductsByRange(minVal, maxVal);
+}
+
+// drag stop
+function stopDrag() {
+  document.removeEventListener("mousemove", onDrag);
+  document.removeEventListener("mouseup", stopDrag);
+  isDragging = null;
+}
+
+// filtering function
+function filterProductsByRange(minVal, maxVal) {
+  const min = parseInt(minVal, 10);
+  const max = (maxVal === "30000+") ? Infinity : parseInt(maxVal, 10);
+
+  const filtered = products.filter(p => {
+    const price = parseInt(p.price.replace(/[₹,]/g, ""), 10);
+    return price >= min && price <= max;
+  });
+
+  // show clear button
+  document.getElementById("priceclearid").style.display = "flex";
+  document.getElementById("clearmainid").style.display = "flex";
+
+  displayProducts(filtered);
+}
