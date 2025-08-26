@@ -221,12 +221,12 @@ function availabilityclick(){
     if(availabilitybox.style.display==="none"||availabilitybox.style.display===""){
         availabilitybox.style.display="block"
          svg.style.transform="rotate(90deg)"
-    }else{
+    }else{                                    
         availabilitybox.style.display="none"
         svg.style.transform="rotate(-90deg)"
     }
-}
-function discountclick(){
+}     
+function discountclick(){                         
     const svg=document.getElementById("brandid20")
     const discountbox=document.getElementById("discount-id")
     if(discountbox.style.display==="none"||discountbox.style.display===""){
@@ -288,11 +288,9 @@ const boxout3=document.getElementById("homehover3")
 boxout3.addEventListener("mouseout",function(){
     boxout3.style.color="grey"
 })
-
-
-
+                      
 //ELECTRONICS---------
-  
+
 function electromouse(){
     const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
@@ -303,23 +301,15 @@ function electromouse(){
         over1.style.display="block"
     }  
    const font=document.getElementById("sub")
-   if(font.style.color==="black"){
-    font.style.color="blue"
-   }
-}  
-function electroout(){
-    const over=document.getElementById("eachid")
-    if(over.style.display==="block"||over.style.display===""){
-        (over.style.display="none")
-    }
-     const font=document.getElementById("sub")
-    if(font.style.color==="blue"){
-        font.style.color="black"
-    }    
-}  
-//--TV AND AAPLIANCES----------
+   if(font.style.color===""){
+    font.style.color="blue"         
+   }                    
+}
+                                                               
+//--TV AND APPLIANCES---------- 
 
 function electromouse1(){
+
     const font1=document.getElementById("sub1")
     if(font1.style.color===""){
         font1.style.color="blue"
@@ -334,11 +324,11 @@ function electromouse1(){
     }  
 }
 function electroout(){
-       const over=document.getElementById("eachid")
+    const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
+        (over.style.display="none")
     }
-    const font=document.getElementById("sub1")
+     const font=document.getElementById("sub")
     if(font.style.color==="blue"){
         font.style.color="black"
     }
@@ -360,14 +350,14 @@ function electromouse2(){
         over1.style.display="block"
     } 
 }
-
 function electroout(){
     const over=document.getElementById("eachid")
     if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
+        (over.style.display="none")
     }
 }
-//WOMEN---
+          
+//WOMEN--- 
 function electromouse3(){
     const font3=document.getElementById("sub3")
     if(font3.style.color===""){
@@ -382,12 +372,8 @@ function electromouse3(){
         over1.style.display="block"
     } 
 }
-function electroout(){
-    const over=document.getElementById("eachid")
-    if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
-    }
-}
+                      
+
 
 //BABY & KIDS---------
 function electromouse4(){
@@ -404,12 +390,7 @@ function electromouse4(){
         over1.style.display="block"
     } 
 }
-function electroout(){
-    const over=document.getElementById("eachid")
-    if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
-    }
-}
+
 //HOME & FURNITURE---------
 function electromouse5(){
     const font5=document.getElementById("sub5")
@@ -425,13 +406,7 @@ function electromouse5(){
         over1.style.display="block"
     } 
 }
-function electroout7(){
-  
-    const over=document.getElementById("eachid")
-    if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
-    } 
-}
+
 // SPORTS BOOKS & MORE----------
 function electromouse6(){
     const font6=document.getElementById("sub6")
@@ -447,13 +422,7 @@ function electromouse6(){
         over1.style.display="block"
     } 
 }
-function electroout(){
-  
-    const over=document.getElementById("eachid")
-    if(over.style.display==="block"||over.style.display===""){
-        over.style.display="none"
-    }
-}
+
 //FLIGHT----
 function electromouse7(){
     const font7=document.getElementById("sub7")
@@ -485,16 +454,6 @@ function electroout8(){
     }
 } 
  
-//---TITLE OVER---------------
-//   function titleover(){
-//     const titles=document.getElementById("title")
-//     if(titles.style.color==="black"){
-//         titles.style.color="blue"
-//     }else{
-//         titles.style.color="black"
-//     }
-// }
-
   
 function fulltext(){
     const fulltextover=document.getElementById("homehover2")
@@ -725,7 +684,7 @@ function displayProducts(list) {
         </div>
         </div>               
         <div class="productItemsmid">
-          <h3>${element.title}</h3>
+          <h3 class="productTitle">${element.title}</h3>
           <div class="ratings">
             <div class="ppp">
               <p class="nam">${element.num} 
@@ -766,9 +725,64 @@ function displayProducts(list) {
       </div>
     `;
   });
-} 
 
+
+
+const cards=document.querySelectorAll(".productCard");
+cards.forEach(card=>{
+    const title=card.querySelector(".productTitle");
+    card.addEventListener("mouseenter", ()=>{
+        title.style.color="blue"
+    })
+    card.addEventListener("mouseleave", ()=>{
+        title.style.color=""
+    })
+})
+}
+                                                    
 // ------------------- FILTERS -------------------
+//FILTER BY PRICE
+function filterbyprice(){
+    window.scroll({ top:0 });
+
+    let minSelect = document.getElementById("minPrice");
+    let maxSelect = document.getElementById("maxPrice");
+
+    let minVal = minSelect.value;
+    let maxVal = maxSelect.value;
+
+    let activeBox0 = document.getElementById("activeFilters0");  
+    let clear = document.getElementsByClassName("clearall")[0];
+
+    // Check if both are default values
+    if ((minVal === "0" || minVal === "") && (maxVal === "30000+" || maxVal === "")) {
+        activeBox0.innerHTML = "";
+        clear.innerHTML = "";  
+    } else {
+        activeBox0.innerHTML = `<span class="active-tag" data-min="${minVal}" data-max="${maxVal}">
+            ✕ ₹${minVal} - ₹${maxVal}
+        </span>`;
+        clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
+    }
+
+    // Remove filter when clicking on the tag
+   let tag = activeBox0.querySelector(".active-tag");
+    if(tag){
+        tag.addEventListener("click", function(){
+            minSelect.value = "0";          // reset to default Min
+            maxSelect.value = "30000+";     // reset to default Max
+            filterbyprice();                // re-run filter
+        });
+    }
+}
+
+// Attach change event to both selects
+document.getElementById("minPrice").addEventListener('change', filterbyprice);
+document.getElementById("maxPrice").addEventListener('change', filterbyprice);
+
+
+
+
 //Filter by BRAND--
 function filterbyram(){
     window.scroll({
@@ -1143,6 +1157,10 @@ function filterbysecondary(){
         
 }
 // ------------------- EVENT LISTENERS -------------------
+document.querySelectorAll('.price-container select').forEach(select => {
+    select.addEventListener('change', filterbyprice);
+});
+
 document.querySelectorAll('.CategoryList input')
 .forEach(cb => cb.addEventListener('change', filterbyram));
 
@@ -1171,10 +1189,7 @@ document.querySelectorAll('.secondaryList input')
 
 
 // ------------------- INITIAL LOAD -------------------
-loadProducts();
-                             
-    
-
+loadProducts();    
  
                                          
 
@@ -1276,6 +1291,7 @@ function secondaryclick(){
 
 //CLEAR ALL---UPPER
 function clearAll(){
+    const activeFilters0=document.getElementById("activeFilters0")
     const activeFilters=document.getElementById("activeFilters")
     const activeFilters2=document.getElementById("activeFilters2")
     const activeFilters3=document.getElementById("activeFilters3")
@@ -1287,7 +1303,7 @@ function clearAll(){
                
     const clearid=document.getElementById("clearallid")
     clearid.innerHTML=""
-    
+    document.getElementById("clearmainid0").style.display="none"
     const clearid1=document.getElementById("clearmainid")
     const clearid2=document.getElementById("clearmainid2")
     const clearid3=document.getElementById("clearmainid3")
@@ -1296,6 +1312,7 @@ function clearAll(){
     const clearid6=document.getElementById("clearmainid6")
     const clearid7=document.getElementById("clearmainid7")
     const clearid8=document.getElementById("clearmainid8")
+     
     clearid1.style.display = "none";
     clearid2.style.display = "none";
     clearid3.style.display = "none";
@@ -1305,7 +1322,7 @@ function clearAll(){
     clearid7.style.display = "none";
     clearid8.style.display = "none";
 
-
+     activeFilters0.innerHTML=""
      activeFilters.innerHTML=""
      activeFilters2.innerHTML=""
      activeFilters3.innerHTML=""
@@ -1315,6 +1332,7 @@ function clearAll(){
      activeFilters7.innerHTML=""
      activeFilters8.innerHTML=""
 
+   
     document.querySelectorAll('#cattid input[type=checkbox]').forEach(cb=>cb.checked=false)
     document.querySelectorAll('#customerid input[type=checkbox]').forEach(cb=>cb.checked=false)
     document.querySelectorAll('#memoryid input[type=checkbox]').forEach(cb=>cb.checked=false)
@@ -1326,6 +1344,11 @@ function clearAll(){
 
      displayProducts(products)
 }
+
+
+
+
+
 
 //CLEAR--1 BRAND
 const clearit = document.getElementById("clearmainid");
@@ -1543,9 +1566,26 @@ searchbox.addEventListener("keyup",()=>{
     })
 })
     // -----TO REMOVE clear all BELOW EACH CATEGORIES------------
+function activefilterclick0(){
+ const maxDropdown=document.getElementById("maxPrice")
+    maxDropdown.value="30000+"
+    const minDropdown=document.getElementById("minPrice")
+    minDropdown.value="0"
+    document.getElementById("clearmainid0").style.display="none"
+
+    filterbypricerange()
+    displayProducts(products)
+    document.getElementById("activeFilters0").innerHTML=""
+    document.getElementById("clearallid").innerHTML=""
+}
+
+window.addEventListener("load",priceclear);
+
+   
+ 
 //BRAND
 function activefilterclick() {
-    const checked = document.querySelectorAll('#customerlist input[type="checkbox"]:checked');
+    const checked = document.querySelectorAll('#brandlist input[type="checkbox"]:checked');
 
     if (checked.length === 0) {
         document.getElementById("clearmainid").style.display = "none"; 
@@ -1634,18 +1674,8 @@ function activefilterclick8(){
 }            
   
 
+   
 
-
-//PRICE FILTERING-------
-// function filterbypricerange() {
-//     const min = parseInt(document.getElementById("minPrice").value, 10);
-//   const max = parseInt(document.getElementById("maxPrice").value, 10);
-//   const filtered = products.filter(p => {
-//     const price = parseInt(p.price.replace(/[₹,]/g, ""), 10); // clean ₹ and commas
-//     return price >= min && price <= max;
-//   });
-//   displayProducts(filtered);
-// }
 
 
 
@@ -1657,6 +1687,10 @@ function filterbypricerange(){
     const handleTwo=document.querySelector(".handle-two")
 
     const track=document.querySelector(".track")
+
+
+
+  
 
     //DROPDOWN VALUE
     let minVal=minDropdown.value;
@@ -1694,7 +1728,7 @@ function filterbypricerange(){
     })
 
     document.getElementById("priceclearid").style.display="flex";
-    document.getElementById("clearmainid").style.display="flex";
+    document.getElementById("clearmainid0").style.display="flex";
     displayProducts(filtered);
 }
 
@@ -1703,6 +1737,8 @@ function priceclear(){
     maxDropdown.value="30000+"
     const minDropdown=document.getElementById("minPrice")
     minDropdown.value="0"
+
+    document.getElementById("activeFilters0").innerHTML=""
 
     document.getElementById("priceclearid").style.display="none"
 
@@ -1714,84 +1750,98 @@ window.addEventListener("load",priceclear);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+// ----------PRICE DRAGS------------
 const slider = document.querySelector(".range");
-const track = document.querySelector(".track");
+const track = document.querySelector(".track")
 const handleOne = document.querySelector(".handle-one");
-const handleTwo = document.querySelector(".handle-two");
+const handleTwo = document.querySelector(".handle-two")
 
 let isDragging = null;
 
-const steps = [0, 10000, 15000, 20000, 30000, "30000+"]; 
-const stepWidth = 45; // pixel distance per step
+const steps = [0, 10000, 15000, 20000, 30000, "30000+"];
+const stepWidth = 45;
 
-// drag start
+// DRAG STARTS
 [handleOne, handleTwo].forEach(handle => {
   handle.addEventListener("mousedown", () => {
     isDragging = handle;
     document.addEventListener("mousemove", onDrag);
     document.addEventListener("mouseup", stopDrag);
-  });
-});
-
-// drag move
+  })
+})
+   
 function onDrag(e) {
   const rect = slider.getBoundingClientRect();
   let pos = e.clientX - rect.left;
 
-  // clamp to slider range
-  pos = Math.max(0, Math.min(pos, stepWidth * (steps.length - 1)));
+  
 
-  // snap to nearest step
-  let stepIndex = Math.round(pos / stepWidth);
-  let snapPos = stepIndex * stepWidth;
+  // HANDLE DOESNOT GOES OUTSIDE THE TRACK
+  pos = Math.max(0, Math.min(pos, stepWidth * (steps.length - 1)))
 
-  // move handle
+  let stepIndex = Math.round(pos / stepWidth);          //WHICH STEP THE HANDLE NEAREST TO
+  let snapPos = stepIndex * stepWidth;          //ALIGN THE HANDLE TO EXACT STEP
+
+  // current positions
+  let minpos = parseInt(handleOne.style.left) || 0;
+  let maxpos = parseInt(handleTwo.style.left) || stepWidth * (steps.length - 1);
+
+  //STOPS IF OVERLAP--HANDLEONE
   if (isDragging === handleOne) {
+    
+    if (snapPos >= maxpos - stepWidth) {            
+      snapPos = maxpos - stepWidth;
+    }
     handleOne.style.left = snapPos + "px";
-  } else if (isDragging === handleTwo) {
+    minpos = snapPos;
+  } //---STOPS IF OVERLAP--HANDLE-TWO
+  else if (isDragging === handleTwo) {
+   
+    if (snapPos <= minpos + stepWidth) {
+      snapPos = minpos + stepWidth;
+    }
     handleTwo.style.left = snapPos + "px";
+    maxpos = snapPos;
   }
 
-  // get positions
-  let minPos = parseInt(handleOne.style.left) || 0;
-  let maxPos = parseInt(handleTwo.style.left) || stepWidth * (steps.length - 1);
+  // UPDATE TRACK
+  track.style.left = minpos + "px";            
+  track.style.width = (maxpos - minpos) + "px";
 
-  if (minPos > maxPos) {
-    [minPos, maxPos] = [maxPos, minPos]; // swap
-    handleOne.style.left = minPos + "px";
-    handleTwo.style.left = maxPos + "px";
-  }
+  // GET VALUE->TO UPDATE DROPDOWN
+  let minVal = steps[minpos / stepWidth];
+  let maxVal = steps[maxpos / stepWidth];           
 
-  // update track
-  track.style.left = minPos + "px";
-  track.style.width = (maxPos - minPos) + "px";
+  // UPDATE DROPDOWN
+  updateDropdowns(minVal, maxVal);
+                                  
+  // FILTER PRODUCT WHILE DRAGING          
+  filterProductsByRange(minVal, maxVal);                
 
-  // ✅ filter products on sliding
-  let minVal = steps[minPos / stepWidth];
-  let maxVal = steps[maxPos / stepWidth];
 
-  filterProductsByRange(minVal, maxVal);
+  let activeBox0 = document.getElementById("activeFilters0");  
+    let clear = document.getElementsByClassName("clearall")[0];
+
+    // Check if both are default values
+    if ((minVal === "0" || minVal === "") && (maxVal === "30000+" || maxVal === "")) {
+        activeBox0.innerHTML = "";
+        clear.innerHTML = "";  
+    } else {
+        activeBox0.innerHTML = `<span class="active-tag" data-min="${minVal}" data-max="${maxVal}">
+            ✕ ₹${minVal} - ₹${maxVal}
+        </span>`;
+        clear.innerHTML = "<span onclick='clearAll()'>CLEAR ALL</span>";
+    }
 }
 
-// drag stop
+// STOP DRAG
 function stopDrag() {
   document.removeEventListener("mousemove", onDrag);
   document.removeEventListener("mouseup", stopDrag);
   isDragging = null;
 }
 
-// filtering function
+// FILTER FUNCTION
 function filterProductsByRange(minVal, maxVal) {
   const min = parseInt(minVal, 10);
   const max = (maxVal === "30000+") ? Infinity : parseInt(maxVal, 10);
@@ -1807,3 +1857,72 @@ function filterProductsByRange(minVal, maxVal) {
 
   displayProducts(filtered);
 }
+
+function updateDropdowns(minVal, maxVal) {
+  const minDropdown = document.getElementById("minPrice");
+  const maxDropdown = document.getElementById("maxPrice");
+
+  if (minDropdown) minDropdown.value = minVal;
+  if (maxDropdown) maxDropdown.value = maxVal;
+}       
+  
+ 
+
+
+
+
+document.getElementById("minPrice").addEventListener("change",showClear);
+document.getElementById("maxPrice").addEventListener("change",showClear);
+
+function filterProductsByRange(minVal,maxVal){
+    const min=parseInt(minVal,10);
+    const max=(maxVal==="30000+")? Infinity : parseInt(maxVal)
+
+    const filtered=products.filter(p=>{
+        const price=parseInt(p.price.replace(/[₹,]/g,""),10);
+        return price >= min && price <=max
+    })
+    showClear()
+    displayProducts(filtered)
+}
+function showClear(){
+    document.querySelector(".clearprice").style.display="flex"
+}
+
+function clearrate(){
+    document.querySelector(".clearprice").style.display="none"
+}
+
+
+
+
+function last(){
+ const maxDropdown=document.getElementById("maxPrice")
+    maxDropdown.value="30000+"
+    const minDropdown=document.getElementById("minPrice")
+    minDropdown.value="0"
+
+    document.getElementById("priceclearid").style.display="none"
+
+    filterbypricerange()
+    displayProducts(products)
+}
+
+window.addEventListener("load",priceclear);
+
+
+
+
+// window.onload = function () {
+//     document.getElementById("clearmainid").style.display = "none"; 
+// };
+
+
+
+
+
+window.onload=function(){
+    document.getElementById("clearmainid").style.display="none";
+}
+
+

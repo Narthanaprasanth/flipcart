@@ -56,12 +56,12 @@
                     <div class="login-cont"> <svg width="16" height="16" class="" viewBox="0 0 23 22" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" transform="translate(-9.694 -9)"><ellipse cx="20.557" cy="20" rx="20.557" ry="20"></ellipse><path d="M7 6h28v28H7z"></path><path fill="#2874F0" fill-rule="nonzero" d="M31.5 27v1.167a2.34 2.34 0 0 1-2.333 2.333H12.833a2.333 2.333 0 0 1-2.333-2.333V11.833A2.333 2.333 0 0 1 12.833 9.5h16.334a2.34 2.34 0 0 1 2.333 2.333V13H21a2.333 2.333 0 0 0-2.333 2.333v9.334A2.333 2.333 0 0 0 21 27h10.5zM21 24.667h11.667v-9.334H21v9.334zm4.667-2.917c-.97 0-1.75-.782-1.75-1.75s.78-1.75 1.75-1.75c.968 0 1.75.782 1.75 1.75s-.782 1.75-1.75 1.75z"></path></g></svg><span>Gift Cards</span></div>
                 </div>   
                </div>
-    </header>   
+    </header> 
       <!-- 2ND HEADER -->
        <div wholecontainer id="wholeid">
     <div class="sub-head-containter">
             <div class="mini">
-                <span id="sub" class="electronics" onmouseenter="electromouse()" style="color: black;" >Electronics <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
+                <span id="sub" style="color: black;" class="electronics" onmouseenter="electromouse()">Electronics <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
                 <span id="sub1" class="tv" onmouseover="electromouse1()">TVs & Appliances <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
                 <span id="sub2" class="men" onmouseover="electromouse2()">Men <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
                 <span id="sub3" class="women" onmouseover="electromouse3()">Women <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="overed"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"  class="CPYntE"></path></svg></span>
@@ -187,6 +187,7 @@
                  
                 </div>
                 <div class="main-activefilter" id="mainactiveid">
+                <div class="active-filters0" id="activeFilters0" onclick="activefilterclick0()"></div>
                 <div class="active-filters"  id="activeFilters"  onclick="activefilterclick()" style="display: flex;"></div>
                 <div class="active-filters2" id="activeFilters2" onclick="activefilterclick2()"></div>
                 <div class="active-filters3" id="activeFilters3" onclick="activefilterclick3()"></div>
@@ -204,18 +205,16 @@
                 <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="mobile-acc"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="P3pAQJ"></path></svg>
                 <a href="#">Mobiles & Accessories</a>
                 </div>
-                <a class="mobile" href="#">Mobiles</a>
+                <a class="mobile" href="#">Mobiles</a>   
             </div>               
             <!-- PRICE-RANGE -->
-            <div class="price-container">                                                                                         
+            <div class="price-container" id="pricecontid" >                                                                                         
                 <div class="price-inner" style="width: 100%;">  
-                    <div class="clearprice" style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div class="clearprice" onclick="clearrate()" id="clearmainid0" style="display: flex; flex-direction: row; justify-content: space-between; display: none;">
                          <span>PRICE</span>  
                          <div class="price-clear" id="priceclearid" onclick="priceclear()">CLEAR</div>
                     </div>  
-                     
-                    
-
+                                 
                 <div class="grey" style="position: relative; right: 3px;top: 3px;">
                     <div class="one" style="height: 25px; width: 47.36px;"></div>
                     <div class="one" style="height: 25px; width: 47.36px;"></div>
@@ -228,15 +227,15 @@
                      <div class="handle-one" style="transform: translateX(0px);"></div>
                     <div class="handle-two" style="transform: translateX(0px); cursor: pointer;"></div>
                 </div>  
-                <div class="dots">
+                <div class="dots">                   
                     <div class="dot1" id="1">.</div>
                     <div class="dot1" id="2">.</div>
                     <div class="dot1" id="3">.</div>
                     <div class="dot1" id="4">.</div>
                     <div class="dot1" id="5">.</div>
                     <div class="dot1" id="6">.</div>
-                </div>
-                </div> 
+                </div>                  
+                </div>                     
                 <div class="min-max">
                     <div class="min">        
                         <select class="min-select" id="minPrice" onchange="filterbypricerange()">
@@ -282,7 +281,7 @@
                 <label><input type="checkbox"  value="MOTOROLA" onchange="filterProducts()">MOTOROLA</label>
                 <label><input type="checkbox"  value="Tecno" onchange="filterProducts()">Tecno</label>
                 </div>
-            </div>                                                                                                                   
+            </div>                                                                                                                     
             <div class="border-bottom"></div>
             <!-- CUSTOMER RATTINGS -->
              <div class="customerbox" style="display: flex; justify-content: space-between;">
@@ -290,7 +289,7 @@
                 <div class="customer-svg" id="custid" onclick="customerclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
              </div>
              
-             <div class="customerList" id="customerid" style="display: flex; ">
+             <div class="customerList" id="customerid" style="display: none; ">
                  <div class="clear-main2" onclick="clearclick2()" id="clearmainid2" style="display: none;">
                     <div class="clear-cros2">✕</div>
                     <div class="clear-text2">Clear all</div>
@@ -320,7 +319,7 @@
             <div class="internal">INTERNAL STORAGE</div>
             <div class="internal-svg" id="intid" onclick="internalclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
             </div>
-            <div class="internalList" id="internalid" style="display: flex;">
+            <div class="internalList" id="internalid" style="display: none;">
                 <div class="clear-main4" id="clearmainid4" onclick="clearclick4()" style="display: none;">
                     <div class="clear-cros4">✕</div>
                     <div class="clear-text4">Clear all</div>
@@ -337,7 +336,7 @@
             <div class="batteryy">BATTERY CAPACITY</div>
             <div class="battery-svg" i d="battid" onclick="batteryclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
           </div>
-          <div class="batteryList" id="batteryid" style="display: flex;">
+          <div class="batteryList" id="batteryid" style="display: none;">
              <div class="clear-main5" id="clearmainid5" onclick="clearclick5()" style="display: none;">
                     <div class="clear-cros5">✕</div>
                     <div class="clear-text5">Clear all</div>
@@ -353,7 +352,7 @@
             <div class="screen">SCREEN SIZE</div>
             <div class="screen-svg" id="scrnid" onclick="screenclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
            </div>
-           <div class="screenList" id="screenid" style="display: flex;">
+           <div class="screenList" id="screenid" style="display: none;">
             <div class="clear-main6" onclick="clearclick6()" id="clearmainid6" style="display: none;">
                     <div class="clear-cros6">✕</div>
                     <div class="clear-text6">Clear all</div>
@@ -366,7 +365,7 @@
                 <div class="primary">PRIMARY CAMERA</div>
                 <div class="screen-svg" id="primaryid" onclick="primaryclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
             </div>
-            <div class="primaryList" id="primid" style="display: flex;">
+            <div class="primaryList" id="primid" style="display: none;">
                <div class="clear-main7" onclick="clearclick7()" id="clearmainid7" style="display: none;">
                     <div class="clear-cros7">✕</div>
                     <div class="clear-text7">Clear all</div>
@@ -381,7 +380,7 @@
                 <div class="secondary">SECONDARY CAMERA</div>
                 <div class="secondary-svg" id="secondaryid" onclick="secondaryclick()"><svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black" class="SV+H35"></path></svg></div>
                </div>
-               <div class="secondaryList" id="secondid" style="display: flex;">
+               <div class="secondaryList" id="secondid" style="display: none;">
                 <div class="clear-main8" onclick="clearclick8()" id="clearmainid8" style="display: none;">
                     <div class="clear-cros8">✕</div>
                     <div class="clear-text8">Clear all</div>
@@ -540,11 +539,9 @@
         </div>
     </footer>
     <script src="flip.js">
-        
     </script>
 </body>              
 </html>
-   
    
 
                                  
