@@ -300,47 +300,33 @@ function electromouse(){
     if(over1.style.display==="none"||over1.style.display===""){     
         over1.style.display="block"
     }  
-   const font=document.getElementById("sub")
-   if(font.style.color===""){
-    font.style.color="blue"         
-   }                    
-}
-                                                               
+               
+}   
+
+        
 //--TV AND APPLIANCES---------- 
 
 function electromouse1(){
-
-    const font1=document.getElementById("sub1")
-    if(font1.style.color===""){
-        font1.style.color="blue"
-    }
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
     }
      const over1=document.getElementById("some")
-    if(over1.style.display==="none"||over1.style.display===""){
-        over1.style.display="block"
-    }  
+ 
 }
 function electroout(){
     const over=document.getElementById("eachid")
+    
     if(over.style.display==="block"||over.style.display===""){
         (over.style.display="none")
     }
-     const font=document.getElementById("sub")
-    if(font.style.color==="blue"){
-        font.style.color="black"
-    }
-}
-
+  
+}   
 //MEN---------
 
 function electromouse2(){
-    const font2=document.getElementById("sub2")
-    if(font2.style.color===""){  
-        font2.style.color="blue"
-    }
+
+
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
@@ -359,10 +345,7 @@ function electroout(){
           
 //WOMEN--- 
 function electromouse3(){
-    const font3=document.getElementById("sub3")
-    if(font3.style.color===""){
-        font3.style.color="blue"
-    }
+ 
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
@@ -377,10 +360,7 @@ function electromouse3(){
 
 //BABY & KIDS---------
 function electromouse4(){
-    const font4=document.getElementById("sub4")
-    if(font4.style.color===""){
-        font4.style.color="blue"
-    }
+
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
@@ -393,10 +373,7 @@ function electromouse4(){
 
 //HOME & FURNITURE---------
 function electromouse5(){
-    const font5=document.getElementById("sub5")
-    if(font5.style.color===""){
-        font5.style.color="blue"
-    }
+   
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
@@ -409,10 +386,7 @@ function electromouse5(){
 
 // SPORTS BOOKS & MORE----------
 function electromouse6(){
-    const font6=document.getElementById("sub6")
-    if(font6.style.color===""){
-        font6.style.color="blue"
-    }
+  
      const over=document.getElementById("eachid")
     if(over.style.display==="none"||over.style.display===""){
         over.style.display="block"
@@ -423,21 +397,6 @@ function electromouse6(){
     } 
 }
 
-//FLIGHT----
-function electromouse7(){
-    const font7=document.getElementById("sub7")
-    if(font7.style.color===""){
-        font7.style.color="blue"
-    }
-   
-}
-function electroout7(){
-    const font7=document.getElementById("sub7")
-    if(font7.style.color==="blue"){
-        font7.style.color="black"
-    }
-   
-}
 
 
 //OFFER ZONE
@@ -523,7 +482,7 @@ function lowhigh(){
     let priceB = parseInt(b.price.replace(/[₹,]/g, ""));
     return priceA - priceB; 
   });
-  displayProducts(sorted);
+  displayProducts(sorted) 
 }   
 function highlow(){
     const high=document.getElementById("high-low-id")
@@ -590,27 +549,54 @@ function newestfirst(){
 
 
 //--MORE--
- 
-function moreclick(){
-    const moreid=document.getElementById("more-id")
+ const moreLink = document.getElementById("moreid");
+const moreContainer = document.getElementById("more-id");
 
-    if(moreid.style.display==="none"||moreid.style.display===""){
-        moreid.style.display="block"
-    }else{
-        moreid.style.display="none"
+// Show container on hover
+moreLink.addEventListener("mouseenter", () => {
+    moreContainer.style.display = "block";
+});
+
+// Hide container when mouse leaves both link and container
+moreLink.addEventListener("mouseleave", (e) => {
+    // check if mouse enters container
+    if (!moreContainer.matches(':hover')) {
+        moreContainer.style.display = "none";
     }
-}
+});
+
+moreContainer.addEventListener("mouseleave", () => {
+    moreContainer.style.display = "none";
+});
+
+// Optional: keep visible when hovering container
+moreContainer.addEventListener("mouseenter", () => {
+    moreContainer.style.display = "block";
+});
+
+
  
 //--LOGIN---
 
-function log(){
-    const loginid=document.getElementById("logid")
-    if(loginid.style.display==="none"||loginid.style.display===""){
-        loginid.style.display="block"
-    }else{
-        loginid.style.display="none"
-    }  
-}
+const loginDiv = document.getElementById('logid');
+const loginBtn = document.querySelector('.main-but');
+
+
+loginBtn.addEventListener('mouseenter', () => {
+  loginDiv.style.display = 'block';
+});
+
+loginBtn.addEventListener('mouseleave', () => {
+  loginDiv.style.display = 'none';
+});
+
+loginDiv.addEventListener('mouseenter', () => {
+  loginDiv.style.display = 'block';
+});
+
+loginDiv.addEventListener('mouseleave', () => {
+  loginDiv.style.display = 'none';
+});
 
 //SEARCH BOX
 
@@ -1194,97 +1180,115 @@ loadProducts();
                                          
 
 
- 
-
-
-
 
 function svgclick(){
-    const svg=document.getElementById("brandid")
+    const svg=document.getElementById("brandid").querySelector("svg")
     const will=document.getElementById("cattid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
+      if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; // reset
+    svg.style.transition = "transform 0.3s ease";
+  }
+}  
+function ramclick() {
+  const svg = document.getElementById("ramid").querySelector("svg"); 
+  const will = document.getElementById("memoryid");
+
+  if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  }
 }
-    
-function ramclick(){
-    const svg=document.getElementById("ramid")
-    const will=document.getElementById("memoryid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
-}
+
 function customerclick(){
-    const svg=document.getElementById("custid")
+    const svg=document.getElementById("custid").querySelector("svg")
     const will=document.getElementById("customerid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
+  if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  }
 }
 
 function internalclick(){
-     const svg=document.getElementById("internal-svg")
+     const svg=document.getElementById("intid").querySelector("svg")
     const will=document.getElementById("internalid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
-
+  if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; // reset
+    svg.style.transition = "transform 0.3s ease";
+  }
 }
 function batteryclick(){
-    const svg=document.getElementById("battery-svg")
+    const svg=document.getElementById("battid").querySelector("svg")
     const will=document.getElementById("batteryid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
+      if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; // reset
+    svg.style.transition = "transform 0.3s ease";
+  }
 
 }
 function screenclick(){
-    const svg=document.getElementById("screen-svg")
+    const svg=document.getElementById("scrnid").querySelector("svg")
     const will=document.getElementById("screenid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
-
+      if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(360deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(180deg)"; // reset
+    svg.style.transition = "transform 0.3s ease";
+  }
 }
 function primaryclick(){
-const svg=document.getElementById("screen-svg")
+    const svg=document.getElementById("primaryid").querySelector("svg")
     const will=document.getElementById("primid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }
-
+    if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; // reset
+    svg.style.transition = "transform 0.3s ease";
+  }
 
 }
 function secondaryclick(){
-    const svg=document.getElementById("secondary-svg")
+    const svg=document.getElementById("secondaryid").querySelector("svg")
     const will=document.getElementById("secondid")
- if(will.style.display==="none" || will.style.display===""){
-    will.style.display="flex"
-     
- }else{
-    will.style.display="none"
- }          
+   if (will.style.display === "none" || will.style.display === "") {
+    will.style.display = "flex";
+    svg.style.transform = "rotate(180deg)"; 
+    svg.style.transition = "transform 0.3s ease";
+  } else {
+    will.style.display = "none";
+    svg.style.transform = "rotate(0deg)"; // reset
+    svg.style.transition = "transform 0.3s ease";
+  }        
 }
                    
 
