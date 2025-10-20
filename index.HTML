@@ -103,8 +103,8 @@
                         </g>
                     </svg><span> Download App </span> </div>
 
-            </div>                                    
-        </div>                                     
+            </div>
+        </div>
 
         <div class="login-container" id="logid" style="width: 100%;">
 
@@ -410,7 +410,7 @@
                             <div class="dot1" id="6">.</div>
                         </div>
                     </div>
-                    <div class="min-max">
+                    <div class="min-max">                                                                                       
                         <div class="min">
                             <select class="min-select" id="minPrice" onchange="filterbypricerange()">
                                 <option value="0">Min</option>
@@ -438,7 +438,7 @@
                 <div class="main">
                     <div class="filterBox" style="display: flex; justify-content: space-between;">
                         <div class="brand">BRAND</div>
-                        <div class="brand-svg" id="brandid" onclick="svgclick()"><svg width="10" height="10"
+                        <div class="brand-svg" id="brandid" onclick="toggleSection('brandid','cattid')"><svg width="10" height="10"
                                 viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                                 <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                     class="SV+H35"></path>
@@ -460,7 +460,7 @@
                                             d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
                                         </path>
                                     </g>
-                                </svg></div>
+                                </svg></div>                                         
                             <input class="searchbox" id="searchboxid" type="text" placeholder="Search Brand" value="">
                         </div>
                         <div id="brandlist">
@@ -469,14 +469,15 @@
                                         onchange="filterProducts()">Samsung</label>
                                 <label><input type="checkbox" value="MOTOROLA"
                                         onchange="filterProducts()">MOTOROLA</label>
-                                <label><input type="checkbox" value="Tecno" onchange="filterProducts()">Tecno</label>
+                                <label><input type="checkbox" value="Tecno" 
+                                        onchange="filterProducts()">Tecno</label>
                         </div>
-                    </div>
+                    </div>                        
                     <div class="border-bottom"></div>
                     <!-- CUSTOMER RATTINGS -->
                     <div class="customerbox" style="display: flex; justify-content: space-between;">
                         <div class="customer">CUSTOMER RATINGS</div>
-                        <div class="customer-svg" id="custid" onclick="customerclick()"><svg width="10" height="10"
+                        <div class="customer-svg" id="custid" onclick="toggleSection('custid','customerid')"><svg width="10" height="10"
                                 viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                                 <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                     class="SV+H35"></path>
@@ -515,7 +516,7 @@
                 <!-- INTERNAL STORAGE -->
                 <div class="'internalbox" style="display:flex;justify-content: space-between;">
                     <div class="internal">INTERNAL STORAGE</div>
-                    <div class="internal-svg" id="intid" onclick="internalclick()"><svg width="10" height="10"
+                    <div class="internal-svg" id="intid" onclick="toggleSection('intid','internalid')"><svg width="10" height="10"
                             viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                 class="SV+H35"></path>
@@ -537,7 +538,7 @@
                 <!-- BATTERY CAPACITY -->
                 <div class="betterybox" style="display: flex; justify-content: space-between;">
                     <div class="batteryy">BATTERY CAPACITY</div>
-                    <div class="battery-svg" id="battid" onclick="batteryclick()"><svg width="10" height="10"
+                    <div class="battery-svg" id="battid" onclick="toggleSection('battid','batteryid')"><svg width="10" height="10"
                             viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                 class="SV+H35"></path>
@@ -559,7 +560,7 @@
                 <!-- SCREEN SIZE -->
                 <div class="screenbox" style="display: flex; justify-content:space-between;">
                     <div class="screen">SCREEN SIZE</div>
-                    <div class="screen-svg" id="scrnid" onclick="screenclick()"><svg width="10" height="10"
+                    <div class="screen-svg" id="scrnid" onclick="toggleSection('scrnid','screenid')"><svg width="10" height="10"
                             viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                 class="SV+H35"></path>
@@ -576,7 +577,7 @@
                 <!-- PRIMARY CAMERA -->
                 <div class="primarybox" style="display: flex; justify-content: space-between;">
                     <div class="primary">PRIMARY CAMERA</div>
-                    <div class="screen-svg" id="primaryid" onclick="primaryclick()"><svg width="10" height="10"
+                    <div class="screen-svg" id="primaryid" onclick="toggleSection('primaryid','primid')"><svg width="10" height="10"
                             viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                 class="SV+H35"></path>
@@ -595,7 +596,7 @@
                 <!-- SECONDARY CAMERA -->
                 <div class="secondarybox" style="display: flex; justify-content: space-between;">
                     <div class="secondary">SECONDARY CAMERA</div>
-                    <div class="secondary-svg" id="secondaryid" onclick="secondaryclick()"><svg width="10" height="10"
+                    <div class="secondary-svg" id="secondaryid" onclick="toggleSection('secondaryid','secondid')"><svg width="10" height="10"
                             viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="black"
                                 class="SV+H35"></path>
